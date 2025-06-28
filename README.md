@@ -136,6 +136,7 @@ https://www.smartdatainc.com/
 ## 👩‍💻 Author
 
 **Priya Kumari**
+[www.linkedin.com/in/priya-kumari-8391b6113](https://www.linkedin.com/in/priya-kumari-8391b6113)
 
 ---
 
