@@ -1,0 +1,22 @@
+{
+  "extends": "@react-native/typescript-config",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@src/*": ["src/*"],
+      "@shared/*": ["shared/*"],
+      "@theme/*": ["src/theme/*"],
+      "@pods/*": ["pods/*"],
+      "@screens/*": ["src/screens/*"],
+      "@ui/*": ["shared/ui/*"],
+      "@navigation/*": ["src/navigation/*"],
+      "@assets/*": ["src/assets/*"],
+      "@components/*": ["src/components/*"],
+      "@hooks/*": ["src/hooks/*"],
+      "@redux/*": ["src/redux/*"],
+      "@constants/*": ["src/constants/*"]
+    }
+    // ...other options
+  }
+
+}
