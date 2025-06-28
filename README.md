@@ -1,4 +1,4 @@
-# SmartPlatform
+# SmartPlatformRN
 
 SmartPlatform is a modular React Native project designed for scalability, maintainability, and reusability. It uses a **pods** architecture, where each feature is encapsulated as a reusable component (pod). The project also includes a shared UI library and a robust navigation and theming system.
 
@@ -126,6 +126,17 @@ yarn android
 
 ---
 
-## 📄 License
+## 🏢 Maintained By
 
-MIT
+**SmartData**  
+https://www.smartdatainc.com/
+
+---
+
+## 👩‍💻 Author
+
+**Priya Kumari**
+
+---
+
+##
