@@ -3,9 +3,10 @@ import { View, StyleSheet } from 'react-native';
 import { useTheme } from '@src/theme/themeProvider';
 import { TextInput, Button } from '../../../shared';
 import type { StackNavigationProp } from '@react-navigation/stack';
-
+import { useTranslation } from 'react-i18next';
 import { Text, Layout } from '@shared/index';
 import { colors, spacing, verticalScale } from '@src/theme';
+
 type AuthStackParamList = {
   LoginScreen: undefined;
   SignUp: undefined;
@@ -21,10 +22,11 @@ interface WelcomeScreenProps {
 }
 
 const LoginScreen = ({ navigation: _navigation }: WelcomeScreenProps) => {
+  const { t } = useTranslation();
   return (
     <Layout>
       <Layout.Body>
-        <Text variant="title">Login</Text>
+        <Text variant="title">Login {t('login.title')}</Text>
         <Text variant="subtitle" style={styles.subtitle}>
           We are happy to see you again.{'\n'}Enter your email address and
           password

@@ -2,8 +2,7 @@ import React from 'react';
 import { StatusBar, StyleSheet, useColorScheme, View } from 'react-native';
 import { AppNavigator } from './navigation';
 import { ThemeProvider } from '@theme/themeProvider';
-import { KeyboardProvider } from 'react-native-keyboard-controller';
-
+import './localization/i18n'; // Import before your app renders
 function App() {
   const isDarkMode = useColorScheme() === 'dark';
 
