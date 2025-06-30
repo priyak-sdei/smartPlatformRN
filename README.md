@@ -31,6 +31,7 @@ smartPlatformRN/
 │   ├── redux/                # Redux store and slices (if used)
 │   ├── constants/            # App-wide constants
 │   └── App.tsx               # App entry point
+│   └── i18n/                 # multi-language support
 │
 ├── pods/                     # Feature modules (pods)
 │   └── auth/
