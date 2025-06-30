@@ -11,6 +11,8 @@ import {
 } from 'react-native';
 import Text from './Text';
 import { fonts, moderateScale, spacing, verticalScale, colors } from '../theme'; // Adjust the import path as needed
+import { TxKeyPath } from '@src/i18n';
+import { useTranslation } from 'react-i18next';
 
 interface CustomTextInputProps extends TextInputProps {
   label?: string; // Label above the input
@@ -23,6 +25,9 @@ interface CustomTextInputProps extends TextInputProps {
   errorStyle?: TextStyle; // Style for the error text
   helperTextStyle?: TextStyle; // Style for the helper text
   inputRef?: React.Ref<RNTextInput>; // Ref forwarding for focus/blur
+  labelTx?: string;
+  txOptions?: import('i18next').TOptions; // Use the TOptions type from i18next
+  placeholderTx?: TxKeyPath;
 }
 
 const TextInput: React.FC<CustomTextInputProps> = ({
@@ -35,11 +40,25 @@ const TextInput: React.FC<CustomTextInputProps> = ({
   errorStyle,
   inputRef,
   style,
+  labelTx,
+  placeholderTx,
+  txOptions,
   ...props
 }) => {
+  const { t } = useTranslation();
+  const i18nPlaceholder = placeholderTx ? t(placeholderTx) : props.placeholder;
+
   return (
     <View style={[styles.container, containerStyle]}>
-      {label ? <Text style={[styles.label, labelStyle]}>{label}</Text> : null}
+      {label || labelTx ? (
+        <Text
+          style={[styles.label, labelStyle]}
+          tx={labelTx}
+          txOptions={txOptions}
+        >
+          {label}
+        </Text>
+      ) : null}
       <View style={styles.inputRow}>
         {leftIcon ? <View style={styles.icon}>{leftIcon}</View> : null}
         <RNTextInput
@@ -49,6 +68,7 @@ const TextInput: React.FC<CustomTextInputProps> = ({
           style={[styles.input, style]}
           {...props}
           autoCapitalize="none"
+          placeholder={i18nPlaceholder}
         />
         {rightIcon ? (
           <TouchableOpacity style={styles.icon}>{rightIcon}</TouchableOpacity>

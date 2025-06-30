@@ -1,10 +1,19 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { StatusBar, StyleSheet, useColorScheme, View } from 'react-native';
 import { AppNavigator } from './navigation';
 import { ThemeProvider } from '@theme/themeProvider';
-import './localization/i18n'; // Import before your app renders
+
+import { initI18n } from './i18n/i18n';
 function App() {
+  const [i18nReady, setI18nReady] = useState(false);
+
+  useEffect(() => {
+    initI18n().then(() => setI18nReady(true));
+  }, []); // Ensure  Ensure i18n is initialized before rendering your app
+
   const isDarkMode = useColorScheme() === 'dark';
+
+  if (!i18nReady) return null; // or a splash/loading component
 
   return (
     <ThemeProvider>

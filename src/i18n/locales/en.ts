@@ -1,20 +1,23 @@
 const en = {
   // Auth Screens
   login: {
-    title: 'Login12',
+    title: 'Login',
     emailPlaceholder: 'Enter your email',
     passwordPlaceholder: 'Enter your password',
     forgotPassword: 'Forgot Password?',
     signIn: 'Sign In',
     noAccount: "Don't have an account?",
     signUp: 'Sign Up',
-    welcome: 'Welcome',
+    welcome:
+      'We are happy to see you again.\nEnter your email address and password',
+    email: 'Email',
+    password: 'Password',
   },
 
   // Common UI
   common: {
-    email: 'Email',
-    password: 'Password',
+    Hi: 'Hello, {{name}}!',
+
     confirmPassword: 'Confirm Password',
     submit: 'Submit',
     cancel: 'Cancel',
@@ -48,3 +51,4 @@ const en = {
 };
 
 export default en;
+export type Translations = typeof en;

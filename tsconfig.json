@@ -8,7 +8,7 @@
       "@theme/*": ["src/theme/*"],
       "@pods/*": ["pods/*"],
       "@screens/*": ["src/screens/*"],
-      "@localization/*": ["src/localization/*"],
+      "@i18n/*": ["src/i18n/*"],
       "@ui/*": ["shared/ui/*"],
       "@navigation/*": ["src/navigation/*"],
       "@assets/*": ["src/assets/*"],

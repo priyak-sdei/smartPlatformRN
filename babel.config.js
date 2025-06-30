@@ -7,7 +7,7 @@ module.exports = {
         root: ['./src', './shared', './pods'],
         alias: {
           '@src': './src',
-          '@localization': './src/localization',
+          '@i18n': './src/i18n',
           '@shared': './shared',
           '@theme': './src/theme',
           '@pods': './pods',

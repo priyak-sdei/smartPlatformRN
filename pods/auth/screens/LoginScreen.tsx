@@ -1,10 +1,7 @@
-import React from 'react';
-import { View, StyleSheet } from 'react-native';
-import { useTheme } from '@src/theme/themeProvider';
-import { TextInput, Button } from '../../../shared';
 import type { StackNavigationProp } from '@react-navigation/stack';
-import { useTranslation } from 'react-i18next';
-import { Text, Layout } from '@shared/index';
+import React from 'react';
+import { StyleSheet } from 'react-native';
+import { Layout, Text, Button, TextInput } from '@shared/index';
 import { colors, spacing, verticalScale } from '@src/theme';
 
 type AuthStackParamList = {
@@ -22,25 +19,24 @@ interface WelcomeScreenProps {
 }
 
 const LoginScreen = ({ navigation: _navigation }: WelcomeScreenProps) => {
-  const { t } = useTranslation();
   return (
     <Layout>
       <Layout.Body>
-        <Text variant="title">Login {t('login.title')}</Text>
-        <Text variant="subtitle" style={styles.subtitle}>
-          We are happy to see you again.{'\n'}Enter your email address and
-          password
-        </Text>
+        <Text variant="title" tx="login.title" />
+        <Text variant="subtitle" style={styles.subtitle} tx={'login.welcome'} />
 
         <TextInput
-          onChangeText={txt => console.log(txt, 'jfhfh')}
-          label="Email"
-          placeholder="Enter email"
+          onChangeText={txt => console.log(txt, 'jfhfh1')}
+          labelTx="login.email"
+          placeholderTx={'login.emailPlaceholder'}
         />
-        <TextInput label="Password" placeholder="Enter Password" />
+        <TextInput
+          labelTx="login.password"
+          placeholderTx={'login.passwordPlaceholder'}
+        />
 
         <Button
-          title="Sign In"
+          tx={'login.signIn'}
           onPress={() => console.log('Sign In Pressed')}
           style={styles.button}
         />

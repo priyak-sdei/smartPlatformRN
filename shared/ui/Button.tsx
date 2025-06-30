@@ -10,7 +10,9 @@ import Text from './Text';
 import { fonts, moderateScale, spacing, colors } from '../theme';
 
 interface ButtonProps extends TouchableOpacityProps {
-  title: string;
+  title?: string;
+  tx?: string;
+  txOptions?: import('i18next').TOptions; // Use the TOptions type from i18next
   style?: ViewStyle;
   textStyle?: TextStyle;
   leftIcon?: React.ReactNode;
@@ -19,6 +21,8 @@ interface ButtonProps extends TouchableOpacityProps {
 
 const Button: React.FC<ButtonProps> = ({
   title,
+  tx,
+  txOptions,
   style,
   textStyle,
   leftIcon,
@@ -32,7 +36,9 @@ const Button: React.FC<ButtonProps> = ({
       {...props}
     >
       {leftIcon && <>{leftIcon}</>}
-      <Text style={[styles.text, textStyle]}>{title}</Text>
+      <Text style={[styles.text, textStyle]} tx={tx} txOptions={txOptions}>
+        {title}
+      </Text>
       {rightIcon && <>{rightIcon}</>}
     </TouchableOpacity>
   );
