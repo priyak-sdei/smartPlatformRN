@@ -10,7 +10,7 @@ SmartPlatform is a modular React Native project designed for scalability, mainta
 - **Shared UI Library:** Common UI components (Button, TextInput, Layout, etc.) are centralized for consistency and reuse.
 - **Theming:** Centralized theme management for colors, fonts, and spacing.
 - **Module Aliasing:** Clean and maintainable imports using Babel and TypeScript path aliases.
-- **Keyboard Handling:** Integrated with `react-native-keyboard-controller` for smooth keyboard experience.
+- **Localization:** Built-in multi-language support using `i18next` and `react-i18next`.
 
 ---
 
