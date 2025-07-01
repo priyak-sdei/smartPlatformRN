@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { StatusBar, StyleSheet, useColorScheme, View } from 'react-native';
 import { AppNavigator } from './navigation';
 import { ThemeProvider } from '@theme/themeProvider';
-
 import { initI18n } from './i18n/i18n';
 function App() {
   const [i18nReady, setI18nReady] = useState(false);

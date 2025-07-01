@@ -1,27 +1,34 @@
 import type { StackNavigationProp } from '@react-navigation/stack';
 import React from 'react';
-import { StyleSheet } from 'react-native';
+import { Image, StyleSheet } from 'react-native';
 import { Layout, Text, Button, TextInput } from '@shared/index';
-import { colors, spacing, verticalScale } from '@src/theme';
+import { colors, moderateScale, spacing, verticalScale } from '@src/theme';
+import { IMAGES } from '@shared/theme';
 
 type AuthStackParamList = {
-  LoginScreen: undefined;
+  Login: undefined;
   SignUp: undefined;
 };
 
-type WelcomeScreenNavigationProp = StackNavigationProp<
+type LoginPropsNavigationProp = StackNavigationProp<
   AuthStackParamList,
-  'LoginScreen'
+  'Login'
 >;
 
-interface WelcomeScreenProps {
-  navigation: WelcomeScreenNavigationProp;
+interface LoginProps {
+  navigation: LoginPropsNavigationProp;
 }
 
-const LoginScreen = ({ navigation: _navigation }: WelcomeScreenProps) => {
+const Login = ({ navigation: _navigation }: LoginProps) => {
   return (
     <Layout>
-      <Layout.Body>
+      <Layout.Header />
+      <Layout.Body scrollable={true}>
+        <Image
+          source={IMAGES.auth.logo}
+          style={styles.logo}
+          resizeMode="contain"
+        />
         <Text variant="title" tx="login.title" />
         <Text variant="subtitle" style={styles.subtitle} tx={'login.welcome'} />
 
@@ -37,7 +44,7 @@ const LoginScreen = ({ navigation: _navigation }: WelcomeScreenProps) => {
 
         <Button
           tx={'login.signIn'}
-          onPress={() => console.log('Sign In Pressed')}
+          onPress={() => _navigation.navigate('SignUp')}
           style={styles.button}
         />
       </Layout.Body>
@@ -46,6 +53,13 @@ const LoginScreen = ({ navigation: _navigation }: WelcomeScreenProps) => {
 };
 
 const styles = StyleSheet.create({
+  logo: {
+    width: moderateScale(80),
+    height: moderateScale(80),
+    alignSelf: 'center',
+    marginBottom: verticalScale(spacing.l),
+    borderRadius: moderateScale(5),
+  },
   subtitle: {
     marginBottom: verticalScale(spacing.l),
     color: colors.placeholder,
@@ -55,4 +69,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default LoginScreen;
+export default Login;

@@ -2,10 +2,10 @@ import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 import AuthModule from '../screens/auth';
 import {
-  LoginScreen,
+  Login,
   WelcomeScreen,
   ForgotPasswordScreen,
-  SignUpScreen,
+  SignUp,
 } from '@pods/auth/index';
 
 export type AuthStackParamList = {
@@ -20,10 +20,10 @@ const Stack = createStackNavigator<AuthStackParamList>();
 
 const AuthNavigator = () => (
   <Stack.Navigator screenOptions={{ headerShown: false }}>
-    <Stack.Screen name="Login" component={LoginScreen} />
+    <Stack.Screen name="Login" component={Login} />
     <Stack.Screen name="Welcome" component={WelcomeScreen} />
     <Stack.Screen name="ForgotPassword" component={ForgotPasswordScreen} />
-    <Stack.Screen name="SignUp" component={SignUpScreen} />
+    <Stack.Screen name="SignUp" component={SignUp} />
     <Stack.Screen name="Auth" component={AuthModule} />
   </Stack.Navigator>
 );

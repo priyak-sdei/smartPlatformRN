@@ -1,5 +1,5 @@
 export const colors = {
-  primary: '#5F7AEA',
+  primary: '#d92029',
   secondary: '#001D51',
   background: '#FFFFFF',
   text: '#222222',
@@ -8,4 +8,5 @@ export const colors = {
   inputBorder: '#0A0F0F1A',
   placeholder: 'rgba(10, 15, 15, 0.5)',
   label: '#0A0F0F',
+  transparent: 'transparent',
 };

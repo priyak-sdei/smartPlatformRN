@@ -10,3 +10,6 @@ export {
   verticalScale,
   fonts,
 } from '@theme/index';
+
+export { IMAGES } from '@assets/images/index';
+export { Back } from '@assets/svg/index';

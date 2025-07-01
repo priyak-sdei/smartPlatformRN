@@ -13,6 +13,11 @@ const en = {
     email: 'Email',
     password: 'Password',
   },
+  auth: {
+    name: 'Name',
+    createPassword: 'Create Password',
+    confirmPassword: 'Confirm Password',
+  },
 
   // Common UI
   common: {
