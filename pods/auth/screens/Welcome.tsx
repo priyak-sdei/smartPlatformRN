@@ -16,10 +16,7 @@ type AuthStackParamList = {
   SignUp: undefined;
 };
 
-type WelcomePropsNavigationProp = StackNavigationProp<
-  AuthStackParamList,
-  'Login'
->;
+type WelcomePropsNavigationProp = StackNavigationProp<AuthStackParamList>;
 
 interface WelcomeProps {
   navigation: WelcomePropsNavigationProp;
@@ -37,7 +34,7 @@ const data = [
     title: 'Seamless Collaboration',
     text: 'Connect with your team, share insights, and work together in real time—anytime, anywhere.',
     image: IMAGES.auth.slider,
-    bg: '#febe29',
+    bg: '#d92029',
   },
 ];
 type Item = (typeof data)[0];
@@ -61,7 +58,14 @@ const Welcome = ({ navigation: _navigation }: WelcomeProps) => {
   };
 
   const _keyExtractor = (item: Item) => item.title;
-
+  const renderButton = (type: 'next' | 'done') => (
+    <Text
+      style={type === 'done' ? styles.doneText : styles.nextText}
+      tx={type === 'done' ? 'login.done' : 'login.next'}
+    >
+      {type === 'done' ? 'Done' : 'Next'}
+    </Text>
+  );
   return (
     <Layout>
       <Layout.Body scrollable={true} style={styles.noPadding}>
@@ -69,6 +73,8 @@ const Welcome = ({ navigation: _navigation }: WelcomeProps) => {
           keyExtractor={_keyExtractor}
           renderItem={_renderItem}
           data={data}
+          renderNextButton={() => renderButton('next')}
+          renderDoneButton={() => renderButton('done')}
           onDone={() => _navigation.navigate('Login')}
         />
       </Layout.Body>
@@ -99,6 +105,16 @@ const styles = StyleSheet.create({
   },
   noPadding: {
     padding: 0,
+  },
+  doneText: {
+    fontSize: moderateScale(spacing.s),
+    fontFamily: fonts.semiBold,
+    color: colors.background,
+  },
+  nextText: {
+    fontSize: moderateScale(spacing.s),
+    fontFamily: fonts.light,
+    color: colors.background,
   },
 });
 

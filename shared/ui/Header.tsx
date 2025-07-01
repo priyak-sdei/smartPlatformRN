@@ -15,7 +15,7 @@ interface HeaderProps extends ViewProps {
   leftIconColor?: string;
   centerComponent?: ReactElement;
   rightComponent?: ReactElement;
-  noBottomBorder?: boolean;
+  BottomBorder?: boolean;
   onLeftPress?: () => void;
   onRightPress?: () => void;
   style?: ViewStyle;
@@ -26,7 +26,7 @@ const Header: React.FC<HeaderProps> = ({
   leftIcon,
   centerComponent,
   rightComponent,
-  noBottomBorder,
+  BottomBorder,
   onLeftPress,
   onRightPress,
   style,
@@ -34,7 +34,7 @@ const Header: React.FC<HeaderProps> = ({
 }) => {
   return (
     <View
-      style={[styles.container, !noBottomBorder && styles.bottomBorder, style]}
+      style={[styles.container, BottomBorder && styles.bottomBorder, style]}
       {...rest}
     >
       <View style={styles.side}>

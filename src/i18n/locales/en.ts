@@ -14,6 +14,9 @@ const en = {
       'We are happy to see you again.\nEnter your email address and password',
     email: 'Email',
     password: 'Password',
+    done: 'Done',
+    next: 'Next',
+    alreadyAccount: 'Already have an account?',
   },
   auth: {
     name: 'Name',
