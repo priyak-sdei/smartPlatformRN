@@ -62,9 +62,7 @@ const Welcome = ({ navigation: _navigation }: WelcomeProps) => {
     <Text
       style={type === 'done' ? styles.doneText : styles.nextText}
       tx={type === 'done' ? 'login.done' : 'login.next'}
-    >
-      {type === 'done' ? 'Done' : 'Next'}
-    </Text>
+    />
   );
   return (
     <Layout>

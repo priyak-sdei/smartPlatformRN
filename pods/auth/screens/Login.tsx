@@ -19,10 +19,7 @@ type AuthStackParamList = {
   Welcome: undefined;
 };
 
-type LoginPropsNavigationProp = StackNavigationProp<
-  AuthStackParamList,
-  'Login'
->;
+type LoginPropsNavigationProp = StackNavigationProp<AuthStackParamList>;
 
 interface LoginProps {
   navigation: LoginPropsNavigationProp;
