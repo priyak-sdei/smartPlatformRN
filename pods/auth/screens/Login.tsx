@@ -2,13 +2,14 @@ import type { StackNavigationProp } from '@react-navigation/stack';
 import React from 'react';
 import { Image, StyleSheet } from 'react-native';
 import { Layout, Text, Button, TextInput } from '@shared/index';
-import { colors, moderateScale, spacing, verticalScale } from '@src/theme';
+import { colors, moderateScale, spacing, verticalScale } from '@shared/theme';
 import { IMAGES } from '@shared/theme';
 
 type AuthStackParamList = {
   Login: undefined;
   SignUp: undefined;
   ForgotPassword: undefined;
+  Welcome: undefined;
 };
 
 type LoginPropsNavigationProp = StackNavigationProp<
@@ -42,10 +43,9 @@ const Login = ({ navigation: _navigation }: LoginProps) => {
           labelTx="login.password"
           placeholderTx={'login.passwordPlaceholder'}
         />
-
         <Button
           tx={'login.signIn'}
-          onPress={() => _navigation.navigate('ForgotPassword')}
+          onPress={() => _navigation.navigate('SignUp')}
           style={styles.button}
         />
       </Layout.Body>
