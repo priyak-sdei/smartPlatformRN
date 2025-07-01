@@ -5,6 +5,8 @@ const en = {
     emailPlaceholder: 'Enter your email',
     passwordPlaceholder: 'Enter your password',
     forgotPassword: 'Forgot Password?',
+    forgetPassword: 'Forgot Password',
+    restLink: 'Send Reset Link',
     signIn: 'Sign In',
     noAccount: "Don't have an account?",
     signUp: 'Sign Up',

@@ -8,6 +8,7 @@ import { IMAGES } from '@shared/theme';
 type AuthStackParamList = {
   Login: undefined;
   SignUp: undefined;
+  ForgotPassword: undefined;
 };
 
 type LoginPropsNavigationProp = StackNavigationProp<
@@ -44,7 +45,7 @@ const Login = ({ navigation: _navigation }: LoginProps) => {
 
         <Button
           tx={'login.signIn'}
-          onPress={() => _navigation.navigate('SignUp')}
+          onPress={() => _navigation.navigate('ForgotPassword')}
           style={styles.button}
         />
       </Layout.Body>
