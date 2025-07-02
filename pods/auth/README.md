@@ -42,6 +42,16 @@ pods/
 
 ---
 
+## 🤝 Contributing
+
+- To contribute, generate a new branch with the naming convention:  
+  `refactor/podname` (e.g., `refactor/auth`)
+- Commit your changes using the standard message format:  
+  `refactor(PodName): <description>`  
+  Example:  
+  `refactor(Auth): improve login form validation`
+- Ensure your code follows the existing structure and only imports from the shared UI library and generate the merge request.
+
 ## 🛠️ Maintained By
 
 **SmartData**  

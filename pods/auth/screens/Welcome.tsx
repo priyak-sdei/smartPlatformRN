@@ -11,6 +11,7 @@ import {
 import React from 'react';
 import { Image, StyleSheet, View } from 'react-native';
 import AppIntroSlider from 'react-native-app-intro-slider';
+
 type AuthStackParamList = {
   Login: undefined;
   SignUp: undefined;

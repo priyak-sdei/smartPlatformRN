@@ -73,3 +73,7 @@ ios/Pods/
 !.yarn/releases
 !.yarn/sdks
 !.yarn/versions
+
+# .env files for different environments
+.env
+.env.*

@@ -11,6 +11,7 @@ SmartPlatform is a modular React Native project designed for scalability, mainta
 - **Theming:** Centralized theme management for colors, fonts, and spacing.
 - **Module Aliasing:** Clean and maintainable imports using Babel and TypeScript path aliases.
 - **Localization:** Built-in multi-language support using `i18next` and `react-i18next`.
+- **Environment Variable Support:** Supports multiple environments (`.env`, `.env.dev`, `.env.staging`) for easy configuration of API endpoints and other secrets.
 
 ---
 
@@ -47,6 +48,9 @@ smartPlatformRN/
 ├── tsconfig.json             # TypeScript config with path aliases
 ├── package.json              # Project dependencies and scripts
 └── README.md                 # Project documentation
+└── .env                     # Environment variables
+└── .env.dev                 # Development environment variables
+└── .env.staging             # Staging environment variables
 ```
 
 ---
