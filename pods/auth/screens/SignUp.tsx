@@ -5,9 +5,9 @@ import {
   moderateScale,
   spacing,
   verticalScale,
-  colors,
   fonts,
-} from '@src/theme';
+  useTheme,
+} from '@shared/theme';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { StyleSheet } from 'react-native';
@@ -24,6 +24,8 @@ interface SignUpProps {
 
 const SignUp = ({ navigation: _navigation }: SignUpProps) => {
   const { t } = useTranslation();
+  const { theme } = useTheme();
+  const styles = getStyles(theme);
   return (
     <Layout>
       <Layout.Header
@@ -66,22 +68,23 @@ const SignUp = ({ navigation: _navigation }: SignUpProps) => {
   );
 };
 
-const styles = StyleSheet.create({
-  button: {
-    marginTop: verticalScale(spacing.m),
-  },
-  titleMargin: {
-    marginBottom: moderateScale(spacing.s),
-  },
-  bottomText: {
-    textAlign: 'center',
-    marginTop: verticalScale(spacing.xxs),
-    color: colors.secondary,
-    fontSize: moderateScale(spacing.s),
-  },
-  bottomTextBold: {
-    fontFamily: fonts.medium,
-  },
-});
+const getStyles = (theme: any) =>
+  StyleSheet.create({
+    button: {
+      marginTop: verticalScale(spacing.m),
+    },
+    titleMargin: {
+      marginBottom: moderateScale(spacing.s),
+    },
+    bottomText: {
+      textAlign: 'center',
+      marginTop: verticalScale(spacing.xxs),
+      color: theme.colors.secondary,
+      fontSize: moderateScale(spacing.s),
+    },
+    bottomTextBold: {
+      fontFamily: fonts.medium,
+    },
+  });
 
 export default SignUp;

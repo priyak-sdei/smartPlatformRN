@@ -1,10 +1,9 @@
 import React from 'react';
 import { Text as RNText, StyleProp, TextProps, TextStyle } from 'react-native';
-import { fonts, moderateScale, spacing, colors } from '../theme';
+import { fonts, moderateScale, spacing, useTheme } from '../theme';
 import { TxKeyPath } from '@src/i18n';
 import { TOptions } from 'i18next';
 import { useTranslation } from 'react-i18next';
-import { useTheme } from '@theme/ThemeProvider';
 
 type Variant = 'title' | 'subtitle' | 'body';
 

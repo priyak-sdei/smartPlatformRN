@@ -7,8 +7,8 @@ import {
   ViewStyle,
 } from 'react-native';
 import Text from './Text';
-import { fonts, moderateScale, spacing } from '../theme';
-import { useTheme } from '@theme/ThemeProvider';
+import { fonts, moderateScale, spacing, useTheme } from '../theme';
+
 interface HeaderProps extends ViewProps {
   title?: string;
   leftIcon?: ReactElement;
@@ -79,6 +79,7 @@ const getStyles = (theme: any) =>
       alignItems: 'center',
       height: moderateScale(80),
       backgroundColor: theme.colors.background,
+
       paddingHorizontal: moderateScale(spacing.s),
       justifyContent: 'space-between',
     },

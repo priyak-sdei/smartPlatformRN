@@ -3,11 +3,11 @@ import React from 'react';
 import { Image, StyleSheet } from 'react-native';
 import { Layout, Text, Button, TextInput } from '@shared/index';
 import {
-  colors,
   fonts,
   moderateScale,
   spacing,
   verticalScale,
+  useTheme,
 } from '@shared/theme';
 import { IMAGES } from '@shared/theme';
 import { useTranslation } from 'react-i18next';
@@ -26,6 +26,8 @@ interface LoginProps {
 }
 
 const Login = ({ navigation: _navigation }: LoginProps) => {
+  const { theme } = useTheme();
+  const styles = getStyles(theme);
   const { t } = useTranslation();
   const { email, password, setEmail, setPassword, login } = useLogin();
 
@@ -83,37 +85,38 @@ const Login = ({ navigation: _navigation }: LoginProps) => {
   );
 };
 
-const styles = StyleSheet.create({
-  logo: {
-    width: moderateScale(80),
-    height: moderateScale(80),
-    alignSelf: 'center',
-    marginBottom: verticalScale(spacing.l),
-    borderRadius: moderateScale(5),
-  },
-  subtitle: {
-    marginBottom: verticalScale(spacing.l),
-    color: colors.placeholder,
-  },
-  button: {
-    marginTop: verticalScale(spacing.m),
-  },
-  bottomText: {
-    textAlign: 'center',
-    marginTop: verticalScale(spacing.xxs),
-    color: colors.secondary,
-    fontSize: moderateScale(spacing.s),
-  },
-  bottomTextBold: {
-    fontFamily: fonts.medium,
-  },
-  forgotText: {
-    textAlign: 'right',
-    marginBottom: verticalScale(spacing.s),
-    color: colors.primary,
-    fontSize: moderateScale(spacing.s),
-    marginTop: verticalScale(-spacing.xxs),
-  },
-});
+const getStyles = (theme: any) =>
+  StyleSheet.create({
+    logo: {
+      width: moderateScale(80),
+      height: moderateScale(80),
+      alignSelf: 'center',
+      marginBottom: verticalScale(spacing.l),
+      borderRadius: moderateScale(5),
+    },
+    subtitle: {
+      marginBottom: verticalScale(spacing.l),
+      color: theme.colors.placeholder,
+    },
+    button: {
+      marginTop: verticalScale(spacing.m),
+    },
+    bottomText: {
+      textAlign: 'center',
+      marginTop: verticalScale(spacing.xxs),
+      color: theme.colors.secondary,
+      fontSize: moderateScale(spacing.s),
+    },
+    bottomTextBold: {
+      fontFamily: fonts.medium,
+    },
+    forgotText: {
+      textAlign: 'right',
+      marginBottom: verticalScale(spacing.s),
+      color: theme.colors.primary,
+      fontSize: moderateScale(spacing.s),
+      marginTop: verticalScale(-spacing.xxs),
+    },
+  });
 
 export default Login;

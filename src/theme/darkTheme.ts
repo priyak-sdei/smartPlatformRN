@@ -2,11 +2,13 @@ import { colors } from './colors';
 const darkTheme = {
   colors: {
     ...colors,
-    background: '#101317',
+    background: '#121212', // Dark background color very dark gray
+    secondary: '#AAAAAA', //Muted or subtext
     text: '#FFFFFF',
-    primary: '#0A84FF',
-    secondary: '#FFD60A',
     border: '#333333',
+    label: '#FFFFFF',
+    inputBorder: '#444444', // Darker border for input fields
+    placeholder: '#888888', // Lighter placeholder text color
   },
 };
 

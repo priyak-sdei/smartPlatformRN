@@ -7,7 +7,7 @@ import {
   TouchableOpacityProps,
 } from 'react-native';
 import Text from './Text';
-import { fonts, moderateScale, spacing, colors } from '../theme';
+import { fonts, moderateScale, spacing, useTheme } from '../theme';
 
 interface ButtonProps extends TouchableOpacityProps {
   title?: string;
@@ -29,6 +29,8 @@ const Button: React.FC<ButtonProps> = ({
   rightIcon,
   ...props
 }) => {
+  const { theme } = useTheme();
+  const styles = getStyles(theme);
   return (
     <TouchableOpacity
       style={[styles.button, style]}
@@ -44,23 +46,24 @@ const Button: React.FC<ButtonProps> = ({
   );
 };
 
-const styles = StyleSheet.create({
-  button: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: colors.primary,
-    paddingVertical: moderateScale(spacing.s),
-    paddingHorizontal: moderateScale(spacing.l),
-    borderRadius: moderateScale(spacing.xxs),
-    marginVertical: moderateScale(spacing.xxs),
-    width: '100%',
-  },
-  text: {
-    color: colors.background,
-    fontFamily: fonts.bold,
-    marginHorizontal: moderateScale(spacing.xxs),
-  },
-});
+const getStyles = (theme: any) =>
+  StyleSheet.create({
+    button: {
+      flexDirection: 'row',
+      alignItems: 'center',
+      justifyContent: 'center',
+      backgroundColor: theme.colors.primary,
+      paddingVertical: moderateScale(spacing.s),
+      paddingHorizontal: moderateScale(spacing.l),
+      borderRadius: moderateScale(spacing.xxs),
+      marginVertical: moderateScale(spacing.xxs),
+      width: '100%',
+    },
+    text: {
+      color: theme.colors.background,
+      fontFamily: fonts.bold,
+      marginHorizontal: moderateScale(spacing.xxs),
+    },
+  });
 
 export default Button;

@@ -15,8 +15,8 @@ const Stack = createStackNavigator<AuthStackParamList>();
 
 const AuthNavigator = () => (
   <Stack.Navigator screenOptions={{ headerShown: false }}>
-    <Stack.Screen name="Welcome" component={Welcome} />
     <Stack.Screen name="Login" component={Login} />
+    <Stack.Screen name="Welcome" component={Welcome} />
 
     <Stack.Screen name="ForgotPassword" component={ForgotPassword} />
     <Stack.Screen name="SignUp" component={SignUp} />

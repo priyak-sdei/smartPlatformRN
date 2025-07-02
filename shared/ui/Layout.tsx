@@ -1,4 +1,4 @@
-import { moderateScale, spacing } from '@src/theme';
+import { moderateScale, spacing, useTheme } from '../theme';
 import React, { ReactNode } from 'react';
 import {
   View,
@@ -10,7 +10,6 @@ import {
   Platform,
 } from 'react-native';
 import Header from './Header';
-import { useTheme } from '@theme/ThemeProvider';
 
 interface LayoutProps extends ViewProps {
   children: ReactNode;

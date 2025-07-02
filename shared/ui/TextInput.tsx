@@ -10,7 +10,13 @@ import {
   StyleProp,
 } from 'react-native';
 import Text from './Text';
-import { fonts, moderateScale, spacing, verticalScale, colors } from '../theme'; // Adjust the import path as needed
+import {
+  fonts,
+  moderateScale,
+  spacing,
+  verticalScale,
+  useTheme,
+} from '../theme'; // Adjust the import path as needed
 import { TxKeyPath } from '@src/i18n';
 import { useTranslation } from 'react-i18next';
 
@@ -46,6 +52,8 @@ const TextInput: React.FC<CustomTextInputProps> = ({
   ...props
 }) => {
   const { t } = useTranslation();
+  const { theme } = useTheme();
+  const styles = getStyles(theme);
   const i18nPlaceholder = placeholderTx ? t(placeholderTx) : props.placeholder;
 
   return (
@@ -62,8 +70,8 @@ const TextInput: React.FC<CustomTextInputProps> = ({
       <View style={styles.inputRow}>
         {leftIcon ? <View style={styles.icon}>{leftIcon}</View> : null}
         <RNTextInput
-          placeholderTextColor={colors.placeholder}
-          selectionColor={colors.primary}
+          placeholderTextColor={theme.colors.placeholder}
+          selectionColor={theme.colors.primary}
           ref={inputRef}
           style={[styles.input, style]}
           {...props}
@@ -79,37 +87,38 @@ const TextInput: React.FC<CustomTextInputProps> = ({
   );
 };
 
-const styles = StyleSheet.create({
-  container: {
-    marginBottom: verticalScale(spacing.s),
-    width: '100%',
-  },
-  label: {
-    marginBottom: verticalScale(spacing.xxs),
-  },
-  inputRow: {
-    flexDirection: 'row',
-    alignItems: 'center',
-  },
-  input: {
-    flex: 1,
-    borderWidth: moderateScale(1),
-    borderRadius: moderateScale(8),
-    padding: moderateScale(spacing.xs),
-    color: colors.label,
-    fontSize: moderateScale(spacing.s),
-    fontFamily: fonts.medium,
-    borderColor: colors.inputBorder,
-  },
-  icon: {
-    marginHorizontal: 4,
-  },
-  error: {
-    fontSize: moderateScale(spacing.xs),
-    marginTop: verticalScale(1),
-    fontFamily: fonts.regular,
-    color: colors.error,
-  },
-});
+const getStyles = (theme: any) =>
+  StyleSheet.create({
+    container: {
+      marginBottom: verticalScale(spacing.s),
+      width: '100%',
+    },
+    label: {
+      marginBottom: verticalScale(spacing.xxs),
+    },
+    inputRow: {
+      flexDirection: 'row',
+      alignItems: 'center',
+    },
+    input: {
+      flex: 1,
+      borderWidth: moderateScale(1),
+      borderRadius: moderateScale(8),
+      padding: moderateScale(spacing.xs),
+      color: theme.colors.label,
+      fontSize: moderateScale(spacing.s),
+      fontFamily: fonts.medium,
+      borderColor: theme.colors.inputBorder,
+    },
+    icon: {
+      marginHorizontal: 4,
+    },
+    error: {
+      fontSize: moderateScale(spacing.xs),
+      marginTop: verticalScale(1),
+      fontFamily: fonts.regular,
+      color: theme.colors.error,
+    },
+  });
 
 export default TextInput;

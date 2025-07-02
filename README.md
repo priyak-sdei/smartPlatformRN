@@ -12,6 +12,7 @@ SmartPlatform is a modular React Native project designed for scalability, mainta
 - **Module Aliasing:** Clean and maintainable imports using Babel and TypeScript path aliases.
 - **Localization:** Built-in multi-language support using `i18next` and `react-i18next`.
 - **Environment Variable Support:** Supports multiple environments (`.env`, `.env.dev`, `.env.staging`) for easy configuration of API endpoints and other secrets.
+- **Automatic Dark/Light Mode:** The app automatically adapts to the system's theme.
 
 ---
 
@@ -73,7 +74,8 @@ smartPlatformRN/
 ## 🛠️ Theming
 
 - Centralized in `src/theme/` for colors, fonts, and spacing.
-- Easily customizable for light/dark mode and branding.
+- Supports automatic switching between light and dark modes based on system settings.
+
 
 ---
 
