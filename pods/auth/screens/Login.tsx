@@ -11,6 +11,7 @@ import {
 } from '@shared/theme';
 import { IMAGES } from '@shared/theme';
 import { useTranslation } from 'react-i18next';
+import { useLogin } from '../hooks/useLogin';
 
 type AuthStackParamList = {
   Login: undefined;
@@ -27,6 +28,8 @@ interface LoginProps {
 
 const Login = ({ navigation: _navigation }: LoginProps) => {
   const { t } = useTranslation();
+  const { email, password, setEmail, setPassword, login } = useLogin();
+
   return (
     <Layout>
       <Layout.Header />
@@ -40,11 +43,22 @@ const Login = ({ navigation: _navigation }: LoginProps) => {
         <Text variant="subtitle" style={styles.subtitle} tx={'login.welcome'} />
 
         <TextInput
-          onChangeText={txt => console.log(txt, 'jfhfh1')}
+          value={email}
+          onChangeText={setEmail}
+          keyboardType="email-address"
+          autoCapitalize="none"
+          autoCorrect={false}
           labelTx="login.email"
           placeholderTx={'login.emailPlaceholder'}
         />
         <TextInput
+          value={password}
+          onChangeText={setPassword}
+          secureTextEntry={true}
+          autoCapitalize="none"
+          autoCorrect={false}
+          onSubmitEditing={login}
+          returnKeyType="done"
           labelTx="login.password"
           placeholderTx={'login.passwordPlaceholder'}
         />
