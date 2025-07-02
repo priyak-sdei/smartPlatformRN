@@ -1,4 +1,6 @@
-export const colors = {
+import { ColorPalette } from '../types/ColorPalette';
+
+export const colors: ColorPalette = {
   primary: '#d92029',
   secondary: '#001D51',
   background: '#FFFFFF',

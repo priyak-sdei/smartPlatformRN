@@ -1,11 +1,9 @@
+import { colors } from './colors';
 const lightTheme = {
   colors: {
-    background: '#FFFFFF',
-    text: '#222222',
-    primary: '#007AFF',
-    secondary: '#FF9500',
-    border: '#E5E5EA',
+    ...colors,
   },
 };
 
 export default lightTheme;
+export type LightTheme = typeof lightTheme;

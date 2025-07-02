@@ -21,7 +21,6 @@ type AuthStackParamList = {
 };
 
 type LoginPropsNavigationProp = StackNavigationProp<AuthStackParamList>;
-
 interface LoginProps {
   navigation: LoginPropsNavigationProp;
 }

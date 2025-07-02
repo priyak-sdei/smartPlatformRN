@@ -52,6 +52,8 @@ pods/
   `refactor(Auth): improve login form validation`
 - Ensure your code follows the existing structure and only imports from the shared UI library and generate the merge request.
 
+---
+
 ## 🛠️ Maintained By
 
 **SmartData**  

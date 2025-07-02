@@ -10,6 +10,7 @@ module.exports = {
           '@i18n': './src/i18n',
           '@shared': './shared',
           '@theme': './src/theme',
+          '@types': './src/types',
           '@pods': './pods',
           '@screens': './src/screens',
           '@ui': './shared/ui',

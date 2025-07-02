@@ -10,6 +10,8 @@ import {
   screenWidth,
   verticalScale,
 } from './metrics';
+import lightTheme from './lightTheme';
+import darkTheme from './darkTheme';
 
 export {
   colors,
@@ -22,4 +24,6 @@ export {
   screenWidth,
   verticalScale,
   fonts,
+  lightTheme,
+  darkTheme,
 };

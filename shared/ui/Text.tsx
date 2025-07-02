@@ -4,26 +4,28 @@ import { fonts, moderateScale, spacing, colors } from '../theme';
 import { TxKeyPath } from '@src/i18n';
 import { TOptions } from 'i18next';
 import { useTranslation } from 'react-i18next';
+import { useTheme } from '@theme/ThemeProvider';
 
 type Variant = 'title' | 'subtitle' | 'body';
 
-const variantStyles: Record<Variant, TextStyle> = {
+// Make variantStyles a function that takes theme
+const getVariantStyles = (theme: any): Record<Variant, TextStyle> => ({
   title: {
     fontSize: moderateScale(spacing.l),
     fontFamily: fonts.bold,
-    color: colors.secondary,
+    color: theme.colors.secondary,
   },
   subtitle: {
     fontSize: moderateScale(spacing.s),
     fontFamily: fonts.medium,
-    color: colors.label,
+    color: theme.colors.label,
   },
   body: {
     fontSize: moderateScale(spacing.s),
     fontFamily: fonts.regular,
-    color: colors.label,
+    color: theme.colors.label,
   },
-};
+});
 
 interface AppTextProps extends TextProps {
   variant?: Variant;
@@ -52,6 +54,8 @@ const Text: React.FC<AppTextProps> = ({
 
   const i18nText = tx && t(tx, txOptions);
   const content = i18nText || children;
+  const { theme } = useTheme();
+  const variantStyles = getVariantStyles(theme);
 
   return (
     <RNText style={[variantStyles[variant], style]} {...props}>

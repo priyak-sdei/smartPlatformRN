@@ -1,4 +1,4 @@
-import { colors, moderateScale, spacing } from '@src/theme';
+import { moderateScale, spacing } from '@src/theme';
 import React, { ReactNode } from 'react';
 import {
   View,
@@ -10,6 +10,7 @@ import {
   Platform,
 } from 'react-native';
 import Header from './Header';
+import { useTheme } from '@theme/ThemeProvider';
 
 interface LayoutProps extends ViewProps {
   children: ReactNode;
@@ -25,8 +26,10 @@ const Body: React.FC<LayoutBodyProps> = ({
   style,
   scrollable = false,
   ...props
-}) =>
-  scrollable ? (
+}) => {
+  const { theme } = useTheme();
+  const styles = getStyles(theme);
+  return scrollable ? (
     <KeyboardAvoidingView
       style={styles.flex1}
       behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
@@ -45,35 +48,41 @@ const Body: React.FC<LayoutBodyProps> = ({
       {children}
     </View>
   );
+};
 
 // Compound component pattern
 const Layout: React.FC<LayoutProps> & {
   Header: typeof Header;
   Body: typeof Body;
-} = ({ children, style, ...props }) => (
-  <View style={[styles.container, style]} {...props}>
-    {children}
-  </View>
-);
+} = ({ children, style, ...props }) => {
+  const { theme } = useTheme();
+  const styles = getStyles(theme);
+  return (
+    <View style={[styles.container, style]} {...props}>
+      {children}
+    </View>
+  );
+};
 
 Layout.Header = Header;
 Layout.Body = Body;
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-  body: {
-    flex: 1,
-    padding: moderateScale(spacing.s),
-    backgroundColor: colors.background,
-  },
-  flex1: {
-    flex: 1,
-  },
-  contentContainer: {
-    flexGrow: 1,
-  },
-});
+const getStyles = (theme: any) =>
+  StyleSheet.create({
+    container: {
+      flex: 1,
+    },
+    body: {
+      flex: 1,
+      padding: moderateScale(spacing.s),
+      backgroundColor: theme.colors.background,
+    },
+    flex1: {
+      flex: 1,
+    },
+    contentContainer: {
+      flexGrow: 1,
+    },
+  });
 
 export default Layout;

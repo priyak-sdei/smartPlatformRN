@@ -1,6 +1,8 @@
+import { colors } from './colors';
 const darkTheme = {
   colors: {
-    background: '#181818',
+    ...colors,
+    background: '#101317',
     text: '#FFFFFF',
     primary: '#0A84FF',
     secondary: '#FFD60A',
@@ -9,3 +11,4 @@ const darkTheme = {
 };
 
 export default darkTheme;
+export type DarkTheme = typeof darkTheme;
