@@ -1,18 +1,32 @@
 import React, { useEffect, useState } from 'react';
-import { StatusBar, StyleSheet, useColorScheme, View } from 'react-native';
+import {
+  Appearance,
+  StatusBar,
+  StyleSheet,
+  useColorScheme,
+  View,
+} from 'react-native';
 import { AppNavigator } from './navigation';
 import { ThemeProvider } from '@src/theme/ThemeProvider';
 import { initI18n } from './i18n/i18n';
-function App() {
-  const [i18nReady, setI18nReady] = useState(false);
+import { Provider } from 'react-redux';
+import { store } from '@redux/store';
+import { useAppDispatch } from '@redux/hooks';
+import { setTheme } from '@redux/slices/themeSlice';
 
-  useEffect(() => {
-    initI18n().then(() => setI18nReady(true));
-  }, []); // Ensure  Ensure i18n is initialized before rendering your app
-
+const AppContent = () => {
+  const dispatch = useAppDispatch();
   const isDarkMode = useColorScheme() === 'dark';
 
-  if (!i18nReady) return null; // or a splash/loading component
+  // Listen for system theme changes and update the Redux store. This makes
+  // the "Automatic Dark/Light Mode" feature fully reactive.
+  useEffect(() => {
+    const subscription = Appearance.addChangeListener(({ colorScheme }) => {
+      dispatch(setTheme(colorScheme ?? 'light'));
+    });
+
+    return () => subscription.remove();
+  }, [dispatch]);
 
   return (
     <ThemeProvider>
@@ -21,6 +35,22 @@ function App() {
         <AppNavigator />
       </View>
     </ThemeProvider>
+  );
+};
+
+function App() {
+  const [i18nReady, setI18nReady] = useState(false);
+
+  useEffect(() => {
+    initI18n().then(() => setI18nReady(true));
+  }, []); // Ensure  Ensure i18n is initialized before rendering your app
+
+  if (!i18nReady) return null; // or a splash/loading component
+
+  return (
+    <Provider store={store}>
+      <AppContent />
+    </Provider>
   );
 }
 
@@ -31,32 +61,3 @@ const styles = StyleSheet.create({
 });
 
 export default App;
-
-// /**
-//  * Sample React Native App
-//  * https://github.com/facebook/react-native
-//  *
-//  * @format
-//  */
-
-// import { NewAppScreen } from '@react-native/new-app-screen';
-// import { StatusBar, StyleSheet, useColorScheme, View } from 'react-native';
-
-// function App() {
-//   const isDarkMode = useColorScheme() === 'dark';
-
-//   return (
-//     <View style={styles.container}>
-//       <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-//       <NewAppScreen templateFileName="App.tsx" />
-//     </View>
-//   );
-// }
-
-// const styles = StyleSheet.create({
-//   container: {
-//     flex: 1,
-//   },
-// });
-
-// export default App;
