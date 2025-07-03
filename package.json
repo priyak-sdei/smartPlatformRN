@@ -12,7 +12,8 @@
     "start:staging": "ENVFILE=.env.staging react-native start --reset-cache",
     "start:prod": "ENVFILE=.env react-native start --reset-cache",
     "rename-app": "read -p 'Enter New App Name: ' newName && read -p 'Enter New Bundle ID (e.g., com.example.app): ' newBundleId && npx react-native-rename \"$newName\" -b \"$newBundleId\"",
-    "customize-assets": "yarn assets:set-icon && yarn assets:generate-splash && echo 'Remember to clean builds and reinstall pods if necessary.'"
+    "assets:set-icon": "npx react-native set-icon --path smart-assets/icon.png --platform android && npx react-native set-icon --path smart-assets/icon.png --platform ios",
+    "postassets:set-icon": "echo 'App icons generated. Remember to clean builds (./android/gradlew clean, rm -rf ios/build) and reinstall pods (cd ios && pod install --repo-update) before rebuilding.'"
   },
   "dependencies": {
     "@react-native/new-app-screen": "0.80.0",
@@ -40,6 +41,7 @@
     "@babel/core": "^7.25.2",
     "@babel/preset-env": "^7.25.3",
     "@babel/runtime": "^7.25.0",
+    "@bam.tech/react-native-make": "^3.0.3",
     "@react-native-community/cli": "19.0.0",
     "@react-native-community/cli-platform-android": "19.0.0",
     "@react-native-community/cli-platform-ios": "19.0.0",
@@ -58,7 +60,6 @@
     "prettier": "2.8.8",
     "react-native-bootsplash": "^6.3.10",
     "react-native-dotenv": "^3.4.11",
-    "react-native-make": "^1.0.1",
     "react-native-svg-transformer": "^1.5.1",
     "react-test-renderer": "19.1.0",
     "typescript": "5.0.4"
