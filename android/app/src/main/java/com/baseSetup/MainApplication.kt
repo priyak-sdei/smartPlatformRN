@@ -1,4 +1,4 @@
-package com.smartplatformrn
+package com.baseSetup
 
 import android.app.Application
 import com.facebook.react.PackageList

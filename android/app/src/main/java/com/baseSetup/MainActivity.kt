@@ -1,4 +1,4 @@
-package com.smartplatformrn
+package com.baseSetup
 
 import com.facebook.react.ReactActivity
 import com.facebook.react.ReactActivityDelegate
