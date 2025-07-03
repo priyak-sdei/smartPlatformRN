@@ -10,7 +10,8 @@
     "test": "jest",
     "start:dev": "ENVFILE=.env.dev react-native start --reset-cache",
     "start:staging": "ENVFILE=.env.staging react-native start --reset-cache",
-    "start:prod": "ENVFILE=.env react-native start --reset-cache"
+    "start:prod": "ENVFILE=.env react-native start --reset-cache",
+    "rename-app": "read -p 'Enter New App Name: ' newName && read -p 'Enter New Bundle ID (e.g., com.example.app): ' newBundleId && npx react-native-rename \"$newName\" -b \"$newBundleId\""
   },
   "dependencies": {
     "@react-native/new-app-screen": "0.80.0",
@@ -26,6 +27,7 @@
     "react-native-gesture-handler": "^2.26.0",
     "react-native-localize": "^3.4.2",
     "react-native-reanimated": "^3.18.0",
+    "react-native-rename": "^3.2.16",
     "react-native-safe-area-context": "^5.5.0",
     "react-native-screens": "^4.11.1",
     "react-native-svg": "^15.12.0",
