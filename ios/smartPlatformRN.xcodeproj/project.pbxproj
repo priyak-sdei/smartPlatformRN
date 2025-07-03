@@ -20,6 +20,8 @@
 		D6DB16DFAFE64625A9995D2D /* Outfit-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA07F954FBA54D6B940E4A42 /* Outfit-Regular.ttf */; };
 		117E696A7DBE42CAAC0077ED /* Outfit-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BCB341CBBE144BE3BF7D189D /* Outfit-SemiBold.ttf */; };
 		78DBDC8207D94F21A789F6FF /* Outfit-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 53B4F3E2506D4E67A00B69E4 /* Outfit-Thin.ttf */; };
+		AE63CA44A2E540D1877D49D2 /* BootSplash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFCFDCE55CAF47EDA1FFEF7A /* BootSplash.storyboard */; };
+		07270548F2504C42B63D2A49 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6328BB36851A427A90A3BF86 /* Colors.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		EA07F954FBA54D6B940E4A42 /* Outfit-Regular.ttf */ = {isa = PBXFileReference; name = "Outfit-Regular.ttf"; path = "../src/assets/fonts/Outfit-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		BCB341CBBE144BE3BF7D189D /* Outfit-SemiBold.ttf */ = {isa = PBXFileReference; name = "Outfit-SemiBold.ttf"; path = "../src/assets/fonts/Outfit-SemiBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		53B4F3E2506D4E67A00B69E4 /* Outfit-Thin.ttf */ = {isa = PBXFileReference; name = "Outfit-Thin.ttf"; path = "../src/assets/fonts/Outfit-Thin.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		FFCFDCE55CAF47EDA1FFEF7A /* BootSplash.storyboard */ = {isa = PBXFileReference; name = "BootSplash.storyboard"; path = "smartPlatformRN/BootSplash.storyboard"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		6328BB36851A427A90A3BF86 /* Colors.xcassets */ = {isa = PBXFileReference; name = "Colors.xcassets"; path = "smartPlatformRN/Colors.xcassets"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = folder.assetcatalog; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +87,8 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */,
+				FFCFDCE55CAF47EDA1FFEF7A /* BootSplash.storyboard */,
+				6328BB36851A427A90A3BF86 /* Colors.xcassets */,
 			);
 			name = "smartPlatformRN";
 			sourceTree = "<group>";
@@ -230,6 +236,8 @@
 				D6DB16DFAFE64625A9995D2D /* Outfit-Regular.ttf in Resources */,
 				117E696A7DBE42CAAC0077ED /* Outfit-SemiBold.ttf in Resources */,
 				78DBDC8207D94F21A789F6FF /* Outfit-Thin.ttf in Resources */,
+				AE63CA44A2E540D1877D49D2 /* BootSplash.storyboard in Resources */,
+				07270548F2504C42B63D2A49 /* Colors.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,7 +347,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "smartPlatformRN/Info.plist";
-             INFOPLIST_KEY_CFBundleDisplayName = "smartPlatformRN";
+				INFOPLIST_KEY_CFBundleDisplayName = "smartPlatformRN";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -367,7 +375,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				INFOPLIST_FILE = "smartPlatformRN/Info.plist";
-             INFOPLIST_KEY_CFBundleDisplayName = "smartPlatformRN";
+				INFOPLIST_KEY_CFBundleDisplayName = "smartPlatformRN";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
