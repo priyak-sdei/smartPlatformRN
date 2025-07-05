@@ -8,6 +8,7 @@ interface UseLogin {
   setEmail: (val: string) => void;
   setPassword: (val: string) => void;
   login: () => Promise<void>;
+  isValid: () => boolean;
 }
 
 export function useLogin(): UseLogin {
@@ -34,6 +35,14 @@ export function useLogin(): UseLogin {
     }
   };
 
+  function validateEmail(emailToValidate: string): boolean {
+    // Simple email regex for demonstration
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailToValidate);
+  }
+
+  // Method to check if fields are valid and filled
+  const isValid = () => validateEmail(email) && !!password;
+
   return {
     email,
     password,
@@ -42,5 +51,6 @@ export function useLogin(): UseLogin {
     setEmail,
     setPassword,
     login,
+    isValid,
   };
 }

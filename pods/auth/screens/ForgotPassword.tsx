@@ -4,6 +4,7 @@ import { Back } from '@shared/theme';
 import { moderateScale, spacing, verticalScale } from '@src/theme';
 import React from 'react';
 import { StyleSheet } from 'react-native';
+import { useForgotPassword } from '../hooks/useForgotPassword';
 type AuthStackParamList = {
   Login: undefined;
   SignUp: undefined;
@@ -18,6 +19,8 @@ interface ForgotPasswordProps {
   navigation: ForgotPasswordPropsNavigationProp;
 }
 const ForgotPassword = ({ navigation: _navigation }: ForgotPasswordProps) => {
+  const { email, setEmail, handleForgotPassword, isValid } =
+    useForgotPassword();
   return (
     <Layout>
       <Layout.Header
@@ -32,15 +35,21 @@ const ForgotPassword = ({ navigation: _navigation }: ForgotPasswordProps) => {
         />
 
         <TextInput
-          onChangeText={txt => console.log(txt, 'jfhfh1')}
+          value={email}
+          onChangeText={setEmail}
+          keyboardType="email-address"
           labelTx="login.email"
           placeholderTx={'login.emailPlaceholder'}
         />
 
         <Button
           tx={'login.restLink'}
-          onPress={() => _navigation.navigate('SignUp')}
+          onPress={() => {
+            handleForgotPassword();
+            _navigation.navigate('SignUp');
+          }}
           style={styles.button}
+          disabled={!isValid()}
         />
       </Layout.Body>
     </Layout>

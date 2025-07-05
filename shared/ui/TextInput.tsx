@@ -76,6 +76,7 @@ const TextInput: React.FC<CustomTextInputProps> = ({
           style={[styles.input, style]}
           {...props}
           autoCapitalize="none"
+          autoCorrect={false}
           placeholder={i18nPlaceholder}
         />
         {rightIcon ? (

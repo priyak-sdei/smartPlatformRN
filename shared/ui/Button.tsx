@@ -17,6 +17,7 @@ interface ButtonProps extends TouchableOpacityProps {
   textStyle?: TextStyle;
   leftIcon?: React.ReactNode;
   rightIcon?: React.ReactNode;
+  disabled?: boolean;
 }
 
 const Button: React.FC<ButtonProps> = ({
@@ -27,13 +28,14 @@ const Button: React.FC<ButtonProps> = ({
   textStyle,
   leftIcon,
   rightIcon,
+  disabled = true,
   ...props
 }) => {
   const { theme } = useTheme();
   const styles = getStyles(theme);
   return (
     <TouchableOpacity
-      style={[styles.button, style]}
+      style={[styles.button, style, disabled && styles.disabled]}
       activeOpacity={0.8}
       {...props}
     >
@@ -63,6 +65,9 @@ const getStyles = (theme: any) =>
       color: theme.colors.background,
       fontFamily: fonts.bold,
       marginHorizontal: moderateScale(spacing.xxs),
+    },
+    disabled: {
+      opacity: 0.6,
     },
   });
 

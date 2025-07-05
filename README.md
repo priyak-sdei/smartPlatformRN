@@ -14,6 +14,8 @@ SmartPlatform is a modular React Native project designed for scalability, mainta
 - **Environment Variable Support:** Supports multiple environments (`.env`, `.env.dev`, `.env.staging`) for easy configuration of API endpoints and other secrets.
 - **Automatic Dark/Light Mode:** The app automatically adapts to the system's theme.
 - **App Icon & Splash Generation:** Automated scripts for generating app icons and splash screens.
+- **Pre-commit Linting:** Uses Husky and lint-staged to automatically lint and fix code before every commit.
+
 
 ---
 

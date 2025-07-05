@@ -29,7 +29,7 @@ const Login = ({ navigation: _navigation }: LoginProps) => {
   const { theme } = useTheme();
   const styles = getStyles(theme);
   const { t } = useTranslation();
-  const { email, password, setEmail, setPassword, login } = useLogin();
+  const { email, password, setEmail, setPassword, login, isValid } = useLogin();
 
   return (
     <Layout>
@@ -70,8 +70,9 @@ const Login = ({ navigation: _navigation }: LoginProps) => {
         />
         <Button
           tx={'login.signIn'}
-          onPress={() => _navigation.navigate('SignUp')}
+          onPress={() => login()}
           style={styles.button}
+          disabled={!isValid()}
         />
         <Text
           style={styles.bottomText}

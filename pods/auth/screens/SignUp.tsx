@@ -11,6 +11,7 @@ import {
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { StyleSheet } from 'react-native';
+import { useSignUp } from '../hooks/useSignUp';
 
 type AuthStackParamList = {
   Login: undefined;
@@ -23,6 +24,18 @@ interface SignUpProps {
 }
 
 const SignUp = ({ navigation: _navigation }: SignUpProps) => {
+  const {
+    name,
+    setName,
+    email,
+    setEmail,
+    password,
+    setPassword,
+    confirmPassword,
+    setConfirmPassword,
+    handleSignUp,
+    isValid,
+  } = useSignUp();
   const { t } = useTranslation();
   const { theme } = useTheme();
   const styles = getStyles(theme);
@@ -34,27 +47,41 @@ const SignUp = ({ navigation: _navigation }: SignUpProps) => {
       />
       <Layout.Body scrollable={true}>
         <Text variant="title" tx="login.signUp" style={styles.titleMargin} />
-
         <TextInput
-          onChangeText={txt => console.log(txt, 'jfhfh1')}
+          value={name}
+          onChangeText={setName}
+          autoCapitalize="words"
           labelTx="auth.name"
           placeholderTx={'auth.name'}
         />
         <TextInput
-          onChangeText={txt => console.log(txt, 'jfhfh1')}
+          value={email}
+          onChangeText={setEmail}
+          keyboardType="email-address"
           labelTx="login.email"
           placeholderTx={'login.email'}
         />
         <TextInput
+          value={password}
+          onChangeText={setPassword}
+          secureTextEntry={true}
           labelTx="auth.createPassword"
           placeholderTx={'auth.createPassword'}
         />
         <TextInput
+          value={confirmPassword}
+          onChangeText={setConfirmPassword}
+          secureTextEntry={true}
           labelTx="auth.confirmPassword"
           placeholderTx={'auth.confirmPassword'}
         />
 
-        <Button tx={'login.signUp'} style={styles.button} />
+        <Button
+          tx={'login.signUp'}
+          style={styles.button}
+          onPress={handleSignUp}
+          disabled={!isValid()}
+        />
 
         <Text
           style={styles.bottomText}
