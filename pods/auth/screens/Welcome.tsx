@@ -1,4 +1,3 @@
-import type { StackNavigationProp } from '@react-navigation/stack';
 import { Layout, Text } from '@shared/index';
 import {
   colors,
@@ -11,16 +10,10 @@ import {
 import React from 'react';
 import { Image, StyleSheet, View } from 'react-native';
 import AppIntroSlider from 'react-native-app-intro-slider';
-
-type AuthStackParamList = {
-  Login: undefined;
-  SignUp: undefined;
-};
-
-type WelcomePropsNavigationProp = StackNavigationProp<AuthStackParamList>;
+import { AuthNavigationProp } from '../types';
 
 interface WelcomeProps {
-  navigation: WelcomePropsNavigationProp;
+  navigation: AuthNavigationProp<'Welcome'>;
 }
 const data = [
   {

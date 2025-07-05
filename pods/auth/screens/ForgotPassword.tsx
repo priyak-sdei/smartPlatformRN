@@ -1,22 +1,13 @@
-import type { StackNavigationProp } from '@react-navigation/stack';
 import { Button, Layout, Text, TextInput } from '@shared/index';
 import { Back } from '@shared/theme';
 import { moderateScale, spacing, verticalScale } from '@src/theme';
 import React from 'react';
 import { StyleSheet } from 'react-native';
 import { useForgotPassword } from '../hooks/useForgotPassword';
-type AuthStackParamList = {
-  Login: undefined;
-  SignUp: undefined;
-};
-
-type ForgotPasswordPropsNavigationProp = StackNavigationProp<
-  AuthStackParamList,
-  'Login'
->;
+import type { AuthNavigationProp } from '../types';
 
 interface ForgotPasswordProps {
-  navigation: ForgotPasswordPropsNavigationProp;
+  navigation: AuthNavigationProp<'ForgotPassword'>;
 }
 const ForgotPassword = ({ navigation: _navigation }: ForgotPasswordProps) => {
   const { email, setEmail, handleForgotPassword, isValid } =

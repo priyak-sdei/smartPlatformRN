@@ -1,4 +1,4 @@
-import type { StackNavigationProp } from '@react-navigation/stack';
+import type { AuthNavigationProp } from '../types';
 import { Button, Layout, Text, TextInput } from '@shared/index';
 import { Back } from '@shared/theme';
 import {
@@ -13,14 +13,8 @@ import { useTranslation } from 'react-i18next';
 import { StyleSheet } from 'react-native';
 import { useSignUp } from '../hooks/useSignUp';
 
-type AuthStackParamList = {
-  Login: undefined;
-};
-
-type SignUpPropsNavigationProp = StackNavigationProp<AuthStackParamList>;
-
 interface SignUpProps {
-  navigation: SignUpPropsNavigationProp;
+  navigation: AuthNavigationProp<'SignUp'>;
 }
 
 const SignUp = ({ navigation: _navigation }: SignUpProps) => {

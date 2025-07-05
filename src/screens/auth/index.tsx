@@ -11,7 +11,7 @@ const AuthModule = () => {
       style={[styles.container, { backgroundColor: theme.colors.background }]}
     >
       <Text style={[styles.text, { color: theme.colors.text }]}>
-        671Welcome to Smart Platform!
+        Welcome to Smart Platform!
       </Text>
     </View>
   );
