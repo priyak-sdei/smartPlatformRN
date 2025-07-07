@@ -4,6 +4,14 @@ SmartPlatform is a modular React Native project designed for scalability, mainta
 
 ---
 
+## ✅ Prerequisites
+
+Before you begin, ensure you have the following installed:
+
+- **Node.js**: Version `>=20.18.1`
+
+---
+
 ## 🚀 Features
 
 - **Pods Architecture:** Each feature (e.g., Auth) is a self-contained module with its own screens, navigation, and logic.
@@ -16,7 +24,6 @@ SmartPlatform is a modular React Native project designed for scalability, mainta
 - **App Icon & Splash Generation:** Automated scripts for generating app icons and splash screens.
 - **Pre-commit Linting:** Uses Husky and lint-staged to automatically lint and fix code before every commit.
 
-
 ---
 
 ## 📁 Folder Structure
@@ -26,7 +33,7 @@ smartPlatformRN/
 │
 ├── android/                  # Android native project
 ├── ios/                      # iOS native project
-├── smart-assets/             #App icon and splash images   
+├── smart-assets/             #App icon and splash images
 ├── src/
 │   ├── navigation/           # App and feature navigators
 │   ├── screens/              # App-level screens (if any)
@@ -79,7 +86,6 @@ smartPlatformRN/
 
 - Centralized in `src/theme/` for colors, fonts, and spacing.
 - Supports automatic switching between light and dark modes based on system settings.
-
 
 ---
 

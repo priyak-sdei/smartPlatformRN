@@ -7,7 +7,7 @@ import {
   View,
 } from 'react-native';
 import { AppNavigator } from './navigation';
-import { ThemeProvider } from '@src/theme/ThemeProvide';
+import { ThemeProvider } from '@src/theme/ThemeProvider';
 import { initI18n } from './i18n/i18n';
 import { Provider } from 'react-redux';
 import { store } from '@redux/store';

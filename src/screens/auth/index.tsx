@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
-import { useTheme } from '../../theme/ThemeProvide';
+import { useTheme } from '../../theme/ThemeProvider';
 import { fonts } from '../../theme';
 
 const AuthModule = () => {

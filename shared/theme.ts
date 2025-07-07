@@ -10,6 +10,6 @@ export {
   verticalScale,
   fonts,
 } from '@theme/index';
-export { useTheme } from '@src/theme/ThemeProvide';
+export { useTheme } from '@src/theme/ThemeProvider';
 export { IMAGES } from '@assets/images/index';
 export { Back } from '@assets/svg/index';
