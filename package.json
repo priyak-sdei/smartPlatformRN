@@ -16,7 +16,7 @@
     "postassets:set-icon": "echo 'App icons generated. Remember to clean builds (./android/gradlew clean, rm -rf ios/build) and reinstall pods (cd ios && pod install --repo-update) before rebuilding.'",
     "assets:generate-splash": "node ./scripts/generate-splash.js",
     "customize-app": "yarn assets:set-icon && yarn assets:generate-splash && echo 'App customization complete! Clean builds and reinstall pods.'",
-    "prepare": "husky install"
+    "prepare": "husky"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
