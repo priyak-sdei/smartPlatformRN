@@ -59,7 +59,7 @@ const Welcome = ({ navigation: _navigation }: WelcomeProps) => {
     />
   );
   return (
-    <Layout>
+    <Layout fullScreen={true}>
       <Layout.Body scrollable={true} style={styles.noPadding}>
         <AppIntroSlider
           keyExtractor={_keyExtractor}

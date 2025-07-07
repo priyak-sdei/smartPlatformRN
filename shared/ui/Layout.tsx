@@ -15,6 +15,8 @@ import Header from './Header';
 
 interface LayoutProps extends ViewProps {
   children: ReactNode;
+  hideStatusBar?: boolean;
+  fullScreen?: boolean;
 }
 
 interface LayoutBodyProps extends ViewProps, ScrollViewProps {
@@ -32,7 +34,7 @@ const Body: React.FC<LayoutBodyProps> = ({
   const styles = getStyles(theme);
   return scrollable ? (
     <KeyboardAvoidingView
-      style={styles.flex1}
+      style={styles.container}
       behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
     >
       <ScrollView
@@ -54,19 +56,31 @@ const Body: React.FC<LayoutBodyProps> = ({
 const Layout: React.FC<LayoutProps> & {
   Header: typeof Header;
   Body: typeof Body;
-} = ({ children, style, ...props }) => {
+} = ({
+  children,
+  style,
+  hideStatusBar = false,
+  fullScreen = false,
+  ...props
+}) => {
   const { theme, isDark } = useTheme();
   const styles = getStyles(theme);
 
-  return (
+  return fullScreen ? (
+    <View style={[styles.safeArea, style]} {...props}>
+      <StatusBar hidden={hideStatusBar} translucent />
+      {children}
+    </View>
+  ) : (
     <SafeAreaView
       style={[styles.safeArea, style]}
       edges={['top', 'left', 'right']}
       {...props}
     >
       <StatusBar
-        //   backgroundColor={theme.colors.background} // or any custom color
-        barStyle={isDark ? 'dark-content' : 'dark-content'}
+        backgroundColor={theme.colors.background}
+        barStyle={isDark ? 'light-content' : 'dark-content'}
+        hidden={hideStatusBar}
       />
       <View style={styles.container}>{children}</View>
     </SafeAreaView>
@@ -82,6 +96,7 @@ const getStyles = (theme: any) =>
       flex: 1,
       backgroundColor: theme.colors.background,
     },
+
     container: {
       flex: 1,
     },
@@ -90,9 +105,7 @@ const getStyles = (theme: any) =>
       padding: moderateScale(spacing.s),
       backgroundColor: theme.colors.background,
     },
-    flex1: {
-      flex: 1,
-    },
+
     contentContainer: {
       flexGrow: 1,
     },

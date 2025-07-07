@@ -6,6 +6,7 @@ import {
   useColorScheme,
   View,
 } from 'react-native';
+
 import { AppNavigator } from './navigation';
 import { ThemeProvider } from '@src/theme/ThemeProvider';
 import { initI18n } from './i18n/i18n';
