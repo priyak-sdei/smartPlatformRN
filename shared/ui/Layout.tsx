@@ -8,7 +8,9 @@ import {
   ScrollViewProps,
   KeyboardAvoidingView,
   Platform,
+  StatusBar,
 } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import Header from './Header';
 
 interface LayoutProps extends ViewProps {
@@ -49,17 +51,25 @@ const Body: React.FC<LayoutBodyProps> = ({
   );
 };
 
-// Compound component pattern
 const Layout: React.FC<LayoutProps> & {
   Header: typeof Header;
   Body: typeof Body;
 } = ({ children, style, ...props }) => {
-  const { theme } = useTheme();
+  const { theme, isDark } = useTheme();
   const styles = getStyles(theme);
+
   return (
-    <View style={[styles.container, style]} {...props}>
-      {children}
-    </View>
+    <SafeAreaView
+      style={[styles.safeArea, style]}
+      edges={['top', 'left', 'right']}
+      {...props}
+    >
+      <StatusBar
+        //   backgroundColor={theme.colors.background} // or any custom color
+        barStyle={isDark ? 'dark-content' : 'dark-content'}
+      />
+      <View style={styles.container}>{children}</View>
+    </SafeAreaView>
   );
 };
 
@@ -68,6 +78,10 @@ Layout.Body = Body;
 
 const getStyles = (theme: any) =>
   StyleSheet.create({
+    safeArea: {
+      flex: 1,
+      backgroundColor: theme.colors.background,
+    },
     container: {
       flex: 1,
     },

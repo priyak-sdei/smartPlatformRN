@@ -13,7 +13,7 @@ import { Provider } from 'react-redux';
 import { store } from '@redux/store';
 import { useAppDispatch } from '@redux/hooks';
 import { setTheme } from '@redux/slices/themeSlice';
-
+import BootSplash from 'react-native-bootsplash';
 const AppContent = () => {
   const dispatch = useAppDispatch();
   const isDarkMode = useColorScheme() === 'dark';
@@ -27,6 +27,12 @@ const AppContent = () => {
 
     return () => subscription.remove();
   }, [dispatch]);
+
+  useEffect(() => {
+    BootSplash.hide({ fade: true }).catch(err =>
+      console.warn('BootSplash hide error:', err),
+    );
+  }, []);
 
   return (
     <ThemeProvider>

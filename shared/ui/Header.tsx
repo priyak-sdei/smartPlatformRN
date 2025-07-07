@@ -76,10 +76,8 @@ const getStyles = (theme: any) =>
   StyleSheet.create({
     container: {
       flexDirection: 'row',
-      alignItems: 'center',
-      height: moderateScale(80),
+      height: moderateScale(50),
       backgroundColor: theme.colors.background,
-
       paddingHorizontal: moderateScale(spacing.s),
       justifyContent: 'space-between',
     },
