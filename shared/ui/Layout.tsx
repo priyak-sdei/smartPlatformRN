@@ -1,16 +1,14 @@
-import { moderateScale, spacing, useTheme } from '../theme';
 import React, { ReactNode } from 'react';
 import {
-  View,
-  ScrollView,
-  StyleSheet,
-  ViewProps,
   ScrollViewProps,
-  KeyboardAvoidingView,
-  Platform,
   StatusBar,
+  StyleSheet,
+  View,
+  ViewProps,
 } from 'react-native';
+import { KeyboardAwareScrollView } from 'react-native-keyboard-controller';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import { moderateScale, spacing, useTheme } from '../theme';
 import Header from './Header';
 
 interface LayoutProps extends ViewProps {
@@ -33,19 +31,15 @@ const Body: React.FC<LayoutBodyProps> = ({
   const { theme } = useTheme();
   const styles = getStyles(theme);
   return scrollable ? (
-    <KeyboardAvoidingView
-      style={styles.container}
-      behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
+    <KeyboardAwareScrollView
+      style={[styles.body, style]}
+      contentContainerStyle={styles.contentContainer}
+      showsVerticalScrollIndicator={false}
+      keyboardShouldPersistTaps="handled"
+      {...props}
     >
-      <ScrollView
-        style={[styles.body, style]}
-        contentContainerStyle={styles.contentContainer}
-        keyboardShouldPersistTaps="handled"
-        {...props}
-      >
-        {children}
-      </ScrollView>
-    </KeyboardAvoidingView>
+      {children}
+    </KeyboardAwareScrollView>
   ) : (
     <View style={[styles.body, style]} {...props}>
       {children}

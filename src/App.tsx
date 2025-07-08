@@ -15,6 +15,8 @@ import { store } from '@redux/store';
 import { useAppDispatch } from '@redux/hooks';
 import { setTheme } from '@redux/slices/themeSlice';
 import BootSplash from 'react-native-bootsplash';
+import { KeyboardProvider } from 'react-native-keyboard-controller';
+
 const AppContent = () => {
   const dispatch = useAppDispatch();
   const isDarkMode = useColorScheme() === 'dark';
@@ -56,7 +58,9 @@ function App() {
 
   return (
     <Provider store={store}>
-      <AppContent />
+      <KeyboardProvider>
+        <AppContent />
+      </KeyboardProvider>
     </Provider>
   );
 }
