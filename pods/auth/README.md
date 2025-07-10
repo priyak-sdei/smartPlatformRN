@@ -18,7 +18,6 @@ This pod provides all authentication-related screens and logic for the SmartPlat
 ```
 pods/
 └── auth/
-    ├── navigation/         # Auth stack navigator
     ├── screens/            # All authentication screens
     │   ├── Welcome.tsx
     │   ├── Login.tsx
