@@ -11,4 +11,7 @@ export const colors: ColorPalette = {
   placeholder: 'rgba(10, 15, 15, 0.5)',
   label: '#0A0F0F',
   transparent: 'transparent',
+  tabActive: '#d92029',
+  tabInactive: '#0A0F0F'
+
 };
