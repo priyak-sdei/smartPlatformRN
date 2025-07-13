@@ -1,3 +1,5 @@
+import { useAppDispatch } from '@src/redux/hooks';
+import { setUser } from '@src/redux/slices/userSlice';
 import { useState } from 'react';
 
 interface UseLogin {
@@ -16,6 +18,7 @@ export function useLogin(): UseLogin {
   const [password, setPassword] = useState('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const dispatch = useAppDispatch();
 
   const login = async () => {
     setLoading(true);
@@ -26,7 +29,9 @@ export function useLogin(): UseLogin {
         throw new Error('Email and password are required.');
       }
       // Simulate API call
-      await new Promise(res => setTimeout(res, 1000));
+      await new Promise(_res => {
+        dispatch(setUser(email));
+      });
       // Handle successful login here
     } catch (e: any) {
       setError(e.message || 'Login failed');
