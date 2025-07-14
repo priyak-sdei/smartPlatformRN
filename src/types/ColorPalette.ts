@@ -9,4 +9,6 @@ export interface ColorPalette {
   placeholder: string;
   label: string;
   transparent: string;
+  internetStripOn: string;
+  internetStripOff: string
 }

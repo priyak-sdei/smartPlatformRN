@@ -11,4 +11,6 @@ export const colors: ColorPalette = {
   placeholder: 'rgba(10, 15, 15, 0.5)',
   label: '#0A0F0F',
   transparent: 'transparent',
+  internetStripOff: '#FF3B30',
+  internetStripOn: '#34C759'
 };

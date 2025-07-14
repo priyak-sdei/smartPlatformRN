@@ -16,6 +16,8 @@ import { useAppDispatch } from '@redux/hooks';
 import { setTheme } from '@redux/slices/themeSlice';
 import BootSplash from 'react-native-bootsplash';
 import { KeyboardProvider } from 'react-native-keyboard-controller';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
+import ConnectionStatusStrip from './components/ConnectionStatusStrip';
 
 const AppContent = () => {
   const dispatch = useAppDispatch();
@@ -58,9 +60,12 @@ function App() {
 
   return (
     <Provider store={store}>
-      <KeyboardProvider>
-        <AppContent />
-      </KeyboardProvider>
+      <SafeAreaProvider>
+        <KeyboardProvider>
+          <AppContent />
+          <ConnectionStatusStrip />
+        </KeyboardProvider>
+      </SafeAreaProvider>
     </Provider>
   );
 }
