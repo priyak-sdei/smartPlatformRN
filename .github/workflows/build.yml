@@ -38,3 +38,16 @@ jobs:
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
+
+      - name: Signal SonarQube Success
+        run: echo "SonarQube analysis completed successfully"
+        if: success()
+
+  sonarqube-success:
+    name: SonarQube Analysis Success
+    runs-on: ubuntu-latest
+    needs: build
+    if: needs.build.result == 'success'
+    steps:
+      - name: SonarQube Analysis Passed
+        run: echo "SonarQube analysis passed - Android build can proceed"

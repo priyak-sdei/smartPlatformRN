@@ -1,10 +1,9 @@
 name: Android APK Build
 
 on:
-  push:
-    branches:
-      - main
-  pull_request:
+  workflow_run:
+    workflows: ["Build and Analyze"]
+    types: [completed]
     branches:
       - main
 
@@ -12,6 +11,7 @@ jobs:
   build:
     name: Build Android APK
     runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
 
     strategy:
       matrix:
@@ -85,3 +85,4 @@ jobs:
           echo "- **APK Generated:** app-release.apk ✅" >> $GITHUB_STEP_SUMMARY
           echo "- **Gradle Cache Used:** Enabled ⚡" >> $GITHUB_STEP_SUMMARY
           echo "- **Java Version:** 17 ☕" >> $GITHUB_STEP_SUMMARY
+          echo "- **SonarQube Status:** Passed ✅" >> $GITHUB_STEP_SUMMARY
