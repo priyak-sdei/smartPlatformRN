@@ -8,10 +8,11 @@ import type { AuthNavigationProp } from '../types';
 
 interface ForgotPasswordProps {
   navigation: AuthNavigationProp<'ForgotPassword'>;
+  useForgotPasswordHook?: typeof useForgotPassword;
 }
-const ForgotPassword = ({ navigation: _navigation }: ForgotPasswordProps) => {
+const ForgotPassword = ({ navigation: _navigation, useForgotPasswordHook = useForgotPassword }: ForgotPasswordProps) => {
   const { email, setEmail, handleForgotPassword, isValid } =
-    useForgotPassword();
+    useForgotPasswordHook();
   return (
     <Layout>
       <Layout.Header

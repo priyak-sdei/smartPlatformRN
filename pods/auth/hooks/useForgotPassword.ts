@@ -11,7 +11,10 @@ interface UseForgotPassword {
   isValid: () => boolean;
 }
 
-export const useForgotPassword = (): UseForgotPassword => {
+// Allow injection of async logic for testability
+export const useForgotPassword = (
+  requestPasswordReset?: (email: string) => Promise<void>
+): UseForgotPassword => {
   const [email, setEmail] = useState('');
 
   const validateForm = () => {
@@ -21,23 +24,19 @@ export const useForgotPassword = (): UseForgotPassword => {
     return true;
   };
 
+  const defaultRequest = async (email: string) => {
+    await new Promise(resolve => setTimeout(resolve, 1500));
+    console.log('Simulated password reset request successful for:', email);
+  };
+
   const handleForgotPassword = async () => {
     if (!validateForm()) {
       return;
     }
 
     try {
-      // --- Simulate API Call ---
-      await new Promise(resolve => setTimeout(resolve, 1500)); // Simulate network delay
-      // In a real app, you would call your authentication service here:
-      // await someAuthService.requestPasswordReset(email);
-
-      console.log('Simulated password reset request successful for:', email);
-
+      await (requestPasswordReset || defaultRequest)(email);
       setEmail(''); // Optionally clear the email field on success
-
-      // Optionally navigate or show further instructions
-      // navigation.navigate('Login');
     } catch (err: any) {
       console.error('Forgot password error:', err);
     } finally {

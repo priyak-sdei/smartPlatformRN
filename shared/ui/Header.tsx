@@ -13,6 +13,7 @@ interface HeaderProps extends ViewProps {
   title?: string;
   leftIcon?: ReactElement;
   leftIconColor?: string;
+  leftTestID?: string;
   centerComponent?: ReactElement;
   rightComponent?: ReactElement;
   BottomBorder?: boolean;
@@ -24,6 +25,7 @@ interface HeaderProps extends ViewProps {
 const Header: React.FC<HeaderProps> = ({
   title,
   leftIcon,
+  leftTestID,
   centerComponent,
   rightComponent,
   BottomBorder,
@@ -44,6 +46,7 @@ const Header: React.FC<HeaderProps> = ({
           <TouchableOpacity
             onPress={onLeftPress}
             hitSlop={{ top: 10, bottom: 10, left: 10, right: 10 }}
+            testID={leftTestID}
           >
             {leftIcon}
           </TouchableOpacity>
@@ -53,10 +56,10 @@ const Header: React.FC<HeaderProps> = ({
         {centerComponent
           ? centerComponent
           : !!title && (
-              <Text style={styles.title} numberOfLines={1}>
-                {title}
-              </Text>
-            )}
+            <Text style={styles.title} numberOfLines={1}>
+              {title}
+            </Text>
+          )}
       </View>
       <View style={styles.side}>
         {rightComponent ? (

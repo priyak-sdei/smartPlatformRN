@@ -15,9 +15,10 @@ import { useSignUp } from '../hooks/useSignUp';
 
 interface SignUpProps {
   navigation: AuthNavigationProp<'SignUp'>;
+  useSignUpHook?: typeof useSignUp;
 }
 
-const SignUp = ({ navigation: _navigation }: SignUpProps) => {
+const SignUp = ({ navigation: _navigation, useSignUpHook = useSignUp }: SignUpProps) => {
   const {
     name,
     setName,
@@ -29,7 +30,7 @@ const SignUp = ({ navigation: _navigation }: SignUpProps) => {
     setConfirmPassword,
     handleSignUp,
     isValid,
-  } = useSignUp();
+  } = useSignUpHook();
   const { t } = useTranslation();
   const { theme } = useTheme();
   const styles = getStyles(theme);
@@ -38,6 +39,7 @@ const SignUp = ({ navigation: _navigation }: SignUpProps) => {
       <Layout.Header
         leftIcon={<Back />}
         onLeftPress={() => _navigation.goBack()}
+        leftTestID="header-left"
       />
       <Layout.Body scrollable={true}>
         <Text variant="title" tx="login.signUp" style={styles.titleMargin} />

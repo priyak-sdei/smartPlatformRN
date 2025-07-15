@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AppNavigator matches snapshot: AppNavigator component 1`] = `
+<View
+  style={
+    {
+      "flex": 1,
+    }
+  }
+  testID="app-navigator-root"
+/>
+`;

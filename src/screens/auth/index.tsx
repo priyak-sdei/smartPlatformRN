@@ -9,6 +9,7 @@ const AuthModule = () => {
   return (
     <View
       style={[styles.container, { backgroundColor: theme.colors.background }]}
+      testID="auth-index-root"
     >
       <Text style={[styles.text, { color: theme.colors.text }]}>
         Welcome to Smart Platform!

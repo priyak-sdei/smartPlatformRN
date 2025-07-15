@@ -35,8 +35,11 @@ const Button: React.FC<ButtonProps> = ({
   const styles = getStyles(theme);
   return (
     <TouchableOpacity
+      onPress={disabled ? undefined : props.onPress}
       style={[styles.button, style, disabled && styles.disabled]}
-      activeOpacity={0.8}
+      disabled={disabled}
+      accessibilityState={{ disabled }}
+      testID={props.testID || 'button-root'}
       {...props}
     >
       {leftIcon && <>{leftIcon}</>}

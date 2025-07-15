@@ -1,5 +1,6 @@
 import { StyleSheet } from 'react-native';
-import { colors, moderateScale } from './index';
+import { colors } from './colors';
+import { moderateScale } from './metrics';
 
 /*
  * generated with https://ethercreative.github.io/react-native-shadow-generator/
