@@ -12,6 +12,8 @@ export const colors: ColorPalette = {
   label: '#0A0F0F',
   transparent: 'transparent',
   tabActive: '#d92029',
-  tabInactive: '#0A0F0F'
+  tabInactive: '#0A0F0F',
 
+  internetStripOff: '#FF3B30',
+  internetStripOn: '#34C759',
 };

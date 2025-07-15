@@ -38,6 +38,8 @@ const en = {
     error: 'Error',
     success: 'Success',
     loading: 'Loading...',
+    connection_restored: 'Internet connection restored',
+    connection_lost: 'You are offline',
   },
 
   // Validation & Errors

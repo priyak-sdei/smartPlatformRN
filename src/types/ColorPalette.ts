@@ -9,6 +9,8 @@ export interface ColorPalette {
   placeholder: string;
   label: string;
   transparent: string;
-  tabActive: string,
-  tabInactive: string
+  tabActive: string;
+  tabInactive: string;
+  internetStripOn: string;
+  internetStripOff: string;
 }
