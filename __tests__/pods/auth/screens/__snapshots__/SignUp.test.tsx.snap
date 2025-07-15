@@ -1,0 +1,496 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SignUp Screen matches snapshot: SignUp screen 1`] = `
+<RNCSafeAreaView
+  edges={
+    {
+      "bottom": "off",
+      "left": "additive",
+      "right": "additive",
+      "top": "additive",
+    }
+  }
+  style={
+    [
+      {
+        "backgroundColor": "#FFFFFF",
+        "flex": 1,
+      },
+      undefined,
+    ]
+  }
+>
+  <View
+    style={
+      {
+        "flex": 1,
+      }
+    }
+  >
+    <View
+      style={
+        [
+          {
+            "backgroundColor": "#FFFFFF",
+            "flexDirection": "row",
+            "height": 75,
+            "justifyContent": "space-between",
+            "paddingHorizontal": 24,
+          },
+          undefined,
+          undefined,
+        ]
+      }
+    >
+      <View
+        style={
+          {
+            "alignItems": "center",
+            "justifyContent": "center",
+            "width": 60,
+          }
+        }
+      >
+        <View
+          accessibilityState={
+            {
+              "busy": undefined,
+              "checked": undefined,
+              "disabled": undefined,
+              "expanded": undefined,
+              "selected": undefined,
+            }
+          }
+          accessibilityValue={
+            {
+              "max": undefined,
+              "min": undefined,
+              "now": undefined,
+              "text": undefined,
+            }
+          }
+          accessible={true}
+          collapsable={false}
+          focusable={true}
+          hitSlop={
+            {
+              "bottom": 10,
+              "left": 10,
+              "right": 10,
+              "top": 10,
+            }
+          }
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            {
+              "opacity": 1,
+            }
+          }
+          testID="header-left"
+        >
+          <test-file-stub />
+        </View>
+      </View>
+      <View
+        style={
+          {
+            "alignItems": "center",
+            "flex": 1,
+            "justifyContent": "center",
+            "minWidth": 0,
+          }
+        }
+      />
+      <View
+        style={
+          {
+            "alignItems": "center",
+            "justifyContent": "center",
+            "width": 60,
+          }
+        }
+      />
+    </View>
+    <Text
+      style={
+        [
+          {
+            "color": "#001D51",
+            "fontFamily": "Outfit-Bold",
+            "fontSize": 42,
+          },
+          {
+            "marginBottom": 24,
+          },
+        ]
+      }
+    >
+      login.signUp
+    </Text>
+    <View
+      style={
+        [
+          {
+            "marginBottom": 26.285714285714285,
+            "width": "100%",
+          },
+          undefined,
+        ]
+      }
+    >
+      <Text
+        style={
+          [
+            {
+              "color": "#0A0F0F",
+              "fontFamily": "Outfit-Regular",
+              "fontSize": 24,
+            },
+            [
+              {
+                "marginBottom": 13.142857142857142,
+              },
+              undefined,
+            ],
+          ]
+        }
+      >
+        auth.name
+      </Text>
+      <View
+        style={
+          {
+            "alignItems": "center",
+            "flexDirection": "row",
+          }
+        }
+      >
+        <TextInput
+          autoCapitalize="none"
+          autoCorrect={false}
+          placeholder="auth.name"
+          placeholderTextColor="rgba(10, 15, 15, 0.5)"
+          selectionColor="#d92029"
+          style={
+            [
+              {
+                "borderColor": "#0A0F0F1A",
+                "borderRadius": 12,
+                "borderWidth": 1.5,
+                "color": "#0A0F0F",
+                "flex": 1,
+                "fontFamily": "Outfit-Medium",
+                "fontSize": 24,
+                "padding": 18,
+              },
+              undefined,
+            ]
+          }
+        />
+      </View>
+    </View>
+    <View
+      style={
+        [
+          {
+            "marginBottom": 26.285714285714285,
+            "width": "100%",
+          },
+          undefined,
+        ]
+      }
+    >
+      <Text
+        style={
+          [
+            {
+              "color": "#0A0F0F",
+              "fontFamily": "Outfit-Regular",
+              "fontSize": 24,
+            },
+            [
+              {
+                "marginBottom": 13.142857142857142,
+              },
+              undefined,
+            ],
+          ]
+        }
+      >
+        login.email
+      </Text>
+      <View
+        style={
+          {
+            "alignItems": "center",
+            "flexDirection": "row",
+          }
+        }
+      >
+        <TextInput
+          autoCapitalize="none"
+          autoCorrect={false}
+          keyboardType="email-address"
+          onChangeText={[MockFunction]}
+          placeholder="login.email"
+          placeholderTextColor="rgba(10, 15, 15, 0.5)"
+          selectionColor="#d92029"
+          style={
+            [
+              {
+                "borderColor": "#0A0F0F1A",
+                "borderRadius": 12,
+                "borderWidth": 1.5,
+                "color": "#0A0F0F",
+                "flex": 1,
+                "fontFamily": "Outfit-Medium",
+                "fontSize": 24,
+                "padding": 18,
+              },
+              undefined,
+            ]
+          }
+        />
+      </View>
+    </View>
+    <View
+      style={
+        [
+          {
+            "marginBottom": 26.285714285714285,
+            "width": "100%",
+          },
+          undefined,
+        ]
+      }
+    >
+      <Text
+        style={
+          [
+            {
+              "color": "#0A0F0F",
+              "fontFamily": "Outfit-Regular",
+              "fontSize": 24,
+            },
+            [
+              {
+                "marginBottom": 13.142857142857142,
+              },
+              undefined,
+            ],
+          ]
+        }
+      >
+        auth.createPassword
+      </Text>
+      <View
+        style={
+          {
+            "alignItems": "center",
+            "flexDirection": "row",
+          }
+        }
+      >
+        <TextInput
+          autoCapitalize="none"
+          autoCorrect={false}
+          onChangeText={[MockFunction]}
+          placeholder="auth.createPassword"
+          placeholderTextColor="rgba(10, 15, 15, 0.5)"
+          secureTextEntry={true}
+          selectionColor="#d92029"
+          style={
+            [
+              {
+                "borderColor": "#0A0F0F1A",
+                "borderRadius": 12,
+                "borderWidth": 1.5,
+                "color": "#0A0F0F",
+                "flex": 1,
+                "fontFamily": "Outfit-Medium",
+                "fontSize": 24,
+                "padding": 18,
+              },
+              undefined,
+            ]
+          }
+        />
+      </View>
+    </View>
+    <View
+      style={
+        [
+          {
+            "marginBottom": 26.285714285714285,
+            "width": "100%",
+          },
+          undefined,
+        ]
+      }
+    >
+      <Text
+        style={
+          [
+            {
+              "color": "#0A0F0F",
+              "fontFamily": "Outfit-Regular",
+              "fontSize": 24,
+            },
+            [
+              {
+                "marginBottom": 13.142857142857142,
+              },
+              undefined,
+            ],
+          ]
+        }
+      >
+        auth.confirmPassword
+      </Text>
+      <View
+        style={
+          {
+            "alignItems": "center",
+            "flexDirection": "row",
+          }
+        }
+      >
+        <TextInput
+          autoCapitalize="none"
+          autoCorrect={false}
+          onChangeText={[MockFunction]}
+          placeholder="auth.confirmPassword"
+          placeholderTextColor="rgba(10, 15, 15, 0.5)"
+          secureTextEntry={true}
+          selectionColor="#d92029"
+          style={
+            [
+              {
+                "borderColor": "#0A0F0F1A",
+                "borderRadius": 12,
+                "borderWidth": 1.5,
+                "color": "#0A0F0F",
+                "flex": 1,
+                "fontFamily": "Outfit-Medium",
+                "fontSize": 24,
+                "padding": 18,
+              },
+              undefined,
+            ]
+          }
+        />
+      </View>
+    </View>
+    <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": true,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={false}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        {
+          "alignItems": "center",
+          "backgroundColor": "#d92029",
+          "borderRadius": 12,
+          "flexDirection": "row",
+          "justifyContent": "center",
+          "marginTop": 39.42857142857143,
+          "marginVertical": 12,
+          "opacity": 0.6,
+          "paddingHorizontal": 42,
+          "paddingVertical": 24,
+          "width": "100%",
+        }
+      }
+      testID="button-root"
+    >
+      <Text
+        style={
+          [
+            {
+              "color": "#0A0F0F",
+              "fontFamily": "Outfit-Regular",
+              "fontSize": 24,
+            },
+            [
+              {
+                "color": "#FFFFFF",
+                "fontFamily": "Outfit-Bold",
+                "marginHorizontal": 12,
+              },
+              undefined,
+            ],
+          ]
+        }
+      >
+        login.signUp
+      </Text>
+    </View>
+    <Text
+      onPress={[Function]}
+      style={
+        [
+          {
+            "color": "#0A0F0F",
+            "fontFamily": "Outfit-Regular",
+            "fontSize": 24,
+          },
+          {
+            "color": "#001D51",
+            "fontSize": 24,
+            "marginTop": 13.142857142857142,
+            "textAlign": "center",
+          },
+        ]
+      }
+    >
+      login.alreadyAccount
+       
+      <Text
+        style={
+          [
+            {
+              "color": "#0A0F0F",
+              "fontFamily": "Outfit-Regular",
+              "fontSize": 24,
+            },
+            {
+              "fontFamily": "Outfit-Medium",
+            },
+          ]
+        }
+      >
+        login.signIn
+      </Text>
+    </Text>
+  </View>
+</RNCSafeAreaView>
+`;

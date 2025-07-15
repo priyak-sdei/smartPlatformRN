@@ -1,4 +1,5 @@
 import React from 'react';
+import { View } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Image } from 'react-native';
 import { Home, Profile } from '@src/assets/svg';
@@ -48,22 +49,24 @@ interface TabNavigatorProps {
 const TabNavigator: React.FC<TabNavigatorProps> = ({ tabImages = getTabImages() }) => {
     const { theme } = useTheme();
     return (
-        <Tab.Navigator
-            screenOptions={({ route }) => ({
-                headerShown: false,
-                tabBarStyle: {
-                    backgroundColor: theme.colors.background,
-                    borderTopColor: theme.colors.border,
-                },
-                tabBarActiveTintColor: theme.colors.tabActive,
-                tabBarInactiveTintColor: theme.colors.tabInactive,
-                tabBarIcon: ({ color, size }) => renderTabIcon(route.name, color, size, tabImages),
-            })}
-            initialRouteName="Home"
-        >
-            <Tab.Screen name="Home" component={HomeScreen} />
-            <Tab.Screen name="Profile" component={ProfileScreen} />
-        </Tab.Navigator>
+        <View testID="tab-navigator-root" style={{ flex: 1 }}>
+            <Tab.Navigator
+                screenOptions={({ route }) => ({
+                    headerShown: false,
+                    tabBarStyle: {
+                        backgroundColor: theme.colors.background,
+                        borderTopColor: theme.colors.border,
+                    },
+                    tabBarActiveTintColor: theme.colors.tabActive,
+                    tabBarInactiveTintColor: theme.colors.tabInactive,
+                    tabBarIcon: ({ color, size }) => renderTabIcon(route.name, color, size, tabImages),
+                })}
+                initialRouteName="Home"
+            >
+                <Tab.Screen name="Home" component={HomeScreen} />
+                <Tab.Screen name="Profile" component={ProfileScreen} />
+            </Tab.Navigator>
+        </View>
     );
 };
 

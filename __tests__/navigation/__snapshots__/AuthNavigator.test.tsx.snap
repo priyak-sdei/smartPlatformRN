@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AuthNavigator matches snapshot: AuthNavigator component 1`] = `
+<View
+  style={
+    {
+      "flex": 1,
+    }
+  }
+  testID="auth-navigator-root"
+/>
+`;

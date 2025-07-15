@@ -39,7 +39,7 @@ const AppContent = () => {
 
   return (
     <ThemeProvider>
-      <View style={styles.container}>
+      <View style={styles.container} testID="app-root">
         <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
         <AppNavigator />
       </View>

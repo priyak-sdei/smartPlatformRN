@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`userSlice matches snapshot: userSlice initial state 1`] = `
+{
+  "email": null,
+}
+`;

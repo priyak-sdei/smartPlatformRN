@@ -12,7 +12,7 @@ const ProfileScreen = () => {
     };
 
     return (
-        <View style={styles.container}>
+        <View style={styles.container} testID="profile-root">
             <Text style={styles.title}>Profile Screen</Text>
             {email && <Text style={styles.email}>Email: {email}</Text>}
             <Button title="Logout" onPress={handleLogout} />

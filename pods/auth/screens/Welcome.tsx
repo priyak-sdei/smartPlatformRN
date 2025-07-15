@@ -33,31 +33,32 @@ const data = [
 ];
 type Item = (typeof data)[0];
 
-const Welcome = ({ navigation: _navigation }: WelcomeProps) => {
-  const _renderItem = ({ item }: { item: Item }) => {
-    return (
-      <View
-        style={[
-          styles.slide,
-          {
-            backgroundColor: item.bg,
-          },
-        ]}
-      >
-        <Text style={styles.title}>{item.title}</Text>
-        <Image source={item.image} style={styles.image} resizeMode="contain" />
-        <Text style={styles.text}>{item.text}</Text>
-      </View>
-    );
-  };
-
-  const _keyExtractor = (item: Item) => item.title;
-  const renderButton = (type: 'next' | 'done') => (
-    <Text
-      style={type === 'done' ? styles.doneText : styles.nextText}
-      tx={type === 'done' ? 'login.done' : 'login.next'}
-    />
+const _renderItem = ({ item }: { item: Item }) => {
+  return (
+    <View
+      style={[
+        styles.slide,
+        {
+          backgroundColor: item.bg,
+        },
+      ]}
+    >
+      <Text style={styles.title}>{item.title}</Text>
+      <Image source={item.image} style={styles.image} resizeMode="contain" />
+      <Text style={styles.text}>{item.text}</Text>
+    </View>
   );
+};
+
+const _keyExtractor = (item: Item) => item.title;
+const renderButton = (type: 'next' | 'done') => (
+  <Text
+    style={type === 'done' ? styles.doneText : styles.nextText}
+    tx={type === 'done' ? 'login.done' : 'login.next'}
+  />
+);
+
+const Welcome = ({ navigation: _navigation }: WelcomeProps) => {
   return (
     <Layout fullScreen={true}>
       <Layout.Body scrollable={true} style={styles.noPadding}>
@@ -110,4 +111,5 @@ const styles = StyleSheet.create({
   },
 });
 
+export { _renderItem, _keyExtractor, renderButton };
 export default Welcome;

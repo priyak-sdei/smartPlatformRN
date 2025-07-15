@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AuthIndex matches snapshot: AuthIndex component 1`] = `
+<View
+  style={
+    [
+      {
+        "alignItems": "center",
+        "flex": 1,
+        "justifyContent": "center",
+      },
+      {
+        "backgroundColor": "#FFFFFF",
+      },
+    ]
+  }
+  testID="auth-index-root"
+>
+  <Text
+    style={
+      [
+        {
+          "fontFamily": "Outfit-Regular",
+          "fontSize": 24,
+        },
+        {
+          "color": "#222222",
+        },
+      ]
+    }
+  >
+    Welcome to Smart Platform!
+  </Text>
+</View>
+`;

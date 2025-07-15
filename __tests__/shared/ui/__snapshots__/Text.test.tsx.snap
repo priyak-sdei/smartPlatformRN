@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Text matches snapshot: Text component 1`] = `
+<Text
+  style={
+    [
+      {
+        "color": "blue",
+        "fontFamily": "regular",
+        "fontSize": 10,
+      },
+      undefined,
+    ]
+  }
+>
+  Snapshot
+</Text>
+`;

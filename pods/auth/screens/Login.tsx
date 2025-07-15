@@ -15,13 +15,14 @@ import { useTranslation } from 'react-i18next';
 import { useLogin } from '../hooks/useLogin';
 interface LoginProps {
   navigation: AuthNavigationProp<'Login'>;
+  useLoginHook?: typeof useLogin;
 }
 
-const Login = ({ navigation: _navigation }: LoginProps) => {
+const Login = ({ navigation: _navigation, useLoginHook = useLogin }: LoginProps) => {
   const { theme } = useTheme();
   const styles = getStyles(theme);
   const { t } = useTranslation();
-  const { email, password, setEmail, setPassword, login, isValid } = useLogin();
+  const { email, password, setEmail, setPassword, login, isValid } = useLoginHook();
 
   return (
     <Layout>

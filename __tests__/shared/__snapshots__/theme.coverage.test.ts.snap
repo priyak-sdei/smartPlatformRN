@@ -1,0 +1,96 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`shared/theme full coverage with snapshots should match snapshot for Back component: Back component 1`] = `<test-file-stub />`;
+
+exports[`shared/theme full coverage with snapshots should match snapshot for useTheme hook type: useTheme type 1`] = `"function"`;
+
+exports[`shared/theme full coverage with snapshots should match snapshots for all exports: IMAGES 1`] = `
+{
+  "auth": {
+    "logo": "test-file-stub",
+    "slider": "test-file-stub",
+  },
+}
+`;
+
+exports[`shared/theme full coverage with snapshots should match snapshots for all exports: colors 1`] = `
+{
+  "background": "#FFFFFF",
+  "border": "#E5E5EA",
+  "error": "#FE4444",
+  "inputBorder": "#0A0F0F1A",
+  "label": "#0A0F0F",
+  "placeholder": "rgba(10, 15, 15, 0.5)",
+  "primary": "#d92029",
+  "secondary": "#001D51",
+  "tabActive": "#d92029",
+  "tabInactive": "#0A0F0F",
+  "text": "#222222",
+  "transparent": "transparent",
+}
+`;
+
+exports[`shared/theme full coverage with snapshots should match snapshots for all exports: fonts 1`] = `
+{
+  "black": "Outfit-Black",
+  "bold": "Outfit-Bold",
+  "extraBold": "Outfit-ExtraBold",
+  "extraLight": "Outfit-ExtraLight",
+  "light": "Outfit-Light",
+  "medium": "Outfit-Medium",
+  "regular": "Outfit-Regular",
+  "semiBold": "Outfit-SemiBold",
+  "thin": "Outfit-Thin",
+}
+`;
+
+exports[`shared/theme full coverage with snapshots should match snapshots for all exports: screenHeight 1`] = `1334`;
+
+exports[`shared/theme full coverage with snapshots should match snapshots for all exports: screenWidth 1`] = `750`;
+
+exports[`shared/theme full coverage with snapshots should match snapshots for all exports: shadow 1`] = `
+{
+  "headerShadow": {
+    "elevation": 22.5,
+    "shadowColor": "#d92029",
+    "shadowOffset": {
+      "height": 15,
+      "width": 0,
+    },
+    "shadowOpacity": 0.15,
+    "shadowRadius": 6,
+  },
+  "primary": {
+    "elevation": 5,
+    "shadowColor": "#000000",
+    "shadowOffset": {
+      "height": 2,
+      "width": 0,
+    },
+    "shadowOpacity": 0.25,
+    "shadowRadius": 3.84,
+  },
+}
+`;
+
+exports[`shared/theme full coverage with snapshots should match snapshots for all exports: spacing 1`] = `
+{
+  "l": 28,
+  "m": 24,
+  "s": 16,
+  "xl": 32,
+  "xs": 12,
+  "xxl": 40,
+  "xxs": 8,
+  "xxxl": 50,
+  "xxxs": 4,
+}
+`;
+
+exports[`shared/theme full coverage with snapshots should match snapshots for function outputs: getFontScaleValue 1`] = `1`;
+
+exports[`shared/theme full coverage with snapshots should match snapshots for function outputs: horizontalScale 1`] = `2`;
+
+exports[`shared/theme full coverage with snapshots should match snapshots for function outputs: moderateScale 1`] = `1.5`;
+
+exports[`shared/theme full coverage with snapshots should match snapshots for function outputs: verticalScale 1`] = `1.6428571428571428`;

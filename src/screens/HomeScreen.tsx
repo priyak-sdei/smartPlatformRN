@@ -5,7 +5,7 @@ import { useAppSelector } from '../redux/hooks';
 const HomeScreen = () => {
     const email = useAppSelector(state => state.user.email);
     return (
-        <View style={styles.container}>
+        <View style={styles.container} testID="home-root">
             <Text style={styles.title}>Home Screen</Text>
             {email && <Text style={styles.email}>Logged in as: {email}</Text>}
         </View>
