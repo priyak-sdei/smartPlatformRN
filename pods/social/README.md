@@ -1,6 +1,6 @@
 # Social Pod
 
-![Demo](https://teams.microsoft.com/l/message/48:notes/1752670100687?context=%7B%22contextType%22%3A%22chat%22%2C%22oid%22%3A%228%3Aorgid%3A62eca739-924e-4c32-a972-25c75dbdf2eb%22%7D)
+![Demo](https://smartdatainc-my.sharepoint.com/:i:/g/personal/anilkumar_smartdatainc_net/EZz5Xd1Ud_RCoK1nqCI47RUBzfbEncxDhPiGcxv6CwXDTw?e=4nCX0I)
 
 This pod provides all social authentication buttons and logic for the SmartPlatform project. It is a **self-contained, reusable module** that only imports UI components and utilities from the shared library.
 
