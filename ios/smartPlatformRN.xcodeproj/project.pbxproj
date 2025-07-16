@@ -18,6 +18,7 @@
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		85A6953A353B429B86A842B1 /* Outfit-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 321BC8A5A8D84D139835A587 /* Outfit-Light.ttf */; };
 		88AC3BD6F34841298D347333 /* Outfit-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B777FC9A436E4757B928B5CC /* Outfit-Bold.ttf */; };
+		A624D6652E27A5D400790C90 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A624D6642E27A5D400790C90 /* GoogleService-Info.plist */; };
 		AE63CA44A2E540D1877D49D2 /* BootSplash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFCFDCE55CAF47EDA1FFEF7A /* BootSplash.storyboard */; };
 		B99C573BEC7B44F99399A7F4 /* Outfit-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4870B68BBE4346C0867F1BC1 /* Outfit-Black.ttf */; };
 		D6DB16DFAFE64625A9995D2D /* Outfit-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA07F954FBA54D6B940E4A42 /* Outfit-Regular.ttf */; };
@@ -30,23 +31,25 @@
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = smartPlatformRN/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = smartPlatformRN/Info.plist; sourceTree = "<group>"; };
 		13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PrivacyInfo.xcprivacy; path = smartPlatformRN/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
-		171D182FA013496DA8DE2000 /* Outfit-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Outfit-Medium.ttf"; path = "../src/assets/fonts/Outfit-Medium.ttf"; sourceTree = "<group>"; };
-		321BC8A5A8D84D139835A587 /* Outfit-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Outfit-Light.ttf"; path = "../src/assets/fonts/Outfit-Light.ttf"; sourceTree = "<group>"; };
+		171D182FA013496DA8DE2000 /* Outfit-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Outfit-Medium.ttf"; path = "../src/assets/fonts/Outfit-Medium.ttf"; sourceTree = "<group>"; };
+		321BC8A5A8D84D139835A587 /* Outfit-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Outfit-Light.ttf"; path = "../src/assets/fonts/Outfit-Light.ttf"; sourceTree = "<group>"; };
 		3B4392A12AC88292D35C810B /* Pods-smartPlatformRN.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-smartPlatformRN.debug.xcconfig"; path = "Target Support Files/Pods-smartPlatformRN/Pods-smartPlatformRN.debug.xcconfig"; sourceTree = "<group>"; };
-		4870B68BBE4346C0867F1BC1 /* Outfit-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Outfit-Black.ttf"; path = "../src/assets/fonts/Outfit-Black.ttf"; sourceTree = "<group>"; };
-		53B4F3E2506D4E67A00B69E4 /* Outfit-Thin.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Outfit-Thin.ttf"; path = "../src/assets/fonts/Outfit-Thin.ttf"; sourceTree = "<group>"; };
+		4870B68BBE4346C0867F1BC1 /* Outfit-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Outfit-Black.ttf"; path = "../src/assets/fonts/Outfit-Black.ttf"; sourceTree = "<group>"; };
+		53B4F3E2506D4E67A00B69E4 /* Outfit-Thin.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Outfit-Thin.ttf"; path = "../src/assets/fonts/Outfit-Thin.ttf"; sourceTree = "<group>"; };
 		5709B34CF0A7D63546082F79 /* Pods-smartPlatformRN.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-smartPlatformRN.release.xcconfig"; path = "Target Support Files/Pods-smartPlatformRN/Pods-smartPlatformRN.release.xcconfig"; sourceTree = "<group>"; };
 		5DCACB8F33CDC322A6C60F78 /* libPods-smartPlatformRN.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-smartPlatformRN.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		6328BB36851A427A90A3BF86 /* Colors.xcassets */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = folder.assetcatalog; name = Colors.xcassets; path = smartPlatformRN/Colors.xcassets; sourceTree = "<group>"; };
+		6328BB36851A427A90A3BF86 /* Colors.xcassets */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = folder.assetcatalog; name = Colors.xcassets; path = smartPlatformRN/Colors.xcassets; sourceTree = "<group>"; };
 		761780EC2CA45674006654EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = smartPlatformRN/AppDelegate.swift; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = smartPlatformRN/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		B777FC9A436E4757B928B5CC /* Outfit-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Outfit-Bold.ttf"; path = "../src/assets/fonts/Outfit-Bold.ttf"; sourceTree = "<group>"; };
-		BA200833C96E4002A97182F1 /* Outfit-ExtraBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Outfit-ExtraBold.ttf"; path = "../src/assets/fonts/Outfit-ExtraBold.ttf"; sourceTree = "<group>"; };
-		BCB341CBBE144BE3BF7D189D /* Outfit-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Outfit-SemiBold.ttf"; path = "../src/assets/fonts/Outfit-SemiBold.ttf"; sourceTree = "<group>"; };
-		C27ED987FA234DC4B843C6D0 /* Outfit-ExtraLight.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Outfit-ExtraLight.ttf"; path = "../src/assets/fonts/Outfit-ExtraLight.ttf"; sourceTree = "<group>"; };
-		EA07F954FBA54D6B940E4A42 /* Outfit-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Outfit-Regular.ttf"; path = "../src/assets/fonts/Outfit-Regular.ttf"; sourceTree = "<group>"; };
+		A624D6642E27A5D400790C90 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A624D6662E27BD6200790C90 /* smartPlatformRN.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = smartPlatformRN.entitlements; path = smartPlatformRN/smartPlatformRN.entitlements; sourceTree = "<group>"; };
+		B777FC9A436E4757B928B5CC /* Outfit-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Outfit-Bold.ttf"; path = "../src/assets/fonts/Outfit-Bold.ttf"; sourceTree = "<group>"; };
+		BA200833C96E4002A97182F1 /* Outfit-ExtraBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Outfit-ExtraBold.ttf"; path = "../src/assets/fonts/Outfit-ExtraBold.ttf"; sourceTree = "<group>"; };
+		BCB341CBBE144BE3BF7D189D /* Outfit-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Outfit-SemiBold.ttf"; path = "../src/assets/fonts/Outfit-SemiBold.ttf"; sourceTree = "<group>"; };
+		C27ED987FA234DC4B843C6D0 /* Outfit-ExtraLight.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Outfit-ExtraLight.ttf"; path = "../src/assets/fonts/Outfit-ExtraLight.ttf"; sourceTree = "<group>"; };
+		EA07F954FBA54D6B940E4A42 /* Outfit-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Outfit-Regular.ttf"; path = "../src/assets/fonts/Outfit-Regular.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		FFCFDCE55CAF47EDA1FFEF7A /* BootSplash.storyboard */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = BootSplash.storyboard; path = smartPlatformRN/BootSplash.storyboard; sourceTree = "<group>"; };
+		FFCFDCE55CAF47EDA1FFEF7A /* BootSplash.storyboard */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = BootSplash.storyboard; path = smartPlatformRN/BootSplash.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +67,8 @@
 		13B07FAE1A68108700A75B9A /* smartPlatformRN */ = {
 			isa = PBXGroup;
 			children = (
+				A624D6662E27BD6200790C90 /* smartPlatformRN.entitlements */,
+				A624D6642E27A5D400790C90 /* GoogleService-Info.plist */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
 				761780EC2CA45674006654EE /* AppDelegate.swift */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
@@ -128,7 +133,6 @@
 				53B4F3E2506D4E67A00B69E4 /* Outfit-Thin.ttf */,
 			);
 			name = Resources;
-			path = "";
 			sourceTree = "<group>";
 		};
 		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
@@ -202,6 +206,7 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				A624D6652E27A5D400790C90 /* GoogleService-Info.plist in Resources */,
 				B99C573BEC7B44F99399A7F4 /* Outfit-Black.ttf in Resources */,
 				88AC3BD6F34841298D347333 /* Outfit-Bold.ttf in Resources */,
 				EF1CCF039C3B4145995C371A /* Outfit-ExtraBold.ttf in Resources */,
@@ -312,7 +317,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = smartPlatformRN/smartPlatformRN.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 33P3VUARHV;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = smartPlatformRN/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = smartPlatformRN;
@@ -341,7 +348,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = smartPlatformRN/smartPlatformRN.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 33P3VUARHV;
 				INFOPLIST_FILE = smartPlatformRN/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = smartPlatformRN;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
