@@ -1,6 +1,12 @@
 # Social Pod
 
-![Demo](https://smartdatainc-my.sharepoint.com/:i:/g/personal/anilkumar_smartdatainc_net/EZz5Xd1Ud_RCoK1nqCI47RUBzfbEncxDhPiGcxv6CwXDTw?e=4nCX0I)
+---
+
+## 🔗 Demo
+
+[View Demo of the Social Pod](https://smartdatainc-my.sharepoint.com/:i:/g/personal/anilkumar_smartdatainc_net/EZz5Xd1Ud_RCoK1nqCI47RUBzfbEncxDhPiGcxv6CwXDTw?e=4nCX0I)
+
+---
 
 This pod provides all social authentication buttons and logic for the SmartPlatform project. It is a **self-contained, reusable module** that only imports UI components and utilities from the shared library.
 
@@ -113,6 +119,7 @@ https://www.smartdatainc.com/
 
 ## 👨‍💻 Author
 
-**Anil Kumar**
+**Anil Kumar**  
+[www.linkedin.com/in/thakkuranil](https://www.linkedin.com/in/thakkuranil)
 
 ---
