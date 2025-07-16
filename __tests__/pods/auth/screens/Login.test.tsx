@@ -1,10 +1,10 @@
 import React from 'react';
 import { render, fireEvent } from '@testing-library/react-native';
 import Login from '../../../../pods/auth/screens/Login';
-import { __setMockLoginState, resetMockLoginState } from '../../../../pods/auth/hooks/__mocks__/useLogin';
 import { Provider } from 'react-redux';
 import { store } from '../../../../src/redux/store';
 import { ThemeProvider } from '../../../../src/theme/ThemeProvider';
+import { __setMockLoginState, resetMockLoginState } from '../../../../__mocks__/useLogin';
 
 // Mock i18n so t returns the key
 jest.mock('react-i18next', () => ({

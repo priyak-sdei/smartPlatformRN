@@ -1,14 +1,18 @@
 // __mocks__/useSignUp.ts
 
 let mockState = {
-    isValid: false,
-    loading: false,
-    error: null,
-    values: { email: '', password: '', confirmPassword: '' },
+    name: '',
+    setName: jest.fn(),
+    email: '',
     setEmail: jest.fn(),
+    password: '',
     setPassword: jest.fn(),
+    confirmPassword: '',
     setConfirmPassword: jest.fn(),
-    onSignUp: jest.fn(),
+    handleSignUp: jest.fn(),
+    isLoading: false,
+    error: null,
+    isValid: () => false,
 };
 
 export const __setMockSignUpState = (state: Partial<typeof mockState>) => {
@@ -17,5 +21,5 @@ export const __setMockSignUpState = (state: Partial<typeof mockState>) => {
 
 export const useSignUp = () => ({
     ...mockState,
-    isValid: () => mockState.isValid,
+    isValid: typeof mockState.isValid === 'function' ? mockState.isValid : () => mockState.isValid,
 }); 

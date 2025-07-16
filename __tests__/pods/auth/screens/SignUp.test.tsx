@@ -1,16 +1,15 @@
 import React from 'react';
 import { render, fireEvent, waitFor, cleanup } from '@testing-library/react-native';
-import { ReactTestInstance } from 'react-test-renderer';
 import SignUp from '../../../../pods/auth/screens/SignUp';
-import { __setMockSignUpState } from '../../../../pods/auth/hooks/__mocks__/useSignUp';
 import renderer, { act } from 'react-test-renderer';
+import { __setMockSignUpState } from '../../../../__mocks__/useSignUp';
 
 // Mock i18n so t returns the key
 jest.mock('react-i18next', () => ({
     useTranslation: () => ({ t: (key: string) => key }),
 }));
 
-jest.mock('@pods/auth/hooks/useSignUp');
+jest.mock('@pods/auth/hooks/useSignUp', () => require('../../../../__mocks__/useSignUp'));
 
 afterEach(cleanup);
 
