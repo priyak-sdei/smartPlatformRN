@@ -18,10 +18,19 @@ import BootSplash from 'react-native-bootsplash';
 import { KeyboardProvider } from 'react-native-keyboard-controller';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import ConnectionStatusStrip from './components/ConnectionStatusStrip';
+import { GoogleSignin } from '@react-native-google-signin/google-signin';
 
 const AppContent = () => {
   const dispatch = useAppDispatch();
   const isDarkMode = useColorScheme() === 'dark';
+
+  // Initialize Google Sign-In if require otherwise remove this
+  useEffect(() => {
+    GoogleSignin.configure({
+      webClientId: '749712540931-iqd969jn5jjr0r81mtoc266060eh73nm.apps.googleusercontent.com', // TODO: Replace with your actual web client ID
+      offlineAccess: false,
+    });
+  }, []);
 
   // Listen for system theme changes and update the Redux store. This makes
   // the "Automatic Dark/Light Mode" feature fully reactive.
