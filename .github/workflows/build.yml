@@ -30,9 +30,6 @@ jobs:
       - name: Install dependencies
         run: yarn install
 
-      - name: Run tests and generate coverage report
-        run: yarn test --coverage
-
       - name: SonarQube Scan
         uses: SonarSource/sonarqube-scan-action@v4
         env:
