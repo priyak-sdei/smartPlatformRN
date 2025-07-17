@@ -2,10 +2,8 @@ name: Android APK Build
 
 on:
   workflow_run:
-    workflows: ["Build and Analyze"]
+    workflows: ['Build and Analyze']
     types: [completed]
-    branches:
-      - main
 
 jobs:
   build:
