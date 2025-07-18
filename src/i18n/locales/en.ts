@@ -60,6 +60,12 @@ const en = {
     title: 'Welcome to SmartPlatform',
     description: 'Your modular React Native starter kit.',
   },
+  //Schedule Screen
+  schedule: {
+    title: 'Schedule',
+    subTitle: 'Calendar',
+    subTitleContent: 'See all your events ',
+  },
 };
 
 export default en;

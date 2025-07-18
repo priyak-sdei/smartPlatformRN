@@ -3,3 +3,8 @@ export { default as Profile } from './profile.svg';
 export { default as Home } from './home.svg';
 export { default as GoogleIC } from './google.svg';
 export { default as AppleIC } from './apple.svg';
+export { default as Schedule } from './schedule.svg';
+export { default as Week } from './week.svg';
+export { default as Month } from './month.svg';
+export { default as LeftArrow } from './leftArrow.svg';
+export { default as RightArrow } from './rightArrow.svg';
