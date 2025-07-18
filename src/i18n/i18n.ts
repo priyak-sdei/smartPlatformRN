@@ -28,12 +28,10 @@ const pickSupportedLocale: () => Localization.Locale | undefined = () => {
 };
 
 const locale = pickSupportedLocale();
-export let isRTL = false;
 
 // Need to set RTL ASAP to ensure the app is rendered correctly. Waiting for i18n to init is too late.
 if (locale?.languageTag && locale?.isRTL) {
   I18nManager.allowRTL(true);
-  isRTL = true;
 } else {
   I18nManager.allowRTL(false);
 }
