@@ -25,7 +25,7 @@ Before you begin, ensure you have the following installed:
 - **Pre-commit Linting:** Uses Husky and lint-staged to automatically lint and fix code before every commit.
 - **Screen Orientation:** Locked to portrait mode to ensure a consistent user experience and avoid orientation-related UI issues.
 - **Automatic Network Status:** The app displays a connection status strip that automatically updates based on network connectivity.
-
+- **Social Logins:** Pre-integrated Google Sign-In and Sign in with Apple for streamlined authentication.
 
 ---
 

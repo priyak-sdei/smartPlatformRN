@@ -13,7 +13,7 @@ import {
 import { IMAGES } from '@shared/theme';
 import { useTranslation } from 'react-i18next';
 import { useLogin } from '../hooks/useLogin';
-import SocialLoginButtons from '../../social/SocialLoginButtons';
+import SocialLoginButtons from '@pods/social/SocialLoginButtons';
 interface LoginProps {
   navigation: AuthNavigationProp<'Login'>;
 }
@@ -56,18 +56,19 @@ const Login = ({ navigation: _navigation }: LoginProps) => {
           labelTx="login.password"
           placeholderTx={'login.passwordPlaceholder'}
         />
+
+        <Text
+          style={styles.forgotText}
+          onPress={() => _navigation.navigate('ForgotPassword')}
+          tx="login.forgotPassword"
+        />
         <SocialLoginButtons
           showGoogle
           showApple
           onResult={result => {
             console.log('Social login result:', result);
           }}
-          style={{ marginVertical: 16 }}
-        />
-        <Text
-          style={styles.forgotText}
-          onPress={() => _navigation.navigate('ForgotPassword')}
-          tx="login.forgotPassword"
+          style={styles.socialContainer}
         />
         <Button
           tx={'login.signIn'}
@@ -118,6 +119,9 @@ const getStyles = (theme: any) =>
       color: theme.colors.primary,
       fontSize: moderateScale(spacing.s),
       marginTop: verticalScale(-spacing.xxs),
+    },
+    socialContainer: {
+      marginVertical: moderateScale(spacing.s),
     },
   });
 
