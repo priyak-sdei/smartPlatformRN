@@ -54,28 +54,6 @@ const SignUp = ({ navigation: _navigation }: SignUpProps) => {
     { label: 'Technology', value: 'technology' },
   ];
 
-  // Measurement type and unit options
-  const measureTypeOptions = [
-    { label: 'Weight', value: 'weight' },
-    { label: 'Height', value: 'height' },
-  ];
-  const measureUnitOptionsMap: Record<
-    string,
-    { label: string; value: string }[]
-  > = {
-    weight: [
-      { label: 'Kg', value: 'kg' },
-      { label: 'Pound', value: 'pound' },
-    ],
-    height: [
-      { label: 'cm', value: 'cm' },
-      { label: 'mm', value: 'mm' },
-      { label: 'inch', value: 'inch' },
-    ],
-  };
-  const [measureType, setMeasureType] = React.useState<string | null>(null);
-  const [measureUnit, setMeasureUnit] = React.useState<string | null>(null);
-
   // Gender and country options
   const genderOptions = [
     { label: t('auth.genderMale'), value: 'male', labelTx: 'auth.genderMale' },
@@ -145,7 +123,6 @@ const SignUp = ({ navigation: _navigation }: SignUpProps) => {
           style={
             [styles.fieldMargin, styles.inputSpacing] as unknown as ViewStyle
           }
-          horizontal
         />
         {/* Country Section Title */}
         <Text style={styles.sectionTitle} tx="auth.selectCountryTitle" />
@@ -173,37 +150,7 @@ const SignUp = ({ navigation: _navigation }: SignUpProps) => {
             [styles.fieldMargin, styles.inputSpacing] as unknown as ViewStyle
           }
         />
-        {/* Measurement Type Section Title */}
-        <Text style={styles.sectionTitle}>Measurement Type</Text>
-        <Dropdown
-          options={measureTypeOptions}
-          value={measureType}
-          onChange={val => {
-            setMeasureType(val as string);
-            setMeasureUnit(null);
-          }}
-          placeholder="Select type"
-          style={
-            [styles.fieldMargin, styles.inputSpacing] as unknown as ViewStyle
-          }
-        />
-        {measureType && (
-          <>
-            <Text style={styles.sectionTitle}>Unit</Text>
-            <Dropdown
-              options={measureUnitOptionsMap[measureType]}
-              value={measureUnit}
-              onChange={val => setMeasureUnit(val as string)}
-              placeholder="Select unit"
-              style={
-                [
-                  styles.fieldMargin,
-                  styles.inputSpacing,
-                ] as unknown as ViewStyle
-              }
-            />
-          </>
-        )}
+
         {/* Newsletter Section Title */}
         <Text style={styles.sectionTitle} tx="auth.newsletterTitle" />
         {/* Subscribe Switch */}
@@ -274,7 +221,6 @@ const getStyles = (theme: any) =>
       fontFamily: fonts.medium,
     },
     sectionTitle: {
-      marginTop: verticalScale(spacing.s),
       marginBottom: verticalScale(spacing.xxs),
       color: theme.colors.label,
       fontFamily: fonts.medium,

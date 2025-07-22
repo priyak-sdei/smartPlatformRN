@@ -103,7 +103,7 @@ const Dropdown: React.FC<DropdownProps> = ({
           maxHeight={maxHeight}
           labelField="label"
           valueField="value"
-          placeholder={!isFocus ? placeholder : '...'}
+          placeholder={placeholder}
           value={Array.isArray(value) ? value.map(String) : []}
           onFocus={() => setIsFocus(true)}
           onBlur={() => setIsFocus(false)}

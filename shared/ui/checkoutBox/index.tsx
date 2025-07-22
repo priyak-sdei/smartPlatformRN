@@ -8,6 +8,7 @@ import {
 } from 'react-native';
 import Text from '../Text';
 import { useTheme, moderateScale, spacing, fonts } from '@shared/theme';
+import { Path, Svg } from 'react-native-svg';
 
 interface CheckboxProps {
   checked: boolean;
@@ -56,6 +57,21 @@ const Checkbox: React.FC<CheckboxProps> = ({
     disabledBoxColor,
   });
 
+  // Default check icon
+  function CheckIcon() {
+    return (
+      <Svg width={16} height={16} viewBox="0 0 20 20" fill="none">
+        <Path
+          d="M5 10.5L9 14.5L15 7.5"
+          stroke={checkColor || theme.colors.background}
+          strokeWidth={2.5}
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </Svg>
+    );
+  }
+
   return (
     <TouchableOpacity
       style={[styles.container, style, disabled && styles.disabled]}
@@ -75,8 +91,7 @@ const Checkbox: React.FC<CheckboxProps> = ({
             disabled && styles.boxDisabled,
           ]}
         >
-          {checked &&
-            (renderCheck ? renderCheck() : <View style={styles.check} />)}
+          {checked ? renderCheck ? renderCheck() : <CheckIcon /> : null}
         </View>
       )}
       {(label || labelTx) &&
