@@ -1,5 +1,9 @@
 # Switch Component
 
+<img src="../screenshot/switch.png" alt="Switch Example" width="300" />
+
+[▶️ View Full Screenshot](../screenshot/switch.png)
+
 A customizable, theme-aware Switch component for React Native, designed for seamless integration and easy color customization.
 
 ## Features

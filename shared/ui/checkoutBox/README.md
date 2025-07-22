@@ -1,5 +1,9 @@
 # CheckoutBox (Checkbox) Component
 
+<img src="../screenshot/checkoutBox.png" alt="CheckoutBox Example" width="300" />
+
+[▶️ View Full Screenshot](../screenshot/checkoutBox.png)
+
 A flexible, theme-aware Checkbox component for React Native, supporting custom rendering, color customization, and easy integration.
 
 ## Features

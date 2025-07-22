@@ -1,5 +1,9 @@
 # Modal Component
 
+<img src="../screenshot/modal.png" alt="Modal Example" width="300" />
+
+[▶️ View Full Screenshot](../screenshot/modal.png)
+
 A theme-aware, customizable modal component for React Native, designed for dialogs, popups, and overlays.
 
 ## Features

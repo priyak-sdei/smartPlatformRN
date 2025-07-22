@@ -1,6 +1,7 @@
-# RadioGroup Component
+<img src="../screenshot/radioButton.png" alt="RadioGroup Example" width="300" />
+[▶️ View Full Screenshot](../screenshot/radioButton.png)
 
-![RadioGroup Example](../screenshot/radioButton.png)
+# RadioGroup Component
 
 A flexible, theme-aware RadioGroup component for React Native, supporting custom rendering and easy integration.
 
