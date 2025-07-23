@@ -2,6 +2,15 @@
 
 ## Dropdown Component
 
+<img src="../screenshot/singleDropdown.png" alt="Single Dropdown Example" width="300" />
+[▶️ View Full Screenshot](../screenshot/singleDropdown.png)
+
+<img src="../screenshot/multiDropdownSelection.png" alt="Multi-Select Dropdown Example" width="300" />
+[▶️ View Full Screenshot](../screenshot/multiDropdownSelection.png)
+
+<img src="../screenshot/multipleDropdown.png" alt="Multiple Dropdown Example" width="300" />
+[▶️ View Full Screenshot](../screenshot/multipleDropdown.png)
+
 A customizable dropdown component built with `react-native-element-dropdown` that provides a clean, accessible, and feature-rich dropdown experience.
 
 ### Features

@@ -13,9 +13,9 @@ import { useTranslation } from 'react-i18next';
 import { StyleSheet, ViewStyle } from 'react-native';
 import { useSignUp } from '../hooks/useSignUp';
 import Dropdown from '@shared/ui/dropdown';
-import Checkbox from '@shared/ui/checkoutBox';
 import Switch from '@shared/ui/switch';
 import RadioGroup from '@shared/ui/radioGroup';
+import Checkbox from '@shared/ui/checkBox';
 
 interface SignUpProps {
   navigation: AuthNavigationProp<'SignUp'>;

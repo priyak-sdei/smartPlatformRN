@@ -52,54 +52,56 @@ import Card from 'shared/ui/card';
 </Card>
 ```
 
-### Custom Colors, Border, and Shadow
+### Custom Styles with customStyle Prop
 
 ```tsx
 <Card
-  backgroundColor="#fffbe6"
-  borderColor="#ffd700"
-  borderWidth={2}
-  borderRadius={16}
-  padding={24}
-  margin={16}
-  shadowColor="#ffd700"
-  shadowOffset={{ width: 0, height: 4 }}
-  shadowOpacity={0.3}
-  shadowRadius={12}
-  elevation={8}
+  customStyle={{
+    card: { backgroundColor: '#fffbe6', borderRadius: 16 },
+    header: { backgroundColor: '#f0f0f0', padding: 8 },
+    footer: { borderTopWidth: 1, borderColor: '#eee', padding: 8 },
+  }}
+  header={<Text>Header</Text>}
+  footer={<Text>Footer</Text>}
 >
-  <Text>Custom styled card</Text>
+  <Text>Card content</Text>
 </Card>
 ```
+
+### Using a Local SVG as an Icon (No Vector Icon Library Needed)
+
+If you have a local SVG file (e.g., `myIcon.svg`), you can import and use it directly as a React component in your Card header, footer, or content:
+
+```tsx
+// Import your SVG (requires react-native-svg-transformer or similar setup)
+import MyIcon from '../screenshot/myIcon.svg';
+
+<Card header={<MyIcon width={24} height={24} />}>
+  <Text>Card content</Text>
+</Card>;
+```
+
+This keeps your LOC low and avoids extra dependencies. Make sure your project is set up to import SVGs as components (e.g., using `react-native-svg-transformer`).
 
 ---
 
 ## Props
 
-| Prop            | Type                         | Default                 | Description                         |
-| --------------- | ---------------------------- | ----------------------- | ----------------------------------- |
-| children        | ReactNode                    | —                       | Card content                        |
-| style           | ViewStyle                    | —                       | Custom style for the card           |
-| elevation       | number                       | 3                       | Android elevation & iOS shadow size |
-| header          | ReactNode                    | —                       | Optional header above content       |
-| footer          | ReactNode                    | —                       | Optional footer below content       |
-| backgroundColor | string                       | theme.colors.background | Card background color               |
-| borderColor     | string                       | —                       | Card border color                   |
-| borderWidth     | number                       | —                       | Card border width                   |
-| borderRadius    | number                       | theme spacing default   | Card border radius                  |
-| padding         | number                       | theme spacing default   | Card inner padding                  |
-| margin          | number                       | theme spacing default   | Card vertical margin                |
-| shadowColor     | string                       | #000                    | Shadow color                        |
-| shadowOffset    | {width:number,height:number} | {width:0,height:1}      | Shadow offset                       |
-| shadowOpacity   | number                       | 0.15                    | Shadow opacity                      |
-| shadowRadius    | number                       | elevation\*2            | Shadow blur radius                  |
+| Prop        | Type                  | Default  | Description                         |
+| ----------- | --------------------- | -------- | ----------------------------------- | --- | -------------------------------------- |
+| children    | ReactNode             | —        | Card content                        |
+| style       | ViewStyle             | —        | Custom style for the card           |
+| elevation   | number                | 3        | Android elevation & iOS shadow size |
+| header      | ReactNode             | —        | Optional header above content       |
+| footer      | ReactNode             | —        | Optional footer below content       |
+| customStyle | Partial<Record<'card' | 'header' | 'footer', StyleProp<ViewStyle>>>    | —   | Custom styles for card, header, footer |
 
 ---
 
 ## Styling
 
 - The card adapts to your theme by default.
-- You can override all visual aspects with props or custom styles.
+- You can override all visual aspects with the `customStyle` prop or custom styles.
 - Use header/footer for extra content or actions.
 
 ---
@@ -114,26 +116,16 @@ import Card from 'shared/ui/card';
 
 ```tsx
 import Card from 'shared/ui/card';
+import MyIcon from '../screenshot/myIcon.svg';
 import { Text } from 'react-native';
 
 export default function Example() {
   return (
     <Card
-      header={<Text style={{ fontWeight: 'bold' }}>Header</Text>}
-      footer={<Text style={{ color: 'gray' }}>Footer</Text>}
-      backgroundColor="#fffbe6"
-      borderColor="#ffd700"
-      borderWidth={2}
-      borderRadius={16}
-      padding={24}
-      margin={16}
-      shadowColor="#ffd700"
-      shadowOffset={{ width: 0, height: 4 }}
-      shadowOpacity={0.3}
-      shadowRadius={12}
-      elevation={8}
+      header={<MyIcon width={24} height={24} />}
+      customStyle={{ card: { backgroundColor: '#fffbe6' } }}
     >
-      <Text>Custom styled card</Text>
+      <Text>Custom styled card with SVG icon in header</Text>
     </Card>
   );
 }
