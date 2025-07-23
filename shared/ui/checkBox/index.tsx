@@ -3,8 +3,8 @@ import { TouchableOpacity, View, ViewStyle, TextStyle } from 'react-native';
 import Text from '../Text';
 import { useTheme } from '@shared/theme';
 import { getStyles } from './styles';
-import CheckSvg from '@src/assets/svg/check.svg';
-import UncheckSvg from '@src/assets/svg/uncheck.svg';
+import Checkedbox from '@src/assets/svg/check.svg';
+import Uncheckbox from '@src/assets/svg/uncheck.svg';
 
 interface CheckboxProps {
   checked: boolean;
@@ -65,9 +65,9 @@ const Checkbox: React.FC<CheckboxProps> = ({
       ) : (
         <View style={[styles.box, disabled && styles.boxDisabled]}>
           {checked ? (
-            <CheckSvg width={20} height={20} />
+            <Checkedbox color={checkedBoxColor} width={20} height={20} />
           ) : (
-            <UncheckSvg width={20} height={20} />
+            <Uncheckbox color={checkedBoxColor} width={20} height={20} />
           )}
         </View>
       )}

@@ -166,6 +166,7 @@ const SignUp = ({ navigation: _navigation }: SignUpProps) => {
         <Text style={styles.sectionTitle} tx="auth.termsTitle" />
         {/* Terms Checkbox */}
         <Checkbox
+          checkedBoxColor={theme.colors.secondary}
           checked={acceptedTerms}
           onChange={setAcceptedTerms}
           labelTx="auth.acceptTerms"
