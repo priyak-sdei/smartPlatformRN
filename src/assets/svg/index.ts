@@ -8,3 +8,4 @@ export { default as Week } from './week.svg';
 export { default as Month } from './month.svg';
 export { default as LeftArrow } from './leftArrow.svg';
 export { default as RightArrow } from './rightArrow.svg';
+export { default as DownIC } from './down.svg';
