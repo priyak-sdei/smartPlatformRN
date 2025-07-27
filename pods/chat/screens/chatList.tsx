@@ -4,9 +4,7 @@ import { View } from 'react-native';
 import ListComponent from '../components/listComponent';
 import Search from '../components/search';
 import { data } from '../data';
-
 import { Layout } from '@shared/index';
-
 import { getStyles } from './styles';
 import { ChatNavigationProp } from '../types/navigation';
 import { useChatList } from '../hooks/useChatList';
@@ -18,11 +16,11 @@ import { useChatList } from '../hooks/useChatList';
  * @param {ChatListScreenProps} props - The properties for the component.
  * @returns {JSX.Element} The rendered component.
  */
-export type ChatListScreenProps = {
-  navigation: ChatNavigationProp<'ChatList'>;
+export type ChatListProps = {
+  navigation: ChatNavigationProp<'Chat'>;
 };
 
-const ChatListScreen: React.FC<ChatListScreenProps> = ({ navigation }) => {
+const ChatList: React.FC<ChatListProps> = ({ navigation }) => {
   const { theme } = useTheme();
   const styles = getStyles(theme);
   const { handleItemPress, handleChangeText, listMessages } = useChatList(
@@ -41,4 +39,4 @@ const ChatListScreen: React.FC<ChatListScreenProps> = ({ navigation }) => {
   );
 };
 
-export default ChatListScreen;
+export default ChatList;

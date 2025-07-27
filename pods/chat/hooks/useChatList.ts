@@ -9,7 +9,7 @@ import { useState } from 'react';
  * @returns Object containing methods for chat list interactions
  */
 export const useChatList = (
-  navigation: ChatNavigationProp<'ChatList'>,
+  navigation: ChatNavigationProp<'Chat'>,
   data: ListItem[],
 ) => {
   const [listMessages, setListMessages] = useState<ListItem[]>(data);
@@ -20,7 +20,7 @@ export const useChatList = (
    * @param item - The chat list item that was pressed
    */
   const handleItemPress = (item: ListItem) => {
-    navigation.navigate('ConversationScreen', { item: item });
+    navigation.navigate('ChatDetail', { item: item });
   };
 
   const handleChangeText = (text: string) => {

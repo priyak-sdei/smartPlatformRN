@@ -4,7 +4,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import AuthNavigator from './AuthNavigator';
 import TabNavigator from './TabNavigator';
 import { useAppSelector } from '../redux/hooks';
-
+import { ChatDetail } from '@pods/chat/index';
 const RootStack = createStackNavigator();
 
 const AppNavigator = () => {
@@ -22,6 +22,7 @@ const AppNavigator = () => {
         ) : (
           <RootStack.Screen name="Auth" component={AuthNavigator} />
         )}
+        <RootStack.Screen name="ChatDetail" component={ChatDetail} />
       </RootStack.Navigator>
     </NavigationContainer>
   );

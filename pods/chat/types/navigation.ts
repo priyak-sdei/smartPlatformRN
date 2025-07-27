@@ -3,8 +3,8 @@ import type { RouteProp } from '@react-navigation/native';
 import type { ListItem } from './components';
 
 export type ChatStackParamList = {
-  ChatList: undefined;
-  ConversationScreen: { item: ListItem };
+  Chat: undefined;
+  ChatDetail: { item: ListItem };
 };
 
 export type ChatNavigationProp<T extends keyof ChatStackParamList> =

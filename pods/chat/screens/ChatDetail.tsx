@@ -13,15 +13,15 @@ import { ChatNavigationProp, ChatRouteProp } from '../types/navigation';
  * ConversationScreen component to display a chat conversation.
  * It includes a header, chat messages, and an input field for sending messages.
  *
- * @param {ConversationScreenProps} props - The properties for the component.
+ * @param {ChatDetailProps} props - The properties for the component.
  * @returns {JSX.Element} The rendered component.
  */
-export type ConversationScreenProps = {
-  navigation: ChatNavigationProp<'ConversationScreen'>;
-  route: ChatRouteProp<'ConversationScreen'>;
+export type ChatDetailProps = {
+  navigation: ChatNavigationProp<'ChatDetail'>;
+  route: ChatRouteProp<'ChatDetail'>;
 };
 
-const ConversationScreen = ({ navigation, route }: ConversationScreenProps) => {
+const ChatDetail = ({ navigation, route }: ChatDetailProps) => {
   const { theme } = useTheme();
   const styles = getStyles(theme);
   const { item } = route.params;
@@ -65,4 +65,4 @@ const ConversationScreen = ({ navigation, route }: ConversationScreenProps) => {
   );
 };
 
-export default ConversationScreen;
+export default ChatDetail;
