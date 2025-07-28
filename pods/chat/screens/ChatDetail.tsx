@@ -1,13 +1,14 @@
 import { Layout } from '@shared/index';
-import { Back, useTheme } from '@shared/theme';
+import { Back } from '@shared/theme';
 import React from 'react';
-import { KeyboardAvoidingView, Platform, View } from 'react-native';
+import { Platform, View } from 'react-native';
 import BottomChatInput from '../components/bottomChatInput';
 import ChatMessages from '../components/chatMessages';
 import { useConversation } from '../hooks/useConversation';
 
+import { KeyboardAvoidingView } from 'react-native-keyboard-controller';
+import { ChatNavigationProp, ChatRouteProp } from '../types';
 import { getStyles } from './styles';
-import { ChatNavigationProp, ChatRouteProp } from '../types/navigation';
 
 /**
  * ConversationScreen component to display a chat conversation.
@@ -22,11 +23,19 @@ export type ChatDetailProps = {
 };
 
 const ChatDetail = ({ navigation, route }: ChatDetailProps) => {
-  const { theme } = useTheme();
-  const styles = getStyles(theme);
+  // const { theme } = useTheme();
+  const styles = getStyles();
   const { item } = route.params;
 
-  const { messages, currentUserId, handleSendMessage } = useConversation({
+  const {
+    messages,
+    currentUserId,
+    inputMessage,
+    handleSendMessage,
+    handleTextChange,
+    handleAttach,
+    isSendDisabled,
+  } = useConversation({
     ...item,
     id: String(item.id),
   });
@@ -37,27 +46,30 @@ const ChatDetail = ({ navigation, route }: ChatDetailProps) => {
         leftIcon={<Back />}
         onLeftPress={() => navigation.goBack()}
         title={item.name || 'Conversation'}
+        style={styles.layoutHeader}
       />
+
       <KeyboardAvoidingView
         style={styles.keyboardAvoidingView}
         behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
-        keyboardVerticalOffset={Platform.OS === 'ios' ? 40 : 10}
+        keyboardVerticalOffset={Platform.OS === 'ios' ? 50 : 0}
       >
-        <Layout.Body scrollable={false}>
-          <View style={styles.container}>
-            <ChatMessages
-              messages={messages}
-              currentUserId={currentUserId}
-              autoScroll={true}
+        <Layout.Body scrollable={false} style={styles.bodyContainer}>
+          <ChatMessages
+            messages={messages}
+            currentUserId={currentUserId}
+            autoScroll={true}
+          />
+          <View style={styles.bottomInputContainer}>
+            <BottomChatInput
+              inputMessage={inputMessage}
+              onChangeText={handleTextChange}
+              onSend={() => handleSendMessage(inputMessage)}
+              onAttach={handleAttach}
+              isSendDisabled={isSendDisabled}
+              placeholder="Type a message..."
+              maxLength={1000}
             />
-
-            <View style={styles.bottomInputContainer}>
-              <BottomChatInput
-                onSendMessage={handleSendMessage}
-                placeholder="Type a message..."
-                maxLength={1000}
-              />
-            </View>
           </View>
         </Layout.Body>
       </KeyboardAvoidingView>

@@ -15,7 +15,7 @@ export const getStyles = (theme: any) =>
   StyleSheet.create({
     // seacrh styles
     searchContainer: {
-      margin: moderateScale(spacing.xs),
+      margin: moderateScale(spacing.xxs),
       flexDirection: 'row',
       alignItems: 'center',
       borderRadius: moderateScale(spacing.s),
@@ -33,22 +33,28 @@ export const getStyles = (theme: any) =>
     searchIcon: {
       margin: moderateScale(spacing.xs),
     },
+    crossIcon: {
+      margin: moderateScale(spacing.xs),
+      color: theme.colors.primary,
+    },
     //list component styles
     container: {
       backgroundColor: theme.colors.background,
-      flex: 1,
       marginHorizontal: moderateScale(spacing.xs),
     },
     listContainer: {
       flexDirection: 'row',
       paddingVertical: moderateScale(spacing.xs),
-      paddingHorizontal: moderateScale(spacing.s),
+      paddingHorizontal: moderateScale(spacing.xxs),
       borderRadius: moderateScale(spacing.s),
     },
     content: {
       flex: 1,
       marginLeft: horizontalScale(spacing.xs),
       marginRight: horizontalScale(spacing.m),
+    },
+    contentContainer: {
+      flexGrow: 1,
     },
     timeContent: {
       flexDirection: 'column',
@@ -93,6 +99,12 @@ export const getStyles = (theme: any) =>
       backgroundColor: theme.colors.border,
       marginHorizontal: moderateScale(spacing.xs),
     },
+    emptyListContainer: {
+      flex: 1,
+      justifyContent: 'center',
+      alignItems: 'center',
+    },
+
     // chat messages styles
     chatContainer: {
       flex: 1,
@@ -109,9 +121,7 @@ export const getStyles = (theme: any) =>
       color: theme.colors.placeholder,
       textAlign: 'center',
     },
-    flatListContent: {
-      flexGrow: 1,
-    },
+
     messageContainer: {
       flex: 1,
       flexDirection: 'row',
@@ -128,7 +138,7 @@ export const getStyles = (theme: any) =>
       width: moderateScale(25),
       height: moderateScale(25),
       borderRadius: moderateScale(13.5),
-      margin: moderateScale(spacing.xxs),
+      margin: moderateScale(spacing.xs),
     },
     messageBubble: {
       paddingVertical: verticalScale(spacing.xxs),

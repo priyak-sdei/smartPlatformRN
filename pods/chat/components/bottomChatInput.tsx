@@ -8,8 +8,8 @@ import {
   View,
 } from 'react-native';
 import { Attach } from '../assets/svg';
-import { useBottomChatInput } from '../hooks/useBottomChatInput';
-import { BottomChatInputProps } from '../types/components';
+
+import { BottomChatInputProps } from '../types';
 import { getStyles } from './styles';
 
 /**
@@ -20,7 +20,11 @@ import { getStyles } from './styles';
  * @returns {JSX.Element} The rendered component.
  */
 const BottomChatInput: React.FC<BottomChatInputProps> = ({
-  onSendMessage,
+  inputMessage,
+  onChangeText,
+  onSend,
+  onAttach,
+  isSendDisabled,
   placeholder = 'Type a message...',
   maxLength = 1000,
 }) => {
@@ -28,33 +32,26 @@ const BottomChatInput: React.FC<BottomChatInputProps> = ({
   const { theme } = useTheme();
   const styles = getStyles(theme);
 
-  const {
-    inputMessage,
-    handleSend,
-    handleTextChange,
-    handleAttach,
-    isSendDisabled,
-  } = useBottomChatInput(onSendMessage, maxLength);
-
   return (
     <View style={styles.bottomInputContainer}>
       <RNTextInput
         placeholderTextColor={theme.colors.placeholder}
         value={inputMessage}
-        onChangeText={handleTextChange}
+        onChangeText={onChangeText}
         style={styles.input}
         autoCapitalize="sentences"
         autoCorrect={false}
         placeholder={placeholder}
+        maxLength={maxLength}
       />
       <View style={styles.sendButtonContainer}>
-        <Attach style={styles.attachIcon} onPress={handleAttach} />
+        <Attach style={styles.attachIcon} onPress={onAttach} />
         <TouchableOpacity
           style={[
             styles.sendButton,
             isSendDisabled && styles.sendButtonDisabled,
           ]}
-          onPress={handleSend}
+          onPress={onSend}
           disabled={isSendDisabled}
         >
           <Text

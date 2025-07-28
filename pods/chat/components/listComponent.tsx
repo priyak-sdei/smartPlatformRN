@@ -11,8 +11,9 @@ import {
 } from 'react-native';
 
 import { CHATIMAGES } from '../assets/images';
-import { ListItem } from '../types/components';
+
 import { getStyles } from './styles';
+import { ListItem } from '../types';
 
 // ListComponentProps interface for the component props
 export interface ListComponentProps {
@@ -57,6 +58,12 @@ const ListComponent: React.FC<ListComponentProps> = ({ data, onItemPress }) => {
         keyExtractor={item => item.id.toString()}
         ItemSeparatorComponent={() => <View style={styles.separator} />}
         showsVerticalScrollIndicator={false}
+        contentContainerStyle={[styles.contentContainer]}
+        ListEmptyComponent={() => (
+          <View style={styles.emptyListContainer}>
+            <Text style={styles.emptyText}>No chats available</Text>
+          </View>
+        )}
       />
     </View>
   );

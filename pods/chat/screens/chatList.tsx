@@ -1,13 +1,13 @@
-import { useTheme } from '@shared/theme';
+import { Layout } from '@shared/index';
 import React from 'react';
 import { View } from 'react-native';
 import ListComponent from '../components/listComponent';
 import Search from '../components/search';
 import { data } from '../data';
-import { Layout } from '@shared/index';
 import { getStyles } from './styles';
-import { ChatNavigationProp } from '../types/navigation';
+
 import { useChatList } from '../hooks/useChatList';
+import { ChatNavigationProp } from '../types';
 
 /**
  * ChatListScreen component to display a list of chat conversations.
@@ -21,20 +21,29 @@ export type ChatListProps = {
 };
 
 const ChatList: React.FC<ChatListProps> = ({ navigation }) => {
-  const { theme } = useTheme();
-  const styles = getStyles(theme);
-  const { handleItemPress, handleChangeText, listMessages } = useChatList(
-    navigation,
-    data,
-  );
+  // const { theme } = useTheme();
+  const styles = getStyles();
+  const {
+    handleItemPress,
+    handleChangeText,
+    listMessages,
+    searchText,
+    handleClearSearch,
+  } = useChatList(navigation, data);
 
   return (
     <Layout>
-      <Layout.Header title={'Messages'} />
-      <View style={styles.container}>
-        <Search onChangeText={handleChangeText} />
-        <ListComponent data={listMessages} onItemPress={handleItemPress} />
-      </View>
+      <Layout.Header title={'Messages'} style={styles.layoutHeader} />
+      <Layout.Body scrollable={false} style={styles.bodyContainer}>
+        <View style={styles.container}>
+          <Search
+            value={searchText}
+            onChangeText={handleChangeText}
+            onClear={handleClearSearch}
+          />
+          <ListComponent data={listMessages} onItemPress={handleItemPress} />
+        </View>
+      </Layout.Body>
     </Layout>
   );
 };

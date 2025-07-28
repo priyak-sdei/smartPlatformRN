@@ -1,3 +1,6 @@
+import type { StackNavigationProp } from '@react-navigation/stack';
+import type { RouteProp } from '@react-navigation/native';
+
 // Message list item
 export interface ListItem {
   id: number;
@@ -21,7 +24,11 @@ export interface Message {
 
 // Bottom chat input props
 export interface BottomChatInputProps {
-  onSendMessage: (message: string) => void;
+  inputMessage: string;
+  onChangeText: (text: string) => void;
+  onSend: () => void;
+  onAttach: () => void;
+  isSendDisabled: boolean;
   placeholder?: string;
   maxLength?: number;
 }
@@ -32,3 +39,16 @@ export interface ChatMessagesProps {
   currentUserId: string;
   autoScroll?: boolean;
 }
+
+export type ChatStackParamList = {
+  Chat: undefined;
+  ChatDetail: { item: ListItem };
+};
+
+export type ChatNavigationProp<T extends keyof ChatStackParamList> =
+  StackNavigationProp<ChatStackParamList, T>;
+
+export type ChatRouteProp<T extends keyof ChatStackParamList> = RouteProp<
+  ChatStackParamList,
+  T
+>;
