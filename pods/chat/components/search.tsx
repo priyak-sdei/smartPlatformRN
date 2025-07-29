@@ -1,6 +1,6 @@
-import { useTheme } from '@shared/theme';
+import { moderateScale, spacing, useTheme } from '@shared/theme';
 
-import React from 'react';
+import React, { useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import {
   TextInput as RNTextInput,
@@ -11,13 +11,16 @@ import {
   ViewStyle,
 } from 'react-native';
 import { getStyles } from './styles';
-import { SearchIcon } from '../assets/svg';
+import { CrossIcon, SearchIcon } from '../assets/svg';
 interface CustomSearchTextInputProps extends TextInputProps {
-  rightIcon?: React.ReactNode; // Icon or element on the right side
-  containerStyle?: ViewStyle; // Style for the outer container
-  labelStyle?: StyleProp<TextStyle>; // Style for the label text
-  inputRef?: React.Ref<RNTextInput>; // Ref forwarding for focus/blur
-  txOptions?: import('i18next').TOptions; // Use the TOptions type from i18next
+  rightIcon?: React.ReactNode;
+  containerStyle?: ViewStyle;
+  labelStyle?: StyleProp<TextStyle>;
+  inputRef?: React.Ref<RNTextInput>;
+  txOptions?: import('i18next').TOptions;
+  searchValue?: string; // NEW: controlled searchValue from parent
+  onClearSearch?: () => void; // NEW: callback when CrossIcon is pressed
+  onChangeSearchValue?: (searchText: string) => void;
 }
 
 /**
@@ -30,26 +33,42 @@ interface CustomSearchTextInputProps extends TextInputProps {
 const Search: React.FC<CustomSearchTextInputProps> = ({
   inputRef,
   style,
-
+  searchValue = '',
+  onChangeSearchValue,
+  onClearSearch,
   ...props
 }) => {
   const { t } = useTranslation();
   const { theme } = useTheme();
   const styles = getStyles(theme);
 
+  const internalRef = useRef<RNTextInput>(null);
+  const ref = inputRef ?? internalRef;
+
   return (
-    <View style={styles.searchContainer}>
+    <View style={[styles.searchContainer, style]}>
       <RNTextInput
+        ref={ref}
+        value={searchValue}
+        onChangeText={onChangeSearchValue}
+        placeholder={t('Search')}
         placeholderTextColor={theme.colors.placeholder}
         selectionColor={theme.colors.primary}
-        ref={inputRef}
-        style={[styles.searchInput, style]}
-        {...props}
         autoCapitalize="none"
         autoCorrect={false}
-        placeholder={t('Search')}
+        style={[styles.searchInput, style]}
+        {...props}
       />
-      <SearchIcon style={styles.searchIcon} />
+      {searchValue.length > 0 ? (
+        <CrossIcon
+          style={[styles.crossIcon, style]}
+          height={moderateScale(spacing.sm)}
+          width={moderateScale(spacing.sm)}
+          onPress={onClearSearch}
+        />
+      ) : (
+        <SearchIcon style={[styles.searchIcon, style]} />
+      )}
     </View>
   );
 };

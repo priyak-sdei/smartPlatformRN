@@ -2,9 +2,8 @@ import { useTheme } from '@shared/theme';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { FlatList, Image, Text, View } from 'react-native';
-import { useChatMessages } from '../hooks/useChatMessage';
 import { getStyles } from './styles';
-import { ChatMessagesProps, Message } from '../types/components';
+import { ChatMessagesProps, Message } from '../types';
 
 /**
  * ChatMessages component to display a list of chat messages.
@@ -15,12 +14,10 @@ import { ChatMessagesProps, Message } from '../types/components';
 const ChatMessages: React.FC<ChatMessagesProps> = ({
   messages,
   currentUserId,
-  autoScroll = true,
 }) => {
   const { t } = useTranslation();
   const { theme } = useTheme();
   const styles = getStyles(theme);
-  const { flatListRef } = useChatMessages({ messages, autoScroll });
 
   // Render each message item
   const renderMessageItem = ({ item }: { item: Message }) => {
@@ -87,9 +84,9 @@ const ChatMessages: React.FC<ChatMessagesProps> = ({
 
   if (!messages?.length) {
     return (
-      <View style={[styles.container, styles.emptyContainer]}>
+      <View style={styles.emptyChatContainer}>
         <Text style={styles.emptyText}>
-          {t('No messages yet. Start the conversation!')}
+          {t(`No messages yet. \n Start the conversation!`)}
         </Text>
       </View>
     );
@@ -98,8 +95,8 @@ const ChatMessages: React.FC<ChatMessagesProps> = ({
   return (
     <View style={styles.chatContainer}>
       <FlatList
-        ref={flatListRef}
-        data={messages}
+        data={[...messages].reverse()}
+        inverted={true}
         renderItem={renderMessageItem}
         keyExtractor={item => item._id}
         showsVerticalScrollIndicator={false}

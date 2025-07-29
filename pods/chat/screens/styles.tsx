@@ -1,23 +1,29 @@
-import { spacing, verticalScale } from '@src/theme';
+import { moderateScale, spacing, verticalScale } from '@src/theme';
 import { StyleSheet } from 'react-native';
 
 /**
  * Styles for the chat screens.
  * This file contains styles for the conversation screen and chat list screen.
  */
-export const getStyles = (theme: any) =>
+export const getStyles = () =>
   StyleSheet.create({
     keyboardAvoidingView: {
       flex: 1,
     },
-    container: {
-      flex: 1,
-      backgroundColor: theme.colors.background,
+    layoutHeader: {
+      paddingBottom: verticalScale(10),
     },
-    messagesContainer: {
+    chatListLayoutHeader: {
+      height: moderateScale(40),
+    },
+    bodyContainer: {
+      padding: 0,
+    },
+    container: {
       flex: 1,
     },
     bottomInputContainer: {
-      paddingBottom: verticalScale(spacing.xxs),
+      paddingBottom: verticalScale(spacing.s),
+      paddingTop: verticalScale(spacing.xxs),
     },
   });
