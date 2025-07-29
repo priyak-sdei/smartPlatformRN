@@ -15,7 +15,8 @@ export const getStyles = (theme: any) =>
   StyleSheet.create({
     // seacrh styles
     searchContainer: {
-      margin: moderateScale(spacing.xxs),
+      marginHorizontal: horizontalScale(spacing.xs),
+      marginVertical: verticalScale(spacing.xxs),
       flexDirection: 'row',
       alignItems: 'center',
       borderRadius: moderateScale(spacing.s),
@@ -38,7 +39,8 @@ export const getStyles = (theme: any) =>
       color: theme.colors.primary,
     },
     //list component styles
-    container: {
+    flatListContainer: {
+      flex: 1,
       backgroundColor: theme.colors.background,
       marginHorizontal: moderateScale(spacing.xs),
     },
@@ -48,12 +50,12 @@ export const getStyles = (theme: any) =>
       paddingHorizontal: moderateScale(spacing.xxs),
       borderRadius: moderateScale(spacing.s),
     },
-    content: {
+    listInfoContent: {
       flex: 1,
       marginLeft: horizontalScale(spacing.xs),
       marginRight: horizontalScale(spacing.m),
     },
-    contentContainer: {
+    flatListContentContainer: {
       flexGrow: 1,
     },
     timeContent: {
@@ -110,14 +112,14 @@ export const getStyles = (theme: any) =>
       flex: 1,
       backgroundColor: theme.colors.background,
     },
-    emptyContainer: {
+    emptyChatContainer: {
       flex: 1,
       backgroundColor: theme.colors.background,
       justifyContent: 'center',
       alignItems: 'center',
     },
     emptyText: {
-      fontSize: moderateScale(spacing.xs),
+      fontSize: moderateScale(spacing.s),
       color: theme.colors.placeholder,
       textAlign: 'center',
     },
@@ -125,7 +127,7 @@ export const getStyles = (theme: any) =>
     messageContainer: {
       flex: 1,
       flexDirection: 'row',
-      marginVertical: verticalScale(spacing.xxs),
+      marginVertical: verticalScale(spacing.xxxs),
       alignItems: 'flex-end',
     },
     senderContainer: {
@@ -196,12 +198,18 @@ export const getStyles = (theme: any) =>
       borderWidth: 1,
       borderColor: theme.colors.border,
     },
-    input: {
+    inputRow: {
+      flexDirection: 'row',
+      alignItems: 'flex-end',
+    },
+
+    bottomInput: {
       flex: 1,
       fontSize: moderateScale(spacing.s),
       color: theme.colors.text,
       paddingHorizontal: horizontalScale(spacing.xs),
       borderRadius: moderateScale(spacing.s),
+      paddingVertical: verticalScale(spacing.xs),
     },
     inputDisabled: {
       opacity: 0.6,

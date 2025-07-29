@@ -25,19 +25,17 @@ export interface Message {
 // Bottom chat input props
 export interface BottomChatInputProps {
   inputMessage: string;
-  onChangeText: (text: string) => void;
-  onSend: () => void;
-  onAttach: () => void;
+  onChangeMessageText: (messagetext: string) => void;
+  onMessageSend: () => void;
+  onAttachMessage: () => void;
   isSendDisabled: boolean;
   placeholder?: string;
-  maxLength?: number;
 }
 
 // Chat messages props
 export interface ChatMessagesProps {
   messages: Message[];
   currentUserId: string;
-  autoScroll?: boolean;
 }
 
 export type ChatStackParamList = {

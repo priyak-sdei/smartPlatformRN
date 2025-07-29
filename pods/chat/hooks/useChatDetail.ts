@@ -5,24 +5,27 @@ import { Message } from '../types';
 import { pickImagesFromGallery } from '@src/helpers/mediaPicker';
 import { Platform } from 'react-native';
 
-export interface User {
-  _id: string;
-  name: string;
-  avatar: string;
-}
-
 export interface ConversationItem {
   id?: string;
   [key: string]: any;
 }
 
-export const useConversation = (_item: ConversationItem) => {
+export const useChatDetail = (_item: ConversationItem) => {
   // Replace with your actual current user ID
   const currentUserId = 'current-user-id';
 
   // Mock messages data - replace with your actual messages state management
-  const [messages, setMessages] = useState<Message[]>(messageData);
+  const [chatMessages, setChatMessages] = useState<Message[]>(messageData);
+  const [inputMessage, setInputMessage] = useState<string>('');
+  const trimmedLength = inputMessage.trim().length;
+  const isSendDisabled = trimmedLength === 0;
 
+  // Function to handle text input changes
+  const handleChangeMessageText = (messageText: string): void => {
+    setInputMessage(messageText);
+  };
+
+  // Function to handle sending messages
   const handleSendMessage = (messageText: string): void => {
     const trimmedMessage = messageText?.trim();
     if (trimmedMessage.length === 0) return;
@@ -38,22 +41,12 @@ export const useConversation = (_item: ConversationItem) => {
       },
     };
 
-    setMessages(prevMessages => [...prevMessages, newMessage]);
+    setChatMessages(prevMessages => [...prevMessages, newMessage]);
     setInputMessage('');
   };
 
-  const [inputMessage, setInputMessage] = useState<string>('');
-
-  // Function to handle text input changes
-  const handleTextChange = (text: string): void => {
-    setInputMessage(text);
-  };
-
-  const trimmedLength = inputMessage.trim().length;
-  const isSendDisabled = trimmedLength === 0;
-
   // Function to handle attaching images
-  const handleAttach = async () => {
+  const handleAttachImages = async () => {
     const images = await pickImagesFromGallery();
 
     if (images?.success && images.data) {
@@ -75,12 +68,12 @@ export const useConversation = (_item: ConversationItem) => {
   };
 
   return {
-    messages,
+    chatMessages,
     currentUserId,
-    handleSendMessage,
     inputMessage,
-    handleTextChange,
-    handleAttach,
     isSendDisabled,
+    handleSendMessage,
+    handleChangeMessageText,
+    handleAttachImages,
   };
 };
