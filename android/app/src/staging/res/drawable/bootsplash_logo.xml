@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Background -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#FF9800" />
+        </shape>
+    </item>
+    
+    <!-- Logo -->
+    <item android:gravity="center">
+        <shape android:shape="oval">
+            <solid android:color="#FFB74D" />
+            <size android:width="120dp" android:height="120dp" />
+        </shape>
+    </item>
+    
+    <!-- App Name Text -->
+    <item android:gravity="center_horizontal|bottom" android:bottom="100dp">
+        <text android:text="SmartPlatform Staging" 
+              android:textColor="#FFFFFF"
+              android:textSize="24sp"
+              android:textStyle="bold" />
+    </item>
+    
+    <!-- Environment Badge -->
+    <item android:gravity="top|end" android:top="50dp" android:right="50dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#FFB74D" />
+            <corners android:radius="8dp" />
+            <padding android:left="12dp" android:right="12dp" android:top="6dp" android:bottom="6dp" />
+        </shape>
+    </item>
+</layer-list>

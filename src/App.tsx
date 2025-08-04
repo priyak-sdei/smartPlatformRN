@@ -15,10 +15,11 @@ import { store } from '@redux/store';
 import { useAppDispatch } from '@redux/hooks';
 import { setTheme } from '@redux/slices/themeSlice';
 import BootSplash from 'react-native-bootsplash';
-import { KeyboardProvider } from 'react-native-keyboard-controller';
+
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import ConnectionStatusStrip from './components/ConnectionStatusStrip';
 import { GoogleSignin } from '@react-native-google-signin/google-signin';
+import appConfig, { isDevelopment, shouldEnableLogging } from './config';
 
 const AppContent = () => {
   const dispatch = useAppDispatch();
@@ -27,7 +28,8 @@ const AppContent = () => {
   // Initialize Google Sign-In if require otherwise remove this
   useEffect(() => {
     GoogleSignin.configure({
-      webClientId: '749712540931-iqd969jn5jjr0r81mtoc266060eh73nm.apps.googleusercontent.com', // TODO: Replace with your actual web client ID
+      webClientId:
+        '749712540931-iqd969jn5jjr0r81mtoc266060eh73nm.apps.googleusercontent.com', // TODO: Replace with your actual web client ID
       offlineAccess: false,
     });
   }, []);
@@ -43,9 +45,19 @@ const AppContent = () => {
   }, [dispatch]);
 
   useEffect(() => {
-    BootSplash.hide({ fade: true }).catch(err =>
-      console.warn('BootSplash hide error:', err),
+    BootSplash.hide({ fade: true }).catch(
+      err =>
+        shouldEnableLogging() && console.warn('BootSplash hide error:', err),
     );
+  }, []);
+
+  // Log environment info in development
+  useEffect(() => {
+    if (isDevelopment && shouldEnableLogging()) {
+      console.log('App Environment:', appConfig.ENV);
+      console.log('API URL:', appConfig.API_URL);
+      console.log('App Name:', appConfig.APP_NAME);
+    }
   }, []);
 
   return (
@@ -70,10 +82,8 @@ function App() {
   return (
     <Provider store={store}>
       <SafeAreaProvider>
-        <KeyboardProvider>
-          <AppContent />
-          <ConnectionStatusStrip />
-        </KeyboardProvider>
+        <AppContent />
+        <ConnectionStatusStrip />
       </SafeAreaProvider>
     </Provider>
   );

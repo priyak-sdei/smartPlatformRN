@@ -20,6 +20,7 @@ Before you begin, ensure you have the following installed:
 - **Module Aliasing:** Clean and maintainable imports using Babel and TypeScript path aliases.
 - **Localization:** Built-in multi-language support using `i18next` and `react-i18next`.
 - **Environment Variable Support:** Supports multiple environments (`.env`, `.env.dev`, `.env.staging`) for easy configuration of API endpoints and other secrets.
+- **App Flavors:** Three distinct app flavors (Development, Staging, Production) with unique configurations, app icons, and splash screens.
 - **Automatic Dark/Light Mode:** The app automatically adapts to the system's theme.
 - **App Icon & Splash Generation:** Automated scripts for generating app icons and splash screens.
 - **Pre-commit Linting:** Uses Husky and lint-staged to automatically lint and fix code before every commit.
@@ -63,9 +64,11 @@ smartPlatformRN/
 ├── tsconfig.json             # TypeScript config with path aliases
 ├── package.json              # Project dependencies and scripts
 └── README.md                 # Project documentation
-└── .env                     # Environment variables
-└── .env.dev                 # Development environment variables
-└── .env.staging             # Staging environment variables
+├── config/                  # Environment configuration files
+│   ├── env.dev             # Development environment variables
+│   ├── env.staging         # Staging environment variables
+│   └── env.production      # Production environment variables
+└── FLAVOR_SETUP.md         # Detailed flavor setup documentation
 ```
 
 ---
@@ -96,6 +99,39 @@ smartPlatformRN/
 
 - Clean imports using aliases like `@shared`, `@pods`, `@theme`, etc.
 - Configured in both `babel.config.js` and `tsconfig.json`.
+
+---
+
+## 🎨 App Flavors
+
+This project supports three app flavors with unique configurations:
+
+### Quick Start
+
+```bash
+# Development
+yarn android:dev
+yarn ios:dev
+
+# Staging
+yarn android:staging
+yarn ios:staging
+
+# Production
+yarn android:prod
+yarn ios:prod
+```
+
+### Features
+
+- **Unique App Icons:** Each flavor has a distinct colored app icon
+- **Custom Splash Screens:** Different splash screen designs per flavor
+- **Environment Variables:** Separate configuration for each environment
+- **Bundle IDs:** Different bundle identifiers for simultaneous installation
+
+For detailed setup instructions, see [FLAVOR_SETUP.md](./FLAVOR_SETUP.md).
+
+For asset setup and placement, see [ASSETS_PLACEMENT_GUIDE.md](./ASSETS_PLACEMENT_GUIDE.md).
 
 ---
 
