@@ -18,7 +18,40 @@
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		85A6953A353B429B86A842B1 /* Outfit-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 321BC8A5A8D84D139835A587 /* Outfit-Light.ttf */; };
 		88AC3BD6F34841298D347333 /* Outfit-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B777FC9A436E4757B928B5CC /* Outfit-Bold.ttf */; };
+		94EBBEAB86C314CA36F0B8EE /* libPods-smartPlatformRN.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCACB8F33CDC322A6C60F78 /* libPods-smartPlatformRN.a */; };
 		A624D6652E27A5D400790C90 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A624D6642E27A5D400790C90 /* GoogleService-Info.plist */; };
+		A6DBA5CC2E3C99F200360BF3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761780EC2CA45674006654EE /* AppDelegate.swift */; };
+		A6DBA5D02E3C99F200360BF3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		A6DBA5D12E3C99F200360BF3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
+		A6DBA5D22E3C99F200360BF3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A624D6642E27A5D400790C90 /* GoogleService-Info.plist */; };
+		A6DBA5D32E3C99F200360BF3 /* Outfit-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4870B68BBE4346C0867F1BC1 /* Outfit-Black.ttf */; };
+		A6DBA5D42E3C99F200360BF3 /* Outfit-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B777FC9A436E4757B928B5CC /* Outfit-Bold.ttf */; };
+		A6DBA5D52E3C99F200360BF3 /* Outfit-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BA200833C96E4002A97182F1 /* Outfit-ExtraBold.ttf */; };
+		A6DBA5D62E3C99F200360BF3 /* Outfit-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C27ED987FA234DC4B843C6D0 /* Outfit-ExtraLight.ttf */; };
+		A6DBA5D72E3C99F200360BF3 /* Outfit-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 321BC8A5A8D84D139835A587 /* Outfit-Light.ttf */; };
+		A6DBA5D82E3C99F200360BF3 /* Outfit-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 171D182FA013496DA8DE2000 /* Outfit-Medium.ttf */; };
+		A6DBA5D92E3C99F200360BF3 /* Outfit-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA07F954FBA54D6B940E4A42 /* Outfit-Regular.ttf */; };
+		A6DBA5DA2E3C99F200360BF3 /* Outfit-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BCB341CBBE144BE3BF7D189D /* Outfit-SemiBold.ttf */; };
+		A6DBA5DB2E3C99F200360BF3 /* Outfit-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 53B4F3E2506D4E67A00B69E4 /* Outfit-Thin.ttf */; };
+		A6DBA5DC2E3C99F200360BF3 /* BootSplash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFCFDCE55CAF47EDA1FFEF7A /* BootSplash.storyboard */; };
+		A6DBA5DD2E3C99F200360BF3 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6328BB36851A427A90A3BF86 /* Colors.xcassets */; };
+		A6DBA5DE2E3C99F200360BF3 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */; };
+		A6DBA6262E3CE37B00360BF3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761780EC2CA45674006654EE /* AppDelegate.swift */; };
+		A6DBA62A2E3CE37B00360BF3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		A6DBA62B2E3CE37B00360BF3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
+		A6DBA62C2E3CE37B00360BF3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A624D6642E27A5D400790C90 /* GoogleService-Info.plist */; };
+		A6DBA62D2E3CE37B00360BF3 /* Outfit-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4870B68BBE4346C0867F1BC1 /* Outfit-Black.ttf */; };
+		A6DBA62E2E3CE37B00360BF3 /* Outfit-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B777FC9A436E4757B928B5CC /* Outfit-Bold.ttf */; };
+		A6DBA62F2E3CE37B00360BF3 /* Outfit-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BA200833C96E4002A97182F1 /* Outfit-ExtraBold.ttf */; };
+		A6DBA6302E3CE37B00360BF3 /* Outfit-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C27ED987FA234DC4B843C6D0 /* Outfit-ExtraLight.ttf */; };
+		A6DBA6312E3CE37B00360BF3 /* Outfit-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 321BC8A5A8D84D139835A587 /* Outfit-Light.ttf */; };
+		A6DBA6322E3CE37B00360BF3 /* Outfit-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 171D182FA013496DA8DE2000 /* Outfit-Medium.ttf */; };
+		A6DBA6332E3CE37B00360BF3 /* Outfit-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA07F954FBA54D6B940E4A42 /* Outfit-Regular.ttf */; };
+		A6DBA6342E3CE37B00360BF3 /* Outfit-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BCB341CBBE144BE3BF7D189D /* Outfit-SemiBold.ttf */; };
+		A6DBA6352E3CE37B00360BF3 /* Outfit-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 53B4F3E2506D4E67A00B69E4 /* Outfit-Thin.ttf */; };
+		A6DBA6362E3CE37B00360BF3 /* BootSplash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFCFDCE55CAF47EDA1FFEF7A /* BootSplash.storyboard */; };
+		A6DBA6372E3CE37B00360BF3 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6328BB36851A427A90A3BF86 /* Colors.xcassets */; };
+		A6DBA6382E3CE37B00360BF3 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */; };
 		AE63CA44A2E540D1877D49D2 /* BootSplash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFCFDCE55CAF47EDA1FFEF7A /* BootSplash.storyboard */; };
 		B99C573BEC7B44F99399A7F4 /* Outfit-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4870B68BBE4346C0867F1BC1 /* Outfit-Black.ttf */; };
 		D6DB16DFAFE64625A9995D2D /* Outfit-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA07F954FBA54D6B940E4A42 /* Outfit-Regular.ttf */; };
@@ -32,21 +65,25 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = smartPlatformRN/Info.plist; sourceTree = "<group>"; };
 		13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PrivacyInfo.xcprivacy; path = smartPlatformRN/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		171D182FA013496DA8DE2000 /* Outfit-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Outfit-Medium.ttf"; path = "../src/assets/fonts/Outfit-Medium.ttf"; sourceTree = "<group>"; };
+		204228993AB6CB2DC07974C2 /* Pods-smartPlatformRN.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-smartPlatformRN.debug.xcconfig"; path = "Target Support Files/Pods-smartPlatformRN/Pods-smartPlatformRN.debug.xcconfig"; sourceTree = "<group>"; };
 		321BC8A5A8D84D139835A587 /* Outfit-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Outfit-Light.ttf"; path = "../src/assets/fonts/Outfit-Light.ttf"; sourceTree = "<group>"; };
-		3B4392A12AC88292D35C810B /* Pods-smartPlatformRN.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-smartPlatformRN.debug.xcconfig"; path = "Target Support Files/Pods-smartPlatformRN/Pods-smartPlatformRN.debug.xcconfig"; sourceTree = "<group>"; };
 		4870B68BBE4346C0867F1BC1 /* Outfit-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Outfit-Black.ttf"; path = "../src/assets/fonts/Outfit-Black.ttf"; sourceTree = "<group>"; };
 		53B4F3E2506D4E67A00B69E4 /* Outfit-Thin.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Outfit-Thin.ttf"; path = "../src/assets/fonts/Outfit-Thin.ttf"; sourceTree = "<group>"; };
-		5709B34CF0A7D63546082F79 /* Pods-smartPlatformRN.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-smartPlatformRN.release.xcconfig"; path = "Target Support Files/Pods-smartPlatformRN/Pods-smartPlatformRN.release.xcconfig"; sourceTree = "<group>"; };
 		5DCACB8F33CDC322A6C60F78 /* libPods-smartPlatformRN.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-smartPlatformRN.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6328BB36851A427A90A3BF86 /* Colors.xcassets */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = folder.assetcatalog; name = Colors.xcassets; path = smartPlatformRN/Colors.xcassets; sourceTree = "<group>"; };
 		761780EC2CA45674006654EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = smartPlatformRN/AppDelegate.swift; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = smartPlatformRN/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A624D6642E27A5D400790C90 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A624D6662E27BD6200790C90 /* smartPlatformRN.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = smartPlatformRN.entitlements; path = smartPlatformRN/smartPlatformRN.entitlements; sourceTree = "<group>"; };
+		A6DBA5E52E3C99F200360BF3 /* smartPlatformRN-staging.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "smartPlatformRN-staging.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A6DBA5E62E3C99F200360BF3 /* smartPlatformRNStaging-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "smartPlatformRNStaging-Info.plist"; path = "/Users/anil.kumar/Documents/GitHub/smartPlatformRN/ios/smartPlatformRNStaging-Info.plist"; sourceTree = "<absolute>"; };
+		A6DBA63F2E3CE37B00360BF3 /* smartPlatformRN-dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "smartPlatformRN-dev.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A6DBA6402E3CE37C00360BF3 /* smartPlatformRNDev-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "smartPlatformRNDev-Info.plist"; path = "/Users/anil.kumar/Documents/GitHub/smartPlatformRN/ios/smartPlatformRNDev-Info.plist"; sourceTree = "<absolute>"; };
 		B777FC9A436E4757B928B5CC /* Outfit-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Outfit-Bold.ttf"; path = "../src/assets/fonts/Outfit-Bold.ttf"; sourceTree = "<group>"; };
 		BA200833C96E4002A97182F1 /* Outfit-ExtraBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Outfit-ExtraBold.ttf"; path = "../src/assets/fonts/Outfit-ExtraBold.ttf"; sourceTree = "<group>"; };
 		BCB341CBBE144BE3BF7D189D /* Outfit-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Outfit-SemiBold.ttf"; path = "../src/assets/fonts/Outfit-SemiBold.ttf"; sourceTree = "<group>"; };
 		C27ED987FA234DC4B843C6D0 /* Outfit-ExtraLight.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Outfit-ExtraLight.ttf"; path = "../src/assets/fonts/Outfit-ExtraLight.ttf"; sourceTree = "<group>"; };
+		E070D752321B0856E226BAD0 /* Pods-smartPlatformRN.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-smartPlatformRN.release.xcconfig"; path = "Target Support Files/Pods-smartPlatformRN/Pods-smartPlatformRN.release.xcconfig"; sourceTree = "<group>"; };
 		EA07F954FBA54D6B940E4A42 /* Outfit-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Outfit-Regular.ttf"; path = "../src/assets/fonts/Outfit-Regular.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		FFCFDCE55CAF47EDA1FFEF7A /* BootSplash.storyboard */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = BootSplash.storyboard; path = smartPlatformRN/BootSplash.storyboard; sourceTree = "<group>"; };
@@ -58,6 +95,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C80B921A6F3F58F76C31292 /* libPods-smartPlatformRN.a in Frameworks */,
+				94EBBEAB86C314CA36F0B8EE /* libPods-smartPlatformRN.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A6DBA5CD2E3C99F200360BF3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A6DBA6272E3CE37B00360BF3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,6 +157,8 @@
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
 				8DDC04D557E743C8AA881CAD /* Resources */,
+				A6DBA5E62E3C99F200360BF3 /* smartPlatformRNStaging-Info.plist */,
+				A6DBA6402E3CE37C00360BF3 /* smartPlatformRNDev-Info.plist */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -115,6 +169,8 @@
 			isa = PBXGroup;
 			children = (
 				13B07F961A680F5B00A75B9A /* smartPlatformRN.app */,
+				A6DBA5E52E3C99F200360BF3 /* smartPlatformRN-staging.app */,
+				A6DBA63F2E3CE37B00360BF3 /* smartPlatformRN-dev.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -138,8 +194,8 @@
 		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				3B4392A12AC88292D35C810B /* Pods-smartPlatformRN.debug.xcconfig */,
-				5709B34CF0A7D63546082F79 /* Pods-smartPlatformRN.release.xcconfig */,
+				204228993AB6CB2DC07974C2 /* Pods-smartPlatformRN.debug.xcconfig */,
+				E070D752321B0856E226BAD0 /* Pods-smartPlatformRN.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -166,6 +222,42 @@
 			name = smartPlatformRN;
 			productName = smartPlatformRN;
 			productReference = 13B07F961A680F5B00A75B9A /* smartPlatformRN.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A6DBA5C92E3C99F200360BF3 /* smartPlatformRN-staging */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A6DBA5E22E3C99F200360BF3 /* Build configuration list for PBXNativeTarget "smartPlatformRN-staging" */;
+			buildPhases = (
+				A6DBA5CB2E3C99F200360BF3 /* Sources */,
+				A6DBA5CD2E3C99F200360BF3 /* Frameworks */,
+				A6DBA5CF2E3C99F200360BF3 /* Resources */,
+				A6DBA5DF2E3C99F200360BF3 /* Bundle React Native code and images */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "smartPlatformRN-staging";
+			productName = smartPlatformRN;
+			productReference = A6DBA5E52E3C99F200360BF3 /* smartPlatformRN-staging.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A6DBA6232E3CE37B00360BF3 /* smartPlatformRN-dev */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A6DBA63C2E3CE37B00360BF3 /* Build configuration list for PBXNativeTarget "smartPlatformRN-dev" */;
+			buildPhases = (
+				A6DBA6252E3CE37B00360BF3 /* Sources */,
+				A6DBA6272E3CE37B00360BF3 /* Frameworks */,
+				A6DBA6292E3CE37B00360BF3 /* Resources */,
+				A6DBA6392E3CE37B00360BF3 /* Bundle React Native code and images */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "smartPlatformRN-dev";
+			productName = smartPlatformRN;
+			productReference = A6DBA63F2E3CE37B00360BF3 /* smartPlatformRN-dev.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -195,6 +287,8 @@
 			projectRoot = "";
 			targets = (
 				13B07F861A680F5B00A75B9A /* smartPlatformRN */,
+				A6DBA5C92E3C99F200360BF3 /* smartPlatformRN-staging */,
+				A6DBA6232E3CE37B00360BF3 /* smartPlatformRN-dev */,
 			);
 		};
 /* End PBXProject section */
@@ -219,6 +313,50 @@
 				AE63CA44A2E540D1877D49D2 /* BootSplash.storyboard in Resources */,
 				07270548F2504C42B63D2A49 /* Colors.xcassets in Resources */,
 				7EF0580FCE6AB0C0A821995A /* PrivacyInfo.xcprivacy in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A6DBA5CF2E3C99F200360BF3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A6DBA5D02E3C99F200360BF3 /* LaunchScreen.storyboard in Resources */,
+				A6DBA5D12E3C99F200360BF3 /* Images.xcassets in Resources */,
+				A6DBA5D22E3C99F200360BF3 /* GoogleService-Info.plist in Resources */,
+				A6DBA5D32E3C99F200360BF3 /* Outfit-Black.ttf in Resources */,
+				A6DBA5D42E3C99F200360BF3 /* Outfit-Bold.ttf in Resources */,
+				A6DBA5D52E3C99F200360BF3 /* Outfit-ExtraBold.ttf in Resources */,
+				A6DBA5D62E3C99F200360BF3 /* Outfit-ExtraLight.ttf in Resources */,
+				A6DBA5D72E3C99F200360BF3 /* Outfit-Light.ttf in Resources */,
+				A6DBA5D82E3C99F200360BF3 /* Outfit-Medium.ttf in Resources */,
+				A6DBA5D92E3C99F200360BF3 /* Outfit-Regular.ttf in Resources */,
+				A6DBA5DA2E3C99F200360BF3 /* Outfit-SemiBold.ttf in Resources */,
+				A6DBA5DB2E3C99F200360BF3 /* Outfit-Thin.ttf in Resources */,
+				A6DBA5DC2E3C99F200360BF3 /* BootSplash.storyboard in Resources */,
+				A6DBA5DD2E3C99F200360BF3 /* Colors.xcassets in Resources */,
+				A6DBA5DE2E3C99F200360BF3 /* PrivacyInfo.xcprivacy in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A6DBA6292E3CE37B00360BF3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A6DBA62A2E3CE37B00360BF3 /* LaunchScreen.storyboard in Resources */,
+				A6DBA62B2E3CE37B00360BF3 /* Images.xcassets in Resources */,
+				A6DBA62C2E3CE37B00360BF3 /* GoogleService-Info.plist in Resources */,
+				A6DBA62D2E3CE37B00360BF3 /* Outfit-Black.ttf in Resources */,
+				A6DBA62E2E3CE37B00360BF3 /* Outfit-Bold.ttf in Resources */,
+				A6DBA62F2E3CE37B00360BF3 /* Outfit-ExtraBold.ttf in Resources */,
+				A6DBA6302E3CE37B00360BF3 /* Outfit-ExtraLight.ttf in Resources */,
+				A6DBA6312E3CE37B00360BF3 /* Outfit-Light.ttf in Resources */,
+				A6DBA6322E3CE37B00360BF3 /* Outfit-Medium.ttf in Resources */,
+				A6DBA6332E3CE37B00360BF3 /* Outfit-Regular.ttf in Resources */,
+				A6DBA6342E3CE37B00360BF3 /* Outfit-SemiBold.ttf in Resources */,
+				A6DBA6352E3CE37B00360BF3 /* Outfit-Thin.ttf in Resources */,
+				A6DBA6362E3CE37B00360BF3 /* BootSplash.storyboard in Resources */,
+				A6DBA6372E3CE37B00360BF3 /* Colors.xcassets in Resources */,
+				A6DBA6382E3CE37B00360BF3 /* PrivacyInfo.xcprivacy in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,6 +395,38 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-smartPlatformRN/Pods-smartPlatformRN-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		A6DBA5DF2E3C99F200360BF3 /* Bundle React Native code and images */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/.xcode.env.local",
+				"$(SRCROOT)/.xcode.env",
+			);
+			name = "Bundle React Native code and images";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\n\nWITH_ENVIRONMENT=\"$REACT_NATIVE_PATH/scripts/xcode/with-environment.sh\"\nREACT_NATIVE_XCODE=\"$REACT_NATIVE_PATH/scripts/react-native-xcode.sh\"\n\n/bin/sh -c \"$WITH_ENVIRONMENT $REACT_NATIVE_XCODE\"\n";
+		};
+		A6DBA6392E3CE37B00360BF3 /* Bundle React Native code and images */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/.xcode.env.local",
+				"$(SRCROOT)/.xcode.env",
+			);
+			name = "Bundle React Native code and images";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\n\nWITH_ENVIRONMENT=\"$REACT_NATIVE_PATH/scripts/xcode/with-environment.sh\"\nREACT_NATIVE_XCODE=\"$REACT_NATIVE_PATH/scripts/react-native-xcode.sh\"\n\n/bin/sh -c \"$WITH_ENVIRONMENT $REACT_NATIVE_XCODE\"\n";
 		};
 		C38B50BA6285516D6DCD4F65 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -308,12 +478,28 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A6DBA5CB2E3C99F200360BF3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A6DBA5CC2E3C99F200360BF3 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A6DBA6252E3CE37B00360BF3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A6DBA6262E3CE37B00360BF3 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3B4392A12AC88292D35C810B /* Pods-smartPlatformRN.debug.xcconfig */;
+			baseConfigurationReference = 204228993AB6CB2DC07974C2 /* Pods-smartPlatformRN.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -344,7 +530,7 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5709B34CF0A7D63546082F79 /* Pods-smartPlatformRN.release.xcconfig */;
+			baseConfigurationReference = E070D752321B0856E226BAD0 /* Pods-smartPlatformRN.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -523,6 +709,122 @@
 			};
 			name = Release;
 		};
+		A6DBA5E32E3C99F200360BF3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = smartPlatformRN/smartPlatformRN.entitlements;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 33P3VUARHV;
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = "smartPlatformRNStaging-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = smartPlatformRN;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-lc++",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.baseSetup.staging;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Debug;
+		};
+		A6DBA5E42E3C99F200360BF3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = smartPlatformRN/smartPlatformRN.entitlements;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 33P3VUARHV;
+				INFOPLIST_FILE = "smartPlatformRNStaging-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = smartPlatformRN;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-lc++",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.baseSetup.staging;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Release;
+		};
+		A6DBA63D2E3CE37B00360BF3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = smartPlatformRN/smartPlatformRN.entitlements;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 33P3VUARHV;
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = "smartPlatformRNDev-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = smartPlatformRN;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-lc++",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.baseSetup;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Debug;
+		};
+		A6DBA63E2E3CE37B00360BF3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = smartPlatformRN/smartPlatformRN.entitlements;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 33P3VUARHV;
+				INFOPLIST_FILE = "smartPlatformRNDev-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = smartPlatformRN;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-lc++",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.baseSetup;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -540,6 +842,24 @@
 			buildConfigurations = (
 				83CBBA201A601CBA00E9B192 /* Debug */,
 				83CBBA211A601CBA00E9B192 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A6DBA5E22E3C99F200360BF3 /* Build configuration list for PBXNativeTarget "smartPlatformRN-staging" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A6DBA5E32E3C99F200360BF3 /* Debug */,
+				A6DBA5E42E3C99F200360BF3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A6DBA63C2E3CE37B00360BF3 /* Build configuration list for PBXNativeTarget "smartPlatformRN-dev" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A6DBA63D2E3CE37B00360BF3 /* Debug */,
+				A6DBA63E2E3CE37B00360BF3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

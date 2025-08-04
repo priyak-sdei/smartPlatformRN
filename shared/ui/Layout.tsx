@@ -1,12 +1,13 @@
 import React, { ReactNode } from 'react';
 import {
+  ScrollView,
   ScrollViewProps,
   StatusBar,
   StyleSheet,
   View,
   ViewProps,
 } from 'react-native';
-import { KeyboardAwareScrollView } from 'react-native-keyboard-controller';
+
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { moderateScale, spacing, useTheme } from '../theme';
 import Header from './Header';
@@ -31,7 +32,7 @@ const Body: React.FC<LayoutBodyProps> = ({
   const { theme } = useTheme();
   const styles = getStyles(theme);
   return scrollable ? (
-    <KeyboardAwareScrollView
+    <ScrollView
       style={[styles.body, style]}
       contentContainerStyle={styles.contentContainer}
       showsVerticalScrollIndicator={false}
@@ -39,7 +40,7 @@ const Body: React.FC<LayoutBodyProps> = ({
       {...props}
     >
       {children}
-    </KeyboardAwareScrollView>
+    </ScrollView>
   ) : (
     <View style={[styles.body, style]} {...props}>
       {children}

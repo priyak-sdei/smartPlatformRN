@@ -1,0 +1,25 @@
+# Sample Asset File
+# This is a placeholder for: splash-logo.png
+
+# To convert this SVG to PNG, you can use:
+# 1. Online tools like: https://convertio.co/svg-png/
+# 2. Command line tools like ImageMagick: convert input.svg output.png
+# 3. Design tools like Figma, Sketch, or Adobe Illustrator
+
+# SVG Content:
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <circle cx="100" cy="100" r="80" fill="url(#grad2)"/>
+  <text x="100" y="120" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="white">SP</text>
+</svg>
+
+# Requirements:
+# - App Icon: 1024x1024 PNG with transparent background
+# - Splash Logo: PNG with transparent background (recommended: 200x200px)
+
+# Place the converted PNG file in this location: /Users/anil.kumar/Documents/GitHub/smartPlatformRN/smart-assets/splash-logo.png
