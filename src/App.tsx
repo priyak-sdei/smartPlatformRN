@@ -20,6 +20,7 @@ import { SafeAreaProvider } from 'react-native-safe-area-context';
 import ConnectionStatusStrip from './components/ConnectionStatusStrip';
 import { GoogleSignin } from '@react-native-google-signin/google-signin';
 import appConfig, { isDevelopment, shouldEnableLogging } from './config';
+import { KeyboardProvider } from 'react-native-keyboard-controller';
 
 const AppContent = () => {
   const dispatch = useAppDispatch();
@@ -81,10 +82,12 @@ function App() {
 
   return (
     <Provider store={store}>
-      <SafeAreaProvider>
-        <AppContent />
-        <ConnectionStatusStrip />
-      </SafeAreaProvider>
+      <KeyboardProvider>
+        <SafeAreaProvider>
+          <AppContent />
+          <ConnectionStatusStrip />
+        </SafeAreaProvider>
+      </KeyboardProvider>
     </Provider>
   );
 }

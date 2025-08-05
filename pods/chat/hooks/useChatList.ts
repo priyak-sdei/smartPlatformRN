@@ -1,6 +1,5 @@
-import { ChatNavigationProp } from '../types/navigation';
-import { ListItem } from '../types/components';
 import { useState } from 'react';
+import { ChatNavigationProp, ListItem } from '../types';
 
 /**
  * Custom hook to handle chat list functionality
@@ -12,31 +11,39 @@ export const useChatList = (
   navigation: ChatNavigationProp<'Chat'>,
   data: ListItem[],
 ) => {
-  const [listMessages, setListMessages] = useState<ListItem[]>(data);
+  const [chatlistMessages, setChatListMessages] = useState<ListItem[]>(data);
+  const [searchText, setSearchText] = useState('');
+
   /**
    * Handles press event on a chat list item
    * Navigates to the conversation screen with the selected item data
    *
    * @param item - The chat list item that was pressed
    */
-  const handleItemPress = (item: ListItem) => {
-    navigation.navigate('ChatDetail', { item: item });
+  const handleChatItemPress = (chatItem: ListItem) => {
+    navigation.navigate('ChatDetail', { item: chatItem });
   };
 
-  const handleChangeText = (text: string) => {
-    console.log('text', text);
-    const filteredData = data.filter(item =>
-      item.name.toLowerCase().includes(text.toLowerCase()),
+  const handleChangeSearchText = (searchValue: string) => {
+    setSearchText(searchValue);
+    const filteredChatList = data.filter(item =>
+      item.name.toLowerCase().includes(searchValue.toLowerCase()),
     );
-    setListMessages(filteredData);
-    if (text === '') {
-      setListMessages(data);
+    setChatListMessages(filteredChatList);
+    if (searchValue === '') {
+      setChatListMessages(data);
     }
   };
 
+  const handleClearSearch = () => {
+    setSearchText('');
+    setChatListMessages(data);
+  };
   return {
-    handleItemPress,
-    handleChangeText,
-    listMessages,
+    searchText,
+    chatlistMessages,
+    handleChatItemPress,
+    handleChangeSearchText,
+    handleClearSearch,
   };
 };
