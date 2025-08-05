@@ -135,11 +135,10 @@ android {
             keyPassword 'android'
         }
         release {
-            // For production builds, you should use a proper keystore
-            storeFile file('release.keystore')
-            storePassword System.getenv('KEYSTORE_PASSWORD') ?: 'android'
-            keyAlias System.getenv('KEY_ALIAS') ?: 'androiddebugkey'
-            keyPassword System.getenv('KEY_PASSWORD') ?: 'android'
+            storeFile file(RELEASE_STORE_FILE)
+            storePassword RELEASE_STORE_PASSWORD
+            keyAlias RELEASE_KEY_ALIAS
+            keyPassword RELEASE_KEY_PASSWORD
         }
     }
     buildTypes {
