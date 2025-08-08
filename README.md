@@ -137,7 +137,28 @@ For asset setup and placement, see [ASSETS_PLACEMENT_GUIDE.md](./ASSETS_PLACEMEN
 
 ## 🧑‍💻 Get Started
 
-### 1. Install dependencies
+### 1. Rename the App (Optional)
+
+If you want to rename the app from its default name, you can use the built-in rename script:
+
+```sh
+yarn rename
+```
+
+This will:
+- Change the app display name
+- Update the bundle identifier
+- Modify necessary Android and iOS configurations
+- Update internal references
+
+After renaming, you should clean and rebuild:
+```sh
+# Clean iOS and Android builds
+cd android && ./gradlew clean && cd ..
+cd ios && xcodebuild clean && pod install && cd ..
+```
+
+### 2. Install dependencies
 
 ```sh
 yarn install

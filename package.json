@@ -1,8 +1,9 @@
 {
-  "name": "smartplatformrn",
+  "name": "demo",
   "version": "0.0.1",
   "private": true,
   "scripts": {
+    "rename": "node scripts/rename-app.js",
     "android": "react-native run-android",
     "ios": "react-native run-ios",
     "lint": "eslint .",
