@@ -1,7 +1,6 @@
 module.exports = {
   presets: ['@react-native/babel-preset'],
   plugins: [
-    'react-native-reanimated/plugin',
     [
       'module-resolver',
       {
@@ -29,8 +28,9 @@ module.exports = {
       'module:react-native-dotenv',
       {
         moduleName: '@env',
-        path: process.env.ENVFILE || 'config/env.dev',
+        path: process.env.ENVFILE || '.env',
       },
     ],
+    'react-native-reanimated/plugin',
   ],
 };

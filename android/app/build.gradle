@@ -2,20 +2,6 @@ apply plugin: "com.android.application"
 apply plugin: "org.jetbrains.kotlin.android"
 apply plugin: "com.facebook.react"
 
-// Helper function to read environment variables from config files
-def getEnvVar(String flavor, String key, String fallback) {
-    def envFile = file("../../config/env.${flavor}")
-    if (envFile.exists()) {
-        def properties = new Properties()
-        envFile.withInputStream { stream ->
-            properties.load(stream)
-        }
-        def value = properties.getProperty(key)
-        return value ? value.trim() : fallback
-    }
-    return fallback
-}
-
 /**
  * This is the configuration block to customize your React Native Android app.
  * By default you don't need to apply any configuration, just uncomment the lines you need.
@@ -92,36 +78,8 @@ android {
     compileSdk rootProject.ext.compileSdkVersion
 
     namespace "com.baseSetup"
-    
-    flavorDimensions "environment"
-    
-    productFlavors {
-        dev {
-            dimension "environment"
-            applicationId getEnvVar("dev", "APP_BUNDLE_ID", "com.baseSetup")
-            resValue "string", "app_name", getEnvVar("dev", "APP_NAME", "SmartPlatform")
-            buildConfigField "String", "ENV", "\"development\""
-            buildConfigField "String", "API_URL", "\"${getEnvVar("dev", "API_URL", "https://dev-api.smartplatform.com")}\""
-        }
-        
-        staging {
-            dimension "environment"
-            applicationId getEnvVar("staging", "APP_BUNDLE_ID", "com.baseSetup.staging")
-            resValue "string", "app_name", getEnvVar("staging", "APP_NAME", "SmartPlatform-Staging")
-            buildConfigField "String", "ENV", "\"staging\""
-            buildConfigField "String", "API_URL", "\"${getEnvVar("staging", "API_URL", "https://staging-api.smartplatform.com")}\""
-        }
-        
-        production {
-            dimension "environment"
-            applicationId getEnvVar("production", "APP_BUNDLE_ID", "com.baseSetup")
-            resValue "string", "app_name", getEnvVar("production", "APP_NAME", "SmartPlatform")
-            buildConfigField "String", "ENV", "\"production\""
-            buildConfigField "String", "API_URL", "\"${getEnvVar("production", "API_URL", "https://api.smartplatform.com")}\""
-        }
-    }
-    
     defaultConfig {
+        applicationId "com.baseSetup"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
@@ -134,11 +92,17 @@ android {
             keyAlias 'androiddebugkey'
             keyPassword 'android'
         }
-
     }
     buildTypes {
         debug {
             signingConfig signingConfigs.debug
+        }
+        release {
+            // Caution! In production, you need to generate your own keystore file.
+            // see https://reactnative.dev/docs/signed-apk-android.
+            signingConfig signingConfigs.debug
+            minifyEnabled enableProguardInReleaseBuilds
+            proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
         }
     }
 }

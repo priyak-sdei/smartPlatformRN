@@ -34,6 +34,9 @@ if linkage != nil
   use_frameworks! :linkage => linkage.to_sym
 end
 
+# Explicitly select Xcode project to avoid auto-detection errors
+project 'smartPlatformRN.xcodeproj'
+
 target 'smartPlatformRN' do
   config = use_native_modules!
 

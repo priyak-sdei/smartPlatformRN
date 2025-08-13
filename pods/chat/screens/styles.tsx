@@ -1,4 +1,4 @@
-import { spacing, verticalScale } from '@src/theme';
+import { moderateScale, spacing, verticalScale } from '@src/theme';
 import { StyleSheet } from 'react-native';
 
 /**
@@ -13,6 +13,9 @@ export const getStyles = () =>
     layoutHeader: {
       paddingBottom: verticalScale(10),
     },
+    chatListLayoutHeader: {
+      height: moderateScale(40),
+    },
     bodyContainer: {
       padding: 0,
     },
@@ -21,5 +24,6 @@ export const getStyles = () =>
     },
     bottomInputContainer: {
       paddingBottom: verticalScale(spacing.s),
+      paddingTop: verticalScale(spacing.xxs),
     },
   });
