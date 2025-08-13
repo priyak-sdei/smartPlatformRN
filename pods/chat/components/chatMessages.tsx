@@ -2,7 +2,6 @@ import { useTheme } from '@shared/theme';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { FlatList, Image, Text, View } from 'react-native';
-
 import { getStyles } from './styles';
 import { ChatMessagesProps, Message } from '../types';
 
@@ -85,9 +84,9 @@ const ChatMessages: React.FC<ChatMessagesProps> = ({
 
   if (!messages?.length) {
     return (
-      <View style={[styles.container, styles.emptyContainer]}>
+      <View style={styles.emptyChatContainer}>
         <Text style={styles.emptyText}>
-          {t('No messages yet. Start the conversation!')}
+          {t(`No messages yet. \n Start the conversation!`)}
         </Text>
       </View>
     );

@@ -1,5 +1,5 @@
 import type { AuthNavigationProp } from '../types';
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Image, StyleSheet } from 'react-native';
 import { Layout, Text, Button, TextInput } from '@shared/index';
 import {
@@ -23,17 +23,7 @@ const Login = ({ navigation: _navigation }: LoginProps) => {
   const styles = getStyles(theme);
   const { t } = useTranslation();
   const { email, password, setEmail, setPassword, login, isValid } = useLogin();
-  useEffect(() => {
-    const logBuildEnvironment = () => {
-      const env = process.env.ENV;
-      const env1 = process.env;
 
-      console.log(`Current build environment: ${env}`);
-      console.log(`Current build env1: ${JSON.stringify(env1)}`);
-    };
-
-    logBuildEnvironment();
-  }, []);
   return (
     <Layout>
       <Layout.Header />
