@@ -34,7 +34,7 @@ if linkage != nil
   use_frameworks! :linkage => linkage.to_sym
 end
 
-target 'smartPlatformRN' do
+target 'DemoApp' do
   config = use_native_modules!
 
   use_react_native!(
