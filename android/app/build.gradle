@@ -98,24 +98,24 @@ android {
     productFlavors {
         dev {
             dimension "environment"
-            applicationId getEnvVar("dev", "APP_BUNDLE_ID", "com.baseSetup")
-            resValue "string", "app_name", getEnvVar("dev", "APP_NAME", "SmartPlatform")
+            applicationId getEnvVar("dev", "APP_BUNDLE_ID", "com.demo.dev")
+            resValue "string", "app_name", getEnvVar("dev", "APP_NAME", "DemoApp")
             buildConfigField "String", "ENV", "\"development\""
             buildConfigField "String", "API_URL", "\"${getEnvVar("dev", "API_URL", "https://dev-api.smartplatform.com")}\""
         }
         
         staging {
             dimension "environment"
-            applicationId getEnvVar("staging", "APP_BUNDLE_ID", "com.baseSetup.staging")
-            resValue "string", "app_name", getEnvVar("staging", "APP_NAME", "SmartPlatform-Staging")
+            applicationId getEnvVar("staging", "APP_BUNDLE_ID", "com.demo.dev.staging")
+            resValue "string", "app_name", getEnvVar("staging", "APP_NAME", "DemoApp-Staging")
             buildConfigField "String", "ENV", "\"staging\""
             buildConfigField "String", "API_URL", "\"${getEnvVar("staging", "API_URL", "https://staging-api.smartplatform.com")}\""
         }
         
         production {
             dimension "environment"
-            applicationId getEnvVar("production", "APP_BUNDLE_ID", "com.baseSetup")
-            resValue "string", "app_name", getEnvVar("production", "APP_NAME", "SmartPlatform")
+            applicationId getEnvVar("production", "APP_BUNDLE_ID", "com.demo.dev")
+            resValue "string", "app_name", getEnvVar("production", "APP_NAME", "DemoApp")
             buildConfigField "String", "ENV", "\"production\""
             buildConfigField "String", "API_URL", "\"${getEnvVar("production", "API_URL", "https://api.smartplatform.com")}\""
         }
