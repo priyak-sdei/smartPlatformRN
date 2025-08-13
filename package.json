@@ -11,7 +11,7 @@
     "start:dev": "ENVFILE=.env.dev react-native start --reset-cache",
     "start:staging": "ENVFILE=.env.staging react-native start --reset-cache",
     "start:prod": "ENVFILE=.env react-native start --reset-cache",
-    "rename-app": "read -p 'Enter New App Name: ' newName && read -p 'Enter New Bundle ID (e.g., com.example.app): ' newBundleId && npx react-native-rename \"$newName\" -b \"$newBundleId\"",
+    "rename-app": "bash -c 'read -p \"Enter New App Name: \" newName && read -p \"Enter New Bundle ID (e.g., com.example.app): \" newBundleId && npx react-native-rename \"$newName\" -b \"$newBundleId\"'",    
     "assets:set-icon": "npx react-native set-icon --path smart-assets/icon.png --platform android && npx react-native set-icon --path smart-assets/icon.png --platform ios",
     "postassets:set-icon": "echo 'App icons generated. Remember to clean builds (./android/gradlew clean, rm -rf ios/build) and reinstall pods (cd ios && pod install --repo-update) before rebuilding.'",
     "assets:generate-splash": "node ./scripts/generate-splash.js",
