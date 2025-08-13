@@ -34,7 +34,7 @@
     "build:ios:staging:release": "cd ios && xcodebuild -workspace smartPlatformRN.xcworkspace -scheme smartPlatformRN-staging -configuration Release -destination generic/platform=iOS archive -archivePath build/smartPlatformRN-staging.xcarchive",
     "build:ios:prod": "cd ios && xcodebuild -workspace smartPlatformRN.xcworkspace -scheme smartPlatformRN-production -configuration Release -destination generic/platform=iOS archive -archivePath build/smartPlatformRN-production.xcarchive",
     "build:ios:prod:release": "cd ios && xcodebuild -workspace smartPlatformRN.xcworkspace -scheme smartPlatformRN-production -configuration Release -destination generic/platform=iOS archive -archivePath build/smartPlatformRN-production.xcarchive",
-    "rename-app": "read -p 'Enter New App Name: ' newName && read -p 'Enter New Bundle ID (e.g., com.example.app): ' newBundleId && npx react-native-rename \"$newName\" -b \"$newBundleId\"",
+    "rename-app": "bash -c 'read -p \"Enter New App Name: \" newName && read -p \"Enter New Bundle ID (e.g., com.example.app): \" newBundleId && npx react-native-rename \"$newName\" -b \"$newBundleId\"'",
     "assets:set-icon": "npx react-native set-icon --path smart-assets/icon.png --platform android && npx react-native set-icon --path smart-assets/icon.png --platform ios",
     "postassets:set-icon": "echo 'App icons generated. Remember to clean builds (./android/gradlew clean, rm -rf ios/build) and reinstall pods (cd ios && pod install --repo-update) before rebuilding.'",
     "assets:generate-splash": "node scripts/generate-flavor-splash-screens.js",
