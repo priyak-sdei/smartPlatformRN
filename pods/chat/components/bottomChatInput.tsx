@@ -7,7 +7,8 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import { AttachIcon } from '../assets/svg';
+import { Attach } from '../assets/svg';
+
 import { BottomChatInputProps } from '../types';
 import { getStyles } from './styles';
 
@@ -20,11 +21,12 @@ import { getStyles } from './styles';
  */
 const BottomChatInput: React.FC<BottomChatInputProps> = ({
   inputMessage,
-  onChangeMessageText,
-  onMessageSend,
-  onAttachMessage,
+  onChangeText,
+  onSend,
+  onAttach,
   isSendDisabled,
   placeholder = 'Type a message...',
+  maxLength = 1000,
 }) => {
   const { t } = useTranslation();
   const { theme } = useTheme();
@@ -32,38 +34,35 @@ const BottomChatInput: React.FC<BottomChatInputProps> = ({
 
   return (
     <View style={styles.bottomInputContainer}>
-      <View style={styles.inputRow}>
-        <RNTextInput
-          placeholderTextColor={theme.colors.placeholder}
-          value={inputMessage}
-          onChangeText={onChangeMessageText}
-          style={styles.bottomInput}
-          autoCapitalize="sentences"
-          autoCorrect={false}
-          placeholder={placeholder}
-          multiline={true}
-          numberOfLines={5}
-        />
-        <View style={styles.sendButtonContainer}>
-          <AttachIcon style={styles.attachIcon} onPress={onAttachMessage} />
-          <TouchableOpacity
+      <RNTextInput
+        placeholderTextColor={theme.colors.placeholder}
+        value={inputMessage}
+        onChangeText={onChangeText}
+        style={styles.input}
+        autoCapitalize="sentences"
+        autoCorrect={false}
+        placeholder={placeholder}
+        maxLength={maxLength}
+      />
+      <View style={styles.sendButtonContainer}>
+        <Attach style={styles.attachIcon} onPress={onAttach} />
+        <TouchableOpacity
+          style={[
+            styles.sendButton,
+            isSendDisabled && styles.sendButtonDisabled,
+          ]}
+          onPress={onSend}
+          disabled={isSendDisabled}
+        >
+          <Text
             style={[
-              styles.sendButton,
-              isSendDisabled && styles.sendButtonDisabled,
+              styles.sendButtonText,
+              isSendDisabled && styles.sendButtonTextDisabled,
             ]}
-            onPress={onMessageSend}
-            disabled={isSendDisabled}
           >
-            <Text
-              style={[
-                styles.sendButtonText,
-                isSendDisabled && styles.sendButtonTextDisabled,
-              ]}
-            >
-              {t('Send')}
-            </Text>
-          </TouchableOpacity>
-        </View>
+            {t('Send')}
+          </Text>
+        </TouchableOpacity>
       </View>
     </View>
   );

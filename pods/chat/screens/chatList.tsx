@@ -8,7 +8,6 @@ import { getStyles } from './styles';
 
 import { useChatList } from '../hooks/useChatList';
 import { ChatNavigationProp } from '../types';
-import { useTranslation } from 'react-i18next';
 
 /**
  * ChatListScreen component to display a list of chat conversations.
@@ -23,34 +22,28 @@ export type ChatListProps = {
 
 const ChatList: React.FC<ChatListProps> = ({ navigation }) => {
   // const { theme } = useTheme();
-  const { t } = useTranslation();
   const styles = getStyles();
   const {
-    chatlistMessages,
+    handleItemPress,
+    handleChangeText,
+    listMessages,
     searchText,
-    handleChatItemPress,
-    handleChangeSearchText,
     handleClearSearch,
   } = useChatList(navigation, data);
 
   return (
     <Layout>
-      <Layout.Header
-        title={t('Messages')}
-        style={styles.chatListLayoutHeader}
-      />
-
-      <View style={styles.container}>
-        <Search
-          searchValue={searchText}
-          onChangeSearchValue={handleChangeSearchText}
-          onClearSearch={handleClearSearch}
-        />
-        <ListComponent
-          data={chatlistMessages}
-          onListItemPress={handleChatItemPress}
-        />
-      </View>
+      <Layout.Header title={'Messages'} style={styles.layoutHeader} />
+      <Layout.Body scrollable={false} style={styles.bodyContainer}>
+        <View style={styles.container}>
+          <Search
+            value={searchText}
+            onChangeText={handleChangeText}
+            onClear={handleClearSearch}
+          />
+          <ListComponent data={listMessages} onItemPress={handleItemPress} />
+        </View>
+      </Layout.Body>
     </Layout>
   );
 };

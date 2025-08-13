@@ -11,7 +11,7 @@ export const useChatList = (
   navigation: ChatNavigationProp<'Chat'>,
   data: ListItem[],
 ) => {
-  const [chatlistMessages, setChatListMessages] = useState<ListItem[]>(data);
+  const [listMessages, setListMessages] = useState<ListItem[]>(data);
   const [searchText, setSearchText] = useState('');
 
   /**
@@ -20,30 +20,30 @@ export const useChatList = (
    *
    * @param item - The chat list item that was pressed
    */
-  const handleChatItemPress = (chatItem: ListItem) => {
-    navigation.navigate('ChatDetail', { item: chatItem });
+  const handleItemPress = (item: ListItem) => {
+    navigation.navigate('ChatDetail', { item: item });
   };
 
-  const handleChangeSearchText = (searchValue: string) => {
-    setSearchText(searchValue);
-    const filteredChatList = data.filter(item =>
-      item.name.toLowerCase().includes(searchValue.toLowerCase()),
+  const handleChangeText = (text: string) => {
+    setSearchText(text);
+    const filtered = data.filter(item =>
+      item.name.toLowerCase().includes(text.toLowerCase()),
     );
-    setChatListMessages(filteredChatList);
-    if (searchValue === '') {
-      setChatListMessages(data);
+    setListMessages(filtered);
+    if (text === '') {
+      setListMessages(data);
     }
   };
 
   const handleClearSearch = () => {
     setSearchText('');
-    setChatListMessages(data);
+    setListMessages(data);
   };
   return {
     searchText,
-    chatlistMessages,
-    handleChatItemPress,
-    handleChangeSearchText,
+    handleItemPress,
+    handleChangeText,
+    listMessages,
     handleClearSearch,
   };
 };

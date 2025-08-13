@@ -14,20 +14,15 @@ import { CHATIMAGES } from '../assets/images';
 
 import { getStyles } from './styles';
 import { ListItem } from '../types';
-import { useTranslation } from 'react-i18next';
 
 // ListComponentProps interface for the component props
 export interface ListComponentProps {
   data: ListItem[];
-  onListItemPress: (item: ListItem) => void;
+  onItemPress: (item: ListItem) => void;
 }
 
 // ListComponent component to display a list of items
-const ListComponent: React.FC<ListComponentProps> = ({
-  data,
-  onListItemPress,
-}) => {
-  const { t } = useTranslation();
+const ListComponent: React.FC<ListComponentProps> = ({ data, onItemPress }) => {
   const { theme } = useTheme();
   const styles = getStyles(theme);
 
@@ -35,10 +30,10 @@ const ListComponent: React.FC<ListComponentProps> = ({
   const renderItem: ListRenderItem<ListItem> = ({ item }) => (
     <TouchableOpacity
       style={styles.listContainer}
-      onPress={() => onListItemPress(item)}
+      onPress={() => onItemPress(item)}
     >
       <Image source={CHATIMAGES.chat.avatar} style={styles.profileImage} />
-      <View style={styles.listInfoContent}>
+      <View style={styles.content}>
         <Text style={styles.name}>{item.name}</Text>
         <Text style={styles.message} numberOfLines={1} ellipsizeMode="tail">
           {item.message}
@@ -56,17 +51,17 @@ const ListComponent: React.FC<ListComponentProps> = ({
   );
 
   return (
-    <View style={styles.flatListContainer}>
+    <View style={styles.container}>
       <FlatList
         data={data}
         renderItem={renderItem}
         keyExtractor={item => item.id.toString()}
         ItemSeparatorComponent={() => <View style={styles.separator} />}
         showsVerticalScrollIndicator={false}
-        contentContainerStyle={styles.flatListContentContainer}
+        contentContainerStyle={[styles.contentContainer]}
         ListEmptyComponent={() => (
           <View style={styles.emptyListContainer}>
-            <Text style={styles.emptyText}>{t('No chats available')}</Text>
+            <Text style={styles.emptyText}>No chats available</Text>
           </View>
         )}
       />

@@ -4,12 +4,11 @@ import React from 'react';
 import { Platform, View } from 'react-native';
 import BottomChatInput from '../components/bottomChatInput';
 import ChatMessages from '../components/chatMessages';
-import { useChatDetail } from '../hooks/useChatDetail';
+import { useConversation } from '../hooks/useConversation';
 
 import { KeyboardAvoidingView } from 'react-native-keyboard-controller';
 import { ChatNavigationProp, ChatRouteProp } from '../types';
 import { getStyles } from './styles';
-import { useTranslation } from 'react-i18next';
 
 /**
  * ConversationScreen component to display a chat conversation.
@@ -25,19 +24,18 @@ export type ChatDetailProps = {
 
 const ChatDetail = ({ navigation, route }: ChatDetailProps) => {
   // const { theme } = useTheme();
-  const { t } = useTranslation();
   const styles = getStyles();
   const { item } = route.params;
 
   const {
-    chatMessages,
+    messages,
     currentUserId,
     inputMessage,
-    isSendDisabled,
     handleSendMessage,
-    handleChangeMessageText,
-    handleAttachImages,
-  } = useChatDetail({
+    handleTextChange,
+    handleAttach,
+    isSendDisabled,
+  } = useConversation({
     ...item,
     id: String(item.id),
   });
@@ -47,7 +45,7 @@ const ChatDetail = ({ navigation, route }: ChatDetailProps) => {
       <Layout.Header
         leftIcon={<Back />}
         onLeftPress={() => navigation.goBack()}
-        title={item.name || t('Conversation')}
+        title={item.name || 'Conversation'}
         style={styles.layoutHeader}
       />
 
@@ -57,15 +55,20 @@ const ChatDetail = ({ navigation, route }: ChatDetailProps) => {
         keyboardVerticalOffset={Platform.OS === 'ios' ? 50 : 0}
       >
         <Layout.Body scrollable={false} style={styles.bodyContainer}>
-          <ChatMessages messages={chatMessages} currentUserId={currentUserId} />
+          <ChatMessages
+            messages={messages}
+            currentUserId={currentUserId}
+            autoScroll={true}
+          />
           <View style={styles.bottomInputContainer}>
             <BottomChatInput
               inputMessage={inputMessage}
-              onChangeMessageText={handleChangeMessageText}
-              onMessageSend={() => handleSendMessage(inputMessage)}
-              onAttachMessage={handleAttachImages}
+              onChangeText={handleTextChange}
+              onSend={() => handleSendMessage(inputMessage)}
+              onAttach={handleAttach}
               isSendDisabled={isSendDisabled}
               placeholder="Type a message..."
+              maxLength={1000}
             />
           </View>
         </Layout.Body>
