@@ -9889,6 +9889,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-native-actions-sheet@npm:^0.9.5":
+  version: 0.9.7
+  resolution: "react-native-actions-sheet@npm:0.9.7"
+  peerDependencies:
+    react-native: "*"
+    react-native-gesture-handler: "*"
+    react-native-safe-area-context: "*"
+  checksum: 48c6eeb7bf7e4607346dfaccdcbb09c6f74d306f9674941174475e54ec6ca0b9efab1c0dc250e19e1cd10b70afece013fc1758acf413c5cf33cfd73bbcf82431
+  languageName: node
+  linkType: hard
+
 "react-native-app-intro-slider@npm:^4.0.4":
   version: 4.0.4
   resolution: "react-native-app-intro-slider@npm:4.0.4"
@@ -11150,6 +11161,7 @@ __metadata:
     react: 19.1.0
     react-i18next: ^15.5.3
     react-native: 0.80.0
+    react-native-actions-sheet: ^0.9.5
     react-native-app-intro-slider: ^4.0.4
     react-native-bootsplash: ^6.3.10
     react-native-dotenv: ^3.4.11
