@@ -1677,9 +1677,9 @@ PODS:
     - React-RCTFBReactNativeSpec
     - ReactCommon/turbomodule/core
     - SocketRocket
-  - react-native-config (1.5.5):
-    - react-native-config/App (= 1.5.5)
-  - react-native-config/App (1.5.5):
+  - react-native-config (1.5.6):
+    - react-native-config/App (= 1.5.6)
+  - react-native-config/App (1.5.6):
     - React-Core
   - react-native-document-picker (10.1.5):
     - boost
@@ -1829,9 +1829,9 @@ PODS:
     - ReactCommon/turbomodule/core
     - SocketRocket
     - Yoga
-  - react-native-maps (1.24.13):
-    - react-native-maps/Maps (= 1.24.13)
-  - react-native-maps/Generated (1.24.13):
+  - react-native-maps (1.25.0):
+    - react-native-maps/Maps (= 1.25.0)
+  - react-native-maps/Generated (1.25.0):
     - boost
     - DoubleConversion
     - fast_float
@@ -1860,7 +1860,7 @@ PODS:
     - ReactCommon/turbomodule/core
     - SocketRocket
     - Yoga
-  - react-native-maps/Maps (1.24.13):
+  - react-native-maps/Maps (1.25.0):
     - boost
     - DoubleConversion
     - fast_float
@@ -3280,13 +3280,13 @@ SPEC CHECKSUMS:
   React-logger: dce52a571ba0e0149c3f0fcc6866cbc0c8552c5e
   React-Mapbuffer: f5754c33877eaf36e4c76c613b35615a181c85c5
   React-microtasksnativemodule: 23df6374a3ac422d8c2927839bcaeed61fee3dad
-  react-native-config: 644074ab88db883fcfaa584f03520ec29589d7df
+  react-native-config: f1dde39f8468ad922fc7e8bd4308c8e6223d5ee8
   react-native-document-picker: 5546afe706069082f3c66ec761826d1b8d88838c
   react-native-geolocation: f01ad4718ad1d015d0c0dd12a6f707354022530e
   react-native-geolocation-service: 32b2c2a3b91e70ce2a8d0c684801aaeb0a07e0ec
   react-native-image-picker: e9d833df19e87e25e38ddc0be3bad92f57307765
   react-native-keyboard-controller: a53adc535926d3f5f15386cf09a23cbd247ee23c
-  react-native-maps: 1ab2b2317dfb1337f5e675c07d6c423bebff1285
+  react-native-maps: 384c84f5eca41791c49746f1fa62e8213f59c2de
   react-native-netinfo: cec9c4e86083cb5b6aba0e0711f563e2fbbff187
   react-native-safe-area-context: 68d1363b8354472a961aa6861ba8451beaf9a810
   React-NativeModulesApple: e16d5c133019987285f001fbf1461a861e40426f
@@ -3334,6 +3334,6 @@ SPEC CHECKSUMS:
   TOCropViewController: 80b8985ad794298fb69d3341de183f33d1853654
   Yoga: 0c4b7d2aacc910a1f702694fa86be830386f4ceb
 
-PODFILE CHECKSUM: 637c83672324504b35b37a99d9fa53a382b32e9a
+PODFILE CHECKSUM: e743fd87bd0a3fcf0d677c014058cf3c2adeeb9a
 
 COCOAPODS: 1.16.2

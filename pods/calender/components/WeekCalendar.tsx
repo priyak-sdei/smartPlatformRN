@@ -2,7 +2,7 @@ import React, { useMemo } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import { format, startOfWeek, addDays, isToday, parseISO, isSameDay } from 'date-fns';
 import { CalendarViewProps } from '../types';
-import { useTheme } from '@shared/theme';
+import { colors, moderateScale, useTheme } from '@shared/theme';
 
 const WeekCalendar: React.FC<CalendarViewProps> = ({
   onDateSelect,
@@ -48,13 +48,13 @@ const WeekCalendar: React.FC<CalendarViewProps> = ({
           >
             <Text style={[
               styles.dayText,
-              { color: item.isSelected ? '#fff' : theme.colors.text }
+              { color: item.isSelected ? colors.background : theme.colors.text }
             ]}>
               {item.day.slice(0, 1)}
             </Text>
             <Text style={[
               styles.dateText,
-              { color: item.isSelected ? '#fff' : theme.colors.text }
+              { color: item.isSelected ? colors.background : theme.colors.text }
             ]}>
               {item.date}
             </Text>
@@ -67,25 +67,25 @@ const WeekCalendar: React.FC<CalendarViewProps> = ({
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: '#fff',
-    paddingVertical: 8,
+    backgroundColor: colors.background,
+    paddingVertical: moderateScale(8),
   },
   weekContainer: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    paddingHorizontal: 16,
+    paddingHorizontal: moderateScale(16),
   },
   dayContainer: {
     alignItems: 'center',
     justifyContent: 'center',
-    paddingVertical: 8,
-    paddingHorizontal: 12,
-    minWidth: 40,
+    paddingVertical: moderateScale(8),
+    paddingHorizontal: moderateScale(12),
+    minWidth: moderateScale(40),
   },
   dayText: {
     fontSize: 16,
     fontWeight: '500',
-    marginBottom: 4,
+    marginBottom: moderateScale(4),
   },
   dateText: {
     fontSize: 18,

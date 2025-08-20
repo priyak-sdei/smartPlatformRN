@@ -1,20 +1,23 @@
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Image } from 'react-native';
-import { Home, Profile } from '@src/assets/svg';
+import { Home, Profile,CalendarIC } from '@src/assets/svg';
 import HomeScreen from '@src/screens/HomeScreen';
 import ProfileScreen from '@src/screens/ProfileScreen';
 import { useTheme } from '@shared/theme';
 import { ChatList } from '@pods/chat/index';
+import ScheduleScreen from '@src/screens/ScheduleScreen';
 export type TabParamList = {
   Home: undefined;
   Profile: undefined;
   Chat: undefined;
+  Calendar:undefined
 };
 
 export type TabImages = {
   Home: any;
   Profile: any;
+  Calendar: any;
   Chat: any;
 };
 
@@ -46,6 +49,7 @@ function getTabImages() {
     Home: Home,
     Profile: Profile,
     Chat: Profile,
+    Calendar:CalendarIC
   };
 }
 
@@ -74,6 +78,7 @@ const TabNavigator: React.FC<TabNavigatorProps> = ({
     >
       <Tab.Screen name="Home" component={HomeScreen} />
       <Tab.Screen name="Profile" component={ProfileScreen} />
+      <Tab.Screen name="Calendar" component={ScheduleScreen} />
       <Tab.Screen name="Chat" component={ChatList} />
     </Tab.Navigator>
   );

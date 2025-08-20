@@ -3,7 +3,7 @@ import { View, StyleSheet } from 'react-native';
 import { CalendarViewProps } from '../types';
 import MonthCalendar from '../components/MonthCalendar';
 import WeekCalendar from '../components/WeekCalendar';
-import { useTheme } from '@shared/theme';
+import { moderateScale, useTheme } from '@shared/theme';
 
 const CalendarView: React.FC<CalendarViewProps> = ({
   mode = 'month',
@@ -62,7 +62,7 @@ const CalendarView: React.FC<CalendarViewProps> = ({
 
 const styles = StyleSheet.create({
   container: {
-    borderRadius: 12,
+    borderRadius: moderateScale(12),
     overflow: 'hidden',
   },
 });

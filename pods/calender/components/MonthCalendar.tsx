@@ -29,7 +29,7 @@ const MonthCalendar: React.FC<CalendarViewProps> = ({
     <Calendar
       {...props}
       theme={calendarTheme}
-      onDayPress={({ dateString }) => onDateSelect?.(dateString)}
+      onDayPress={({ dateString }:any) => onDateSelect?.(dateString)}
       markedDates={{
         ...markedDates,
         [selectedDate || '']: {

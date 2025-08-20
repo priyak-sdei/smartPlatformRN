@@ -1,7 +1,7 @@
 import React, { forwardRef, useImperativeHandle } from 'react';
 import { View, Text, StyleSheet, FlatList, Image, TouchableOpacity } from 'react-native';
 import { ScheduleEvent } from '../types';
-import { useTheme } from '@shared/theme';
+import { colors, moderateScale, useTheme } from '@shared/theme';
 
 interface ScheduleListProps {
   events: ScheduleEvent[];
@@ -127,31 +127,31 @@ const ScheduleList: React.ForwardRefRenderFunction<ScheduleListRef, ScheduleList
 
 const styles = StyleSheet.create({
   container: {
-    paddingHorizontal: 16,
+    paddingHorizontal: moderateScale(16),
   },
   timeSlotContainer: {
     flexDirection: 'row',
-    minHeight: 60,
-    marginBottom: 8,
+    minHeight: moderateScale(60),
+    marginBottom: moderateScale(8),
   },
   timeText: {
-    width: 60,
-    fontSize: 12,
+    width: moderateScale(60),
+    fontSize: moderateScale(12),
     fontWeight: '500',
   },
   emptySlot: {
     flex: 1,
     borderLeftWidth: 1,
-    marginLeft: 8,
+    marginLeft: moderateScale(8),
   },
   eventsContainer: {
     flex: 1,
-    marginLeft: 8,
+    marginLeft: moderateScale(8),
   },
   eventCard: {
-    padding: 12,
-    borderRadius: 8,
-    marginBottom: 8,
+    padding: moderateScale(12),
+    borderRadius: moderateScale(8),
+    marginBottom: moderateScale(8),
     shadowColor: '#000',
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.1,
@@ -170,17 +170,17 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   statusBadge: {
-    paddingHorizontal: 12,
-    paddingVertical: 4,
-    borderRadius: 16,
+    paddingHorizontal: moderateScale(12),
+    paddingVertical: moderateScale(4),
+    borderRadius: moderateScale(16),
   },
   statusText: {
-    color: '#fff',
-    fontSize: 12,
+    color: colors.background,
+    fontSize: moderateScale(12),
     fontWeight: '500',
   },
   eventTime: {
-    marginBottom: 8,
+    marginBottom: moderateScale(8),
   },
   timeRangeText: {
     fontSize: 12,
@@ -191,10 +191,10 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   avatar: {
-    width: 24,
-    height: 24,
-    borderRadius: 12,
-    marginRight: 8,
+    width: moderateScale(24),
+    height: moderateScale(24),
+    borderRadius: moderateScale(12),
+    marginRight: moderateScale(8),
   },
   userName: {
     fontSize: 14,

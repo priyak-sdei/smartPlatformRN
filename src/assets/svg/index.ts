@@ -4,3 +4,4 @@ export { default as Home } from './home.svg';
 export { default as GoogleIC } from './google.svg';
 export { default as AppleIC } from './apple.svg';
 export { default as DownIC } from './down.svg';
+export { default as CalendarIC } from './calendar.svg';
