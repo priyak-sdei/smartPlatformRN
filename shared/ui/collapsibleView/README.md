@@ -55,8 +55,9 @@ import CollapsibleView from 'shared/ui/collapsibleView';
   value="Important"
   labelStyle={{ fontSize: 18, fontWeight: 'bold', color: '#333' }}
   valueStyle={{ fontSize: 14, color: '#666', fontStyle: 'italic' }}
+  style={{ backgroundColor: '#f5f5f5', padding: 20, borderRadius: 8 }}
 >
-  <Text>Content with custom header styling</Text>
+  <Text>Content with custom header and content area styling</Text>
 </CollapsibleView>
 ```
 
@@ -79,13 +80,14 @@ import CollapsibleView from 'shared/ui/collapsibleView';
 
 ## Props
 
-| Prop       | Type      | Default | Description                                 |
-| ---------- | --------- | ------- | ------------------------------------------- |
-| label      | string    | —       | Main label text displayed in the header     |
-| children   | ReactNode | —       | Content to be shown/hidden when collapsed   |
-| value      | string    | —       | Optional value text displayed next to label |
-| labelStyle | TextStyle | —       | Custom style for the label text             |
-| valueStyle | TextStyle | —       | Custom style for the value text             |
+| Prop       | Type      | Default | Description                                   |
+| ---------- | --------- | ------- | --------------------------------------------- |
+| label      | string    | —       | Main label text displayed in the header       |
+| children   | ReactNode | —       | Content to be shown/hidden when collapsed     |
+| value      | string    | —       | Optional value text displayed next to label   |
+| labelStyle | TextStyle | —       | Custom style for the label text               |
+| valueStyle | TextStyle | —       | Custom style for the value text               |
+| style      | ViewStyle | —       | Custom style for the collapsible content area |
 
 ---
 

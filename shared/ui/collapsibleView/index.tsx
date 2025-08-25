@@ -1,6 +1,6 @@
 import { ChevronDown, ChevronUp } from '@src/assets/svg';
 import React from 'react';
-import { Pressable, Text, TextStyle, View } from 'react-native';
+import { Pressable, Text, TextStyle, View, ViewStyle } from 'react-native';
 import Collapsible from 'react-native-collapsible';
 import { getStyles } from './styles';
 import { useTheme } from '@shared/theme';
@@ -11,6 +11,7 @@ interface CollapsibleViewProps {
   value?: string;
   labelStyle?: TextStyle;
   valueStyle?: TextStyle;
+  style?: ViewStyle;
 }
 
 const CollapsibleView: React.FC<CollapsibleViewProps> = ({
@@ -19,6 +20,7 @@ const CollapsibleView: React.FC<CollapsibleViewProps> = ({
   value,
   labelStyle,
   valueStyle,
+  style,
 }) => {
   const [isCollapsed, setIsCollapsed] = React.useState(true);
   const { theme } = useTheme();
@@ -42,7 +44,7 @@ const CollapsibleView: React.FC<CollapsibleViewProps> = ({
         {isCollapsed ? <ChevronDown /> : <ChevronUp />}
       </Pressable>
       <Collapsible collapsed={isCollapsed}>
-        <View style={styles.collapsibleContent}>{children}</View>
+        <View style={[styles.collapsibleContent, style]}>{children}</View>
       </Collapsible>
     </View>
   );
