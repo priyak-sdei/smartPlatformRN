@@ -1,4 +1,4 @@
-import CollapsibleView from '@src/components/CollapsibleView';
+import CollapsibleView from '@shared/ui/collapsibleView';
 import React from 'react';
 import { View, Text, StyleSheet, Button } from 'react-native';
 import { useAppSelector, useAppDispatch } from '../redux/hooks';

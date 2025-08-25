@@ -1,8 +1,9 @@
 import { ChevronDown, ChevronUp } from '@src/assets/svg';
-import { colors, fonts, moderateScale } from '@src/theme';
 import React from 'react';
-import { TextStyle, Pressable, StyleSheet, Text, View } from 'react-native';
+import { Pressable, Text, TextStyle, View } from 'react-native';
 import Collapsible from 'react-native-collapsible';
+import { getStyles } from './styles';
+import { useTheme } from '@shared/theme';
 
 interface CollapsibleViewProps {
   label: string;
@@ -20,7 +21,8 @@ const CollapsibleView: React.FC<CollapsibleViewProps> = ({
   valueStyle,
 }) => {
   const [isCollapsed, setIsCollapsed] = React.useState(true);
-
+  const { theme } = useTheme();
+  const styles = getStyles(theme);
   return (
     <View style={styles.container}>
       <Pressable
@@ -45,43 +47,5 @@ const CollapsibleView: React.FC<CollapsibleViewProps> = ({
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    backgroundColor: colors.background,
-    borderColor: colors.border,
-    borderWidth: moderateScale(1),
-    borderRadius: moderateScale(8),
-    marginTop: moderateScale(16),
-    marginHorizontal: moderateScale(16),
-  },
-  collapsibleHeader: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    padding: moderateScale(12),
-    justifyContent: 'space-between',
-  },
-  collapsibleHeaderContent: {
-    flex: 1,
-    flexDirection: 'row',
-    marginEnd: moderateScale(12),
-    alignItems: 'center',
-    justifyContent: 'space-between',
-  },
-  collapsibleContent: {
-    borderTopWidth: moderateScale(1),
-    paddingVertical: moderateScale(12),
-    marginHorizontal: moderateScale(12),
-    borderTopColor: colors.border,
-  },
-  collapsibleHeaderLabel: {
-    fontFamily: fonts.medium,
-    fontSize: moderateScale(16),
-  },
-  collapsibleHeaderValue: {
-    fontFamily: fonts.regular,
-    fontSize: moderateScale(16),
-  },
-});
 
 export default CollapsibleView;
