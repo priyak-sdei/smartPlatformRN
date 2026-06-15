@@ -14,7 +14,7 @@ Before you begin, ensure you have the following installed:
 
 ## 🚀 Features
 
-- **Pods Architecture:** Each feature (e.g., Auth) is a self-contained module with its own screens, navigation, and logic.
+- **Pods Architecture:** Each feature (e.g., Auth, Header) is a self-contained module with its own screens, navigation, and logic.
 - **Shared UI Library:** Common UI components (Button, TextInput, Layout, etc.) are centralized for consistency and reuse.
 - **Theming:** Centralized theme management for colors, fonts, and spacing.
 - **Module Aliasing:** Clean and maintainable imports using Babel and TypeScript path aliases.
