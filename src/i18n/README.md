@@ -1,6 +1,6 @@
 # Internationalization (i18n)
 
-This document explains how our application handles multiple languages using `i18next` and `react-i18next`.
+This document explains how our application handles multiple languages using `i18next` and `react-i18next`. Common componenet for this
 
 ## Overview
 
